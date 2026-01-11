@@ -39,22 +39,22 @@ export const viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Claw Point Security | Hunting Threats in the Digital Forest',
-  description: 'Elite cybersecurity operations with tactical precision. We are the predators that hunt down digital threats in the darkness between compliance and operational reality.',
+  title: 'Clawpoint Security | Hunting Threats in the Digital Forest',
+  description: 'Elite cybersecurity hunters with predatory precision. We are the apex predators that hunt down digital threats in the darkness between compliance and operational reality.',
   keywords: [
     'cybersecurity',
-    'security operations',
+    'security services',
     'threat hunting',
-    'tactical security',
+    'strategic security',
     'digital defense',
     'cyber defense',
     'security consulting',
     'penetration testing',
     'vulnerability assessment'
   ],
-  authors: [{ name: 'Claw Point Security' }],
-  creator: 'Claw Point Security',
-  publisher: 'Claw Point Security',
+  authors: [{ name: 'Clawpoint Security' }],
+  creator: 'Clawpoint Security',
+  publisher: 'Clawpoint Security',
   robots: {
     index: true,
     follow: true,
@@ -70,22 +70,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://clawpoint.security',
-    siteName: 'Claw Point Security',
-    title: 'Claw Point Security | Hunting Threats in the Digital Forest',
-    description: 'Elite cybersecurity operations with tactical precision. We hunt threats you cannot see.',
+    siteName: 'Clawpoint Security',
+    title: 'Clawpoint Security | Hunting Threats in the Digital Forest',
+    description: 'Elite cybersecurity hunters with predatory precision. We hunt threats you cannot see.',
     images: [
       {
         url: '/images/logo.png',
         width: 1200,
         height: 630,
-        alt: 'Claw Point Security - Tactical Cybersecurity Operations'
+        alt: 'Clawpoint Security - Apex Cybersecurity Hunters'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Claw Point Security | Hunting Threats in the Digital Forest',
-    description: 'Elite cybersecurity operations with tactical precision.',
+    title: 'Clawpoint Security | Hunting Threats in the Digital Forest',
+    description: 'Elite cybersecurity hunters with predatory precision.',
     images: ['/images/logo.png']
   },
   icons: {

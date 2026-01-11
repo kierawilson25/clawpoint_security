@@ -10,7 +10,6 @@ const navigationLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/solutions', label: 'Solutions' },
-  { href: '/careers', label: 'Careers' },
   { href: '/information', label: 'Information' },
   { href: '/infinite-view', label: 'Infinite View' },
   { href: '/contact', label: 'Contact' }
@@ -64,7 +63,7 @@ export default function Navigation() {
             <div className="relative w-16 h-16 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/images/logo.png"
-                alt="Claw Point Security"
+                alt="Clawpoint Security"
                 fill
                 className="object-contain drop-shadow-[0_0_10px_rgba(0,255,65,0.3)]"
                 priority
@@ -72,7 +71,7 @@ export default function Navigation() {
             </div>
             <div className="hidden sm:block">
               <span className="text-white font-mono font-bold text-lg tracking-wider">
-                CLAW POINT
+                CLAWPOINT
               </span>
               <span className="text-night-vision font-mono font-bold text-lg tracking-wider ml-2">
                 SECURITY
@@ -205,7 +204,7 @@ export default function Navigation() {
             }}
           >
             <span className="inline-block w-2 h-2 bg-night-vision rounded-full eye-glow" />
-            SYSTEM ARMED
+            HUNTERS READY
           </div>
         </div>
 

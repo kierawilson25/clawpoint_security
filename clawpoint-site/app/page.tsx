@@ -153,12 +153,12 @@ export default function Home() {
           <div className="rabbit-hole-element absolute w-2.5 h-2.5 border border-[var(--tactical-green)] rotate-45" style={{ left: '75%', animationDelay: '15s' }} />
         </div>
 
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-center pt-32">
+        <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-center pt-32 pb-32 sm:pb-40">
           {/* Logo - Main Focus - Shows First */}
           <div className="mb-20 flex justify-center stalk-in" style={{ animationDelay: '0.5s' }}>
             <Image
               src="/images/logo.png"
-              alt="Claw Point Security"
+              alt="Clawpoint Security"
               width={400}
               height={400}
               className="object-contain drop-shadow-[0_0_40px_rgba(0,255,65,0.4)] predator-movement"
@@ -167,14 +167,14 @@ export default function Home() {
 
           {/* Tagline - Fades In After Logo */}
           <div className="stalk-in" style={{ animationDelay: '2s' }}>
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-200 mb-12 font-mono tracking-wide max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-200 mb-24 sm:mb-32 font-mono tracking-wide max-w-4xl mx-auto leading-relaxed">
               HUNTING THREATS IN THE DIGITAL FOREST
             </p>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 animate-bounce opacity-60">
+        {/* Scroll indicator - hidden on small screens to prevent overlap */}
+        <div className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-3 animate-bounce opacity-60">
           <span className="text-[var(--night-vision)] font-mono text-sm tracking-wider">
             VENTURE DEEPER
           </span>
@@ -202,12 +202,12 @@ export default function Home() {
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12 font-mono tracking-wider">
-            YOUR MISSION IS OUR MISSION
+            YOUR HUNT IS OUR HUNT
           </h2>
 
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-mono mb-16 max-w-5xl mx-auto">
             In the darkness between compliance requirements and operational reality, threats lurk.
-            We are the predators that hunt them down. With tactical precision and relentless focus,
+            We are the apex predators that hunt them down. With predatory precision and relentless focus,
             we secure the gaps others miss.
           </p>
 
@@ -282,13 +282,13 @@ export default function Home() {
           </h2>
 
           <p className="text-lg md:text-xl text-gray-300 mb-16 font-mono leading-relaxed max-w-3xl mx-auto">
-            The threats are real. The stakes are high. Your mission cannot afford security gaps.
+            The threats are real. The stakes are high. Your business cannot afford security gaps.
             Let&apos;s eliminate them together.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20">
             <CTAButton href="/contact" variant="alert" size="lg">
-              SCHEDULE TACTICAL BRIEFING
+              SCHEDULE STRATEGY SESSION
             </CTAButton>
             <CTAButton href="/solutions" variant="secondary" size="lg">
               REVIEW CAPABILITIES

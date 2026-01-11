@@ -1,6 +1,6 @@
-# Claw Point Security - Tactical Cybersecurity Website
+# Clawpoint Security - Tactical Cybersecurity Website
 
-A Next.js website with a feral, tactical, special forces aesthetic for Claw Point Security - a cybersecurity company focused on hunting threats and reducing cognitive load for security teams.
+A Next.js website with a feral, tactical, special forces aesthetic for Clawpoint Security - a cybersecurity company focused on hunting threats and reducing cognitive load for security teams.
 
 ## Overview
 
@@ -247,7 +247,7 @@ Potential additions for later:
 
 ## License
 
-Proprietary - Claw Point Security
+Proprietary - Clawpoint Security
 
 ## Contact
 

@@ -47,14 +47,14 @@ export default function Footer() {
               <div className="relative w-12 h-12 transition-transform duration-300 group-hover:scale-110">
                 <Image
                   src="/images/logo.png"
-                  alt="Claw Point Security"
+                  alt="Clawpoint Security"
                   fill
                   className="object-contain drop-shadow-[0_0_10px_rgba(0,255,65,0.3)]"
                 />
               </div>
               <div>
                 <div className="text-white font-mono font-bold text-base tracking-wider">
-                  CLAW POINT
+                  CLAWPOINT
                 </div>
                 <div className="text-night-vision font-mono font-bold text-base tracking-wider">
                   SECURITY
@@ -66,7 +66,7 @@ export default function Footer() {
             </p>
             <div className="mt-4 flex items-center gap-2 text-night-vision/60 font-mono text-xs">
               <span className="inline-block w-2 h-2 bg-night-vision rounded-full eye-glow animate-pulse" />
-              SYSTEM ARMED
+              HUNTERS READY
             </div>
           </div>
 
@@ -170,10 +170,10 @@ export default function Footer() {
           {/* Copyright */}
           <div className="text-gray-500 font-mono text-xs text-center md:text-left">
             <p>
-              &copy; {currentYear} Claw Point Security. All rights reserved.
+              &copy; {currentYear} Clawpoint Security. All rights reserved.
             </p>
             <p className="mt-1 text-tactical-green-light">
-              CLASSIFIED TACTICAL OPERATIONS | NEED-TO-KNOW BASIS
+              CLASSIFIED HUNTING OPERATIONS | NEED-TO-KNOW BASIS
             </p>
           </div>
 

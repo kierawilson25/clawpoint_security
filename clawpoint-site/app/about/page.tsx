@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import CTAButton from '@/components/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'About Us | Claw Point Security',
+  title: 'About Us | Clawpoint Security',
   description:
-    'Elite cybersecurity operators with special forces mindset. We hunt threats with tactical precision and unwavering commitment to mission success.',
+    'Elite cybersecurity hunters with apex predator mentality. We hunt threats with predatory precision and unwavering commitment to project success.',
 }
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-block border border-[var(--night-vision)] px-4 py-2 mb-6 font-mono text-xs text-[var(--night-vision)] bg-black/50 backdrop-blur-sm">
             <span className="inline-block w-2 h-2 bg-[var(--night-vision)] rounded-full mr-2 eye-glow" />
-            CLASSIFIED BRIEFING | ABOUT CLAW POINT
+            CLASSIFIED BRIEFING | ABOUT CLAWPOINT
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider">
@@ -26,7 +26,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-xl text-gray-300 leading-relaxed font-mono mb-8">
-            We are not your typical security consultants. We are operators. Predators in the
+            We are not your typical security consultants. We are hunters. Apex predators in the
             digital forest. Elite specialists trained to hunt, identify, and eliminate threats
             before they strike.
           </p>
@@ -39,12 +39,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-white mb-6 font-mono tracking-wider border-l-4 border-[var(--night-vision)] pl-6">
-                OUR MISSION
+                OUR PURPOSE
               </h2>
               <p className="text-lg text-gray-300 font-mono leading-relaxed mb-6">
                 To eliminate the cognitive load that cripples security teams. To bridge the deadly
-                gap between compliance requirements and mission reality. To be the tactical
-                operations center that never sleeps, never misses, never fails.
+                gap between compliance requirements and operational reality. To be the hunting
+                command center that never sleeps, never misses, never fails.
               </p>
               <p className="text-lg text-gray-300 font-mono leading-relaxed">
                 Every organization using technology is a target. We ensure they are also a fortress.
@@ -59,14 +59,14 @@ export default function AboutPage() {
                 },
                 {
                   value: 'PRECISE',
-                  description: 'Surgical strikes, zero collateral damage',
+                  description: 'Precise elimination, zero collateral damage',
                 },
                 {
-                  value: 'TACTICAL',
+                  value: 'STRATEGIC',
                   description: 'Strategic thinking, operational excellence',
                 },
                 {
-                  value: 'MISSION-FOCUSED',
+                  value: 'PROJECT-FOCUSED',
                   description: 'Your objectives are our objectives',
                 },
               ].map((principle, index) => (
@@ -92,7 +92,7 @@ export default function AboutPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono tracking-wider">
               WHAT SETS US APART
             </h2>
-            <p className="text-xl text-gray-300 font-mono">SPECIAL FORCES APPROACH TO SECURITY</p>
+            <p className="text-xl text-gray-300 font-mono">APEX PREDATOR APPROACH TO SECURITY</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -108,9 +108,9 @@ export default function AboutPage() {
                   'The space between compliance and reality is where threats breed. We specialize in finding and eliminating those gaps.',
               },
               {
-                title: 'OPERATOR MENTALITY',
+                title: 'HUNTER MENTALITY',
                 description:
-                  'We think like attackers, plan like strategists, execute like operators. Every engagement is a mission with defined objectives.',
+                  'We think like attackers, plan like strategists, execute like apex hunters. Every engagement is a project with defined objectives.',
               },
             ].map((differentiator, index) => (
               <div
@@ -141,7 +141,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono tracking-wider">
-              TACTICAL METHODOLOGY
+              HUNTING METHODOLOGY
             </h2>
           </div>
 
@@ -149,7 +149,7 @@ export default function AboutPage() {
             {[
               {
                 phase: '01',
-                title: 'RECONNAISSANCE',
+                title: 'TRACKING',
                 description:
                   'Deep dive into your tech stack, operations, and threat landscape. We identify every asset, every dependency, every potential attack vector.',
               },
@@ -157,7 +157,7 @@ export default function AboutPage() {
                 phase: '02',
                 title: 'ASSESSMENT',
                 description:
-                  'Comprehensive security evaluation mapped against your mission requirements. We find the gaps between compliance checkboxes and real-world protection.',
+                  'Comprehensive security evaluation mapped against your project requirements. We find the gaps between compliance checkboxes and real-world protection.',
               },
               {
                 phase: '03',
@@ -167,15 +167,15 @@ export default function AboutPage() {
               },
               {
                 phase: '04',
-                title: 'TACTICAL EXECUTION',
+                title: 'STRATEGIC EXECUTION',
                 description:
                   'Rapid deployment of security measures. Continuous monitoring. Real-time threat hunting. Automated compliance reporting. Always-on protection.',
               },
               {
                 phase: '05',
-                title: 'CONTINUOUS OPERATIONS',
+                title: 'CONTINUOUS VIGILANCE',
                 description:
-                  'Security is not a project with an end date. We remain embedded, vigilant, and adaptive. Your security ops center, on demand.',
+                  'Security is not a project with an end date. We remain embedded, vigilant, and adaptive. Your security command center, on demand.',
               },
             ].map((step, index) => (
               <div
@@ -204,7 +204,7 @@ export default function AboutPage() {
             JOIN THE HUNT
           </h2>
           <p className="text-xl text-gray-300 mb-12 font-mono leading-relaxed">
-            Whether you need operators on your team or want to become one, we are ready to engage.
+            Whether you need hunters on your team or want to become one, we are ready to engage.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <CTAButton href="/contact" variant="alert" size="lg">
