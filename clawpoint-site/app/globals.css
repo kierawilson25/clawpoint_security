@@ -54,6 +54,19 @@ body {
   }
 }
 
+/* Screen reader only utility - hides content visually but keeps it accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 /* Tactical grid background effect */
 .tactical-grid {
   background-image:
@@ -636,4 +649,44 @@ body {
 .depth-shift {
   animation: forest-depth-shift 15s ease-in-out infinite;
   transform-style: preserve-3d;
+}
+
+/* Tactical shine effect - sweeps across on hover */
+@keyframes tactical-shine {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+.credential-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.credential-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 65, 0.1) 25%,
+    rgba(0, 255, 65, 0.3) 50%,
+    rgba(0, 255, 65, 0.1) 75%,
+    transparent 100%
+  );
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+.credential-shine:hover::before {
+  display: block;
+  animation: tactical-shine 2.5s ease-out;
 }
