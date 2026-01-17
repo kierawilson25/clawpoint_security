@@ -1,362 +1,531 @@
 'use client'
 
-import { useState } from 'react'
-import type { Metadata } from 'next'
-
-// Note: Metadata export doesn't work in client components, but leaving for reference
-// In production, you'd move the form logic to a separate client component
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
+import CTAButton from '@/components/CTAButton'
 
 export default function ContactPage() {
+  const [scrollProgress, setScrollProgress] = useState(0)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    organization: '',
+    company: '',
     phone: '',
-    interest: 'general',
+    interest: [] as string[],
     message: '',
   })
 
+  const [errors, setErrors] = useState<Record<string, string>>({})
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
+
+  // Scroll progress tracker
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight
+      const progress = (window.scrollY / totalHeight) * 100
+      setScrollProgress(progress)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {}
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required'
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required'
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Invalid email format'
+    }
+
+    if (!formData.company.trim()) {
+      newErrors.company = 'Company/Organization is required'
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required'
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters'
+    }
+
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setStatus('submitting')
 
-    // Simulate form submission
-    // In production, integrate with your backend API
-    setTimeout(() => {
+    if (!validateForm()) {
+      return
+    }
+
+    setStatus('submitting')
+    setErrorMessage('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
       setStatus('success')
       setFormData({
         name: '',
         email: '',
-        organization: '',
+        company: '',
         phone: '',
-        interest: 'general',
+        interest: [],
         message: '',
       })
-    }, 1500)
+    } catch (error) {
+      setStatus('error')
+      setErrorMessage('Failed to send message. Please try again or email us directly.')
+    }
   }
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
+    const { name, value } = e.target
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [name]: value,
+    }))
+    // Clear error for this field when user starts typing
+    if (errors[name]) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: '',
+      }))
+    }
+  }
+
+  const handleCheckboxChange = (value: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      interest: prev.interest.includes(value)
+        ? prev.interest.filter((i) => i !== value)
+        : [...prev.interest, value],
     }))
   }
 
   return (
-    <div className="bg-black min-h-screen pt-20">
-      {/* Hero Section */}
-      <section className="relative py-40 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 tactical-grid opacity-20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
+    <div className="bg-black relative min-h-screen">
+      {/* Progress indicator */}
+      <div className="fixed top-0 left-0 w-full h-1 bg-black z-50">
+        <div
+          className="h-full bg-gradient-to-r from-[var(--tactical-green)] via-[var(--night-vision)] to-[var(--tactical-green-light)] transition-all duration-300"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-block border border-[var(--night-vision)] px-4 py-2 mb-6 font-mono text-xs text-[var(--night-vision)] bg-black/50 backdrop-blur-sm">
-            <span className="inline-block w-2 h-2 bg-[var(--night-vision)] rounded-full mr-2 eye-glow" />
-            SECURE COMMUNICATION CHANNEL
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'linear-gradient(var(--tactical-green) 1px, transparent 1px), linear-gradient(90deg, var(--tactical-green) 1px, transparent 1px)',
+            backgroundSize: '60px 60px'
+          }} />
+        </div>
+
+        <div className="absolute inset-0">
+          <Image
+            src="/images/AdobeStock_241827782.jpeg"
+            alt=""
+            fill
+            className="object-cover opacity-15 mix-blend-screen"
+            priority
+          />
+        </div>
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.7)_70%,rgba(0,0,0,0.95)_100%)]" />
+
+        <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center py-32">
+          <div className="mb-8 stalk-in" style={{ animationDelay: '0.2s' }}>
+            <div className="inline-block border border-[var(--night-vision)] px-4 py-2 font-mono text-xs text-[var(--night-vision)] bg-black/50 backdrop-blur-sm">
+              <span className="inline-block w-2 h-2 bg-[var(--night-vision)] rounded-full mr-2 eye-glow" />
+              SECURE COMMUNICATION CHANNEL
+            </div>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider">
-            INITIATE <span className="text-[var(--night-vision)] text-glow">CONTACT</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.4s' }}>
+            LET&apos;S START THE
+            <span className="block text-[var(--night-vision)] mt-4">
+              CONVERSATION
+            </span>
           </h1>
 
-          <p className="text-xl text-gray-300 leading-relaxed font-mono">
-            Ready to engage? Establish secure communication with our hunting team.
-            Response time: under 4 hours.
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-mono leading-relaxed stalk-in" style={{ animationDelay: '0.6s' }}>
+            Schedule a Mission Briefing
           </p>
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section className="relative py-40 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-8 font-mono tracking-wider border-l-4 border-[var(--night-vision)] pl-6">
-                CONTACT CHANNELS
-              </h2>
+      {/* Contact Form Section */}
+      <section className="relative py-32 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
+        <div className="absolute inset-0 tactical-grid opacity-5" />
 
-              <div className="space-y-6 mb-12">
-                <div className="border border-[var(--tactical-green)] bg-black/50 backdrop-blur-sm p-6">
-                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
-                    EMERGENCY RESPONSE
-                  </h3>
-                  <p className="text-white font-mono text-lg">1-800-CLAW-911</p>
-                  <p className="text-gray-500 font-mono text-xs mt-1">24/7/365 Incident Hotline</p>
-                </div>
-
-                <div className="border border-[var(--tactical-green)] bg-black/50 backdrop-blur-sm p-6">
-                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
-                    GENERAL INQUIRIES
-                  </h3>
-                  <p className="text-white font-mono text-lg">contact@clawpoint.security</p>
-                  <p className="text-gray-500 font-mono text-xs mt-1">Response within 4 hours</p>
-                </div>
-
-                <div className="border border-[var(--tactical-green)] bg-black/50 backdrop-blur-sm p-6">
-                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
-                    RECRUITMENT
-                  </h3>
-                  <p className="text-white font-mono text-lg">careers@clawpoint.security</p>
-                  <p className="text-gray-500 font-mono text-xs mt-1">Join the hunt</p>
-                </div>
-              </div>
-
-              <div className="border-t border-[var(--tactical-green-dark)] pt-8">
-                <h3 className="text-xl font-bold text-white mb-4 font-mono">HEADQUARTERS</h3>
-                <p className="text-gray-400 font-mono text-sm leading-relaxed">
-                  Classified Location
-                  <br />
-                  Operational Globally
-                  <br />
-                  Encrypted Communications Only
-                </p>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="border-2 border-[var(--tactical-green)] bg-black p-8 relative">
-              {/* Tactical corners */}
-              <div className="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-[var(--night-vision)]" />
-              <div className="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-[var(--night-vision)]" />
-              <div className="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[var(--night-vision)]" />
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[var(--night-vision)]" />
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                    OPERATOR NAME *
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-black border border-[var(--tactical-green)] text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-tactical"
-                    placeholder="John Operator"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                    EMAIL *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-black border border-[var(--tactical-green)] text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-tactical"
-                    placeholder="contact@organization.com"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                    ORGANIZATION *
-                  </label>
-                  <input
-                    type="text"
-                    name="organization"
-                    value={formData.organization}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-black border border-[var(--tactical-green)] text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-tactical"
-                    placeholder="Your Organization"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                    PHONE
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-black border border-[var(--tactical-green)] text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-tactical"
-                    placeholder="+1 (555) 000-0000"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                    MISSION OBJECTIVE *
-                  </label>
-                  <select
-                    name="interest"
-                    value={formData.interest}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-black border border-[var(--tactical-green)] text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-tactical"
-                  >
-                    <option value="general">General Inquiry</option>
-                    <option value="assessment">Security Assessment</option>
-                    <option value="incident">Incident Response</option>
-                    <option value="soc">SOC Services</option>
-                    <option value="infinite-view">Infinite View Demo</option>
-                    <option value="careers">Career Opportunities</option>
-                    <option value="partnership">Partnership</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                    MESSAGE *
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-black border border-[var(--tactical-green)] text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-tactical resize-none"
-                    placeholder="Describe your security requirements..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={status === 'submitting'}
-                  className={`w-full px-8 py-4 font-mono font-bold text-sm tracking-wider transition-tactical border ${
-                    status === 'submitting'
-                      ? 'bg-gray-800 text-gray-500 border-gray-700 cursor-not-allowed'
-                      : 'bg-[var(--night-vision)] text-black border-[var(--night-vision)] hover:bg-white hover:border-white hover:shadow-[0_0_30px_rgba(0,255,65,0.8)] pulse-predator'
-                  }`}
-                >
-                  {status === 'submitting' ? 'TRANSMITTING...' : 'TRANSMIT MESSAGE'}
-                </button>
-
-                {status === 'success' && (
-                  <div className="border border-[var(--night-vision)] bg-[var(--tactical-green-dark)] p-4 text-center">
-                    <p className="text-[var(--night-vision)] font-mono text-sm font-bold">
-                      MESSAGE RECEIVED. RESPONSE INBOUND.
-                    </p>
-                  </div>
-                )}
-
-                {status === 'error' && (
-                  <div className="border border-[var(--night-vision)] bg-[var(--tactical-green-dark)] p-4 text-center">
-                    <p className="text-white font-mono text-sm font-bold">
-                      TRANSMISSION FAILED. TRY ALTERNATE CHANNEL.
-                    </p>
-                  </div>
-                )}
-              </form>
-            </div>
-          </div>
+        <div className="absolute inset-0">
+          <Image
+            src="/images/AdobeStock_328406149.jpeg"
+            alt=""
+            fill
+            className="object-cover opacity-10 mix-blend-lighten"
+          />
         </div>
-      </section>
 
-      {/* Security Notice */}
-      <section className="relative py-48 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--tactical-green-dark)] to-black">
-        <div className="max-w-4xl mx-auto">
-          <div className="border border-[var(--tactical-green)] bg-black/80 backdrop-blur-sm p-8 text-center">
-            <h3 className="text-2xl font-bold text-[var(--night-vision)] mb-4 font-mono">
-              SECURE COMMUNICATIONS PROTOCOL
-            </h3>
-            <p className="text-gray-300 font-mono text-sm leading-relaxed mb-6">
-              All communications are encrypted end-to-end. For highly sensitive matters, we can
-              arrange secure channels including PGP-encrypted email, Signal, or air-gapped
-              communication systems.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-xs font-mono text-gray-500">
-              <span>TLS 1.3 ENCRYPTION</span>
-              <span>|</span>
-              <span>ZERO KNOWLEDGE</span>
-              <span>|</span>
-              <span>NO LOGS</span>
-              <span>|</span>
-              <span>GDPR COMPLIANT</span>
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+            {/* Contact Info - 2 columns */}
+            <div className="lg:col-span-2">
+              <div className="mb-12 emerge-from-forest">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-px bg-[var(--tactical-green)]" />
+                  <span className="text-[var(--tactical-green-light)] font-mono text-sm tracking-widest">CONTACT-INFO</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white font-mono tracking-wider mb-8">
+                  CONTACT INFORMATION
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">
+                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
+                    OFFICE LOCATION
+                  </h3>
+                  <p className="text-white font-mono text-lg">Clawpoint Security Collective</p>
+                  <p className="text-gray-400 font-mono text-sm">Charlotte, NC</p>
+                </div>
+
+                <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">
+                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
+                    EMAIL
+                  </h3>
+                  <p className="text-white font-mono text-lg">General Inquiries</p>
+                  <a href="mailto:contact@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors">
+                    contact@clawpointsecuritycollective.com
+                  </a>
+                  <p className="text-white font-mono text-lg mt-4">Business Development</p>
+                  <a href="mailto:business@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors">
+                    business@clawpointsecuritycollective.com
+                  </a>
+                </div>
+
+                <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">
+                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
+                    PHONE
+                  </h3>
+                  <p className="text-white font-mono text-lg">(703) 266-XXXX</p>
+                </div>
+
+                <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">
+                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
+                    LINKEDIN
+                  </h3>
+                  <a
+                    href="https://www.linkedin.com/company/clawpoint"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors inline-flex items-center gap-2"
+                  >
+                    <span>Connect with us</span>
+                    <span>→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form - 3 columns */}
+            <div className="lg:col-span-3">
+              <div className="border-2 border-[var(--tactical-green)] bg-black/60 backdrop-blur-sm p-8 md:p-12 relative emerge-from-forest" style={{ animationDelay: '0.2s' }}>
+                {/* Tactical corners */}
+                <div className="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-[var(--night-vision)]/40" />
+                <div className="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-[var(--night-vision)]/40" />
+                <div className="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-[var(--night-vision)]/40" />
+                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[var(--night-vision)]/40" />
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                      FULL NAME *
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-3 bg-black border ${
+                        errors.name ? 'border-red-500' : 'border-[var(--tactical-green)]'
+                      } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
+                      placeholder="John Smith"
+                    />
+                    {errors.name && (
+                      <p className="text-red-400 font-mono text-xs mt-1">{errors.name}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                      EMAIL ADDRESS *
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-3 bg-black border ${
+                        errors.email ? 'border-red-500' : 'border-[var(--tactical-green)]'
+                      } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
+                      placeholder="contact@organization.com"
+                    />
+                    {errors.email && (
+                      <p className="text-red-400 font-mono text-xs mt-1">{errors.email}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                      COMPANY/ORGANIZATION *
+                    </label>
+                    <input
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-3 bg-black border ${
+                        errors.company ? 'border-red-500' : 'border-[var(--tactical-green)]'
+                      } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
+                      placeholder="Your Organization"
+                    />
+                    {errors.company && (
+                      <p className="text-red-400 font-mono text-xs mt-1">{errors.company}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                      PHONE NUMBER (OPTIONAL)
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-black border border-[var(--tactical-green)] text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all"
+                      placeholder="+1 (555) 000-0000"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-white font-mono text-sm font-bold mb-3 tracking-wider">
+                      I&apos;M INTERESTED IN (SELECT ALL THAT APPLY)
+                    </label>
+                    <div className="space-y-2">
+                      {[
+                        { value: 'consultation', label: "I'm interested in scheduling a consultation" },
+                        { value: 'infinite-view', label: "I'd like to learn more about Infinite View" },
+                        { value: 'careers', label: "I'm interested in career opportunities" },
+                      ].map((option) => (
+                        <label
+                          key={option.value}
+                          className="flex items-center gap-3 cursor-pointer group"
+                        >
+                          <input
+                            type="checkbox"
+                            checked={formData.interest.includes(option.value)}
+                            onChange={() => handleCheckboxChange(option.value)}
+                            className="w-4 h-4 bg-black border-2 border-[var(--tactical-green)] checked:bg-[var(--night-vision)] checked:border-[var(--night-vision)] focus:outline-none focus:ring-2 focus:ring-[var(--night-vision)] focus:ring-offset-2 focus:ring-offset-black transition-all"
+                          />
+                          <span className="text-gray-300 font-mono text-sm group-hover:text-white transition-colors">
+                            {option.label}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                      MESSAGE *
+                    </label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={6}
+                      className={`w-full px-4 py-3 bg-black border ${
+                        errors.message ? 'border-red-500' : 'border-[var(--tactical-green)]'
+                      } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all resize-none`}
+                      placeholder="Describe your security requirements or inquiry..."
+                    />
+                    {errors.message && (
+                      <p className="text-red-400 font-mono text-xs mt-1">{errors.message}</p>
+                    )}
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={status === 'submitting'}
+                    className={`w-full px-8 py-4 font-mono font-bold text-sm tracking-wider transition-all border-2 ${
+                      status === 'submitting'
+                        ? 'bg-gray-800 text-gray-500 border-gray-700 cursor-not-allowed'
+                        : 'bg-[var(--night-vision)] text-black border-[var(--night-vision)] hover:bg-white hover:border-white hover:shadow-[0_0_30px_rgba(0,255,65,0.8)]'
+                    }`}
+                  >
+                    {status === 'submitting' ? 'SENDING MESSAGE...' : 'SEND MESSAGE'}
+                  </button>
+
+                  {status === 'success' && (
+                    <div className="border-2 border-[var(--night-vision)] bg-[var(--tactical-green-dark)] p-4 text-center">
+                      <p className="text-[var(--night-vision)] font-mono text-sm font-bold mb-1">
+                        MESSAGE RECEIVED
+                      </p>
+                      <p className="text-gray-300 font-mono text-xs">
+                        We&apos;ll get back to you shortly.
+                      </p>
+                    </div>
+                  )}
+
+                  {status === 'error' && (
+                    <div className="border-2 border-red-500 bg-red-950/50 p-4 text-center">
+                      <p className="text-red-400 font-mono text-sm font-bold mb-1">
+                        TRANSMISSION FAILED
+                      </p>
+                      <p className="text-gray-300 font-mono text-xs">
+                        {errorMessage || 'Please try again or contact us directly via email.'}
+                      </p>
+                    </div>
+                  )}
+                </form>
+
+                <div className="mt-8 pt-8 border-t border-[var(--tactical-green-dark)]">
+                  <p className="text-gray-500 font-mono text-xs text-center">
+                    We respect your privacy. Your information will never be shared with third parties.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Alternative Contact Methods */}
-      <section className="relative py-48 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
-        <div className="absolute inset-0 tactical-grid opacity-10" />
+      <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'linear-gradient(var(--tactical-green) 1px, transparent 1px), linear-gradient(90deg, var(--tactical-green) 1px, transparent 1px)',
+            backgroundSize: '40px 40px'
+          }} />
+        </div>
+
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono tracking-wider">
-              ALTERNATIVE CHANNELS
+          <div className="text-center mb-16 emerge-from-forest">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="w-16 h-px bg-[var(--tactical-green)]" />
+              <span className="text-[var(--tactical-green-light)] font-mono text-sm tracking-widest">ALTERNATIVES</span>
+              <div className="w-16 h-px bg-[var(--tactical-green)]" />
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white font-mono tracking-wider">
+              ALTERNATIVE CONTACT METHODS
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="border border-[var(--tactical-green)] bg-black p-6 text-center hover:border-[var(--night-vision)] transition-tactical">
-              <div className="w-16 h-16 border-2 border-[var(--night-vision)] flex items-center justify-center text-[var(--night-vision)] text-2xl mx-auto mb-4">
-                📞
+          <div className="grid md:grid-cols-3 gap-8">
+            <article className="border-2 border-[var(--tactical-green-dark)] bg-black p-8 text-center hover:border-[var(--tactical-green)] transition-all duration-300 stalk-in" style={{ animationDelay: '0.1s' }}>
+              <div className="w-16 h-16 border-2 border-[var(--night-vision)] flex items-center justify-center text-3xl mx-auto mb-6">
+                📅
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 font-mono">SCHEDULE CALL</h3>
-              <p className="text-gray-400 font-mono text-sm mb-4">
-                Book a secure video briefing with our team
+              <h3 className="text-xl font-bold text-white mb-3 font-mono">SCHEDULE A CALL</h3>
+              <p className="text-gray-400 font-mono text-sm mb-6 leading-relaxed">
+                Book a direct consultation with our team
               </p>
-              <button className="text-[var(--night-vision)] font-mono text-sm hover:text-glow transition-all">
-                CALENDAR LINK →
-              </button>
-            </div>
+              <CTAButton href="/contact" variant="secondary" size="sm">
+                CALENDAR LINK
+              </CTAButton>
+            </article>
 
-            <div className="border border-[var(--tactical-green)] bg-black p-6 text-center hover:border-[var(--night-vision)] transition-tactical">
-              <div className="w-16 h-16 border-2 border-[var(--night-vision)] flex items-center justify-center text-[var(--night-vision)] text-2xl mx-auto mb-4">
-                🔐
+            <article className="border-2 border-[var(--tactical-green-dark)] bg-black p-8 text-center hover:border-[var(--tactical-green)] transition-all duration-300 stalk-in" style={{ animationDelay: '0.2s' }}>
+              <div className="w-16 h-16 border-2 border-[var(--night-vision)] flex items-center justify-center text-3xl mx-auto mb-6">
+                💼
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 font-mono">PGP KEY</h3>
-              <p className="text-gray-400 font-mono text-sm mb-4">
-                Download our public key for encrypted email
+              <h3 className="text-xl font-bold text-white mb-3 font-mono">LINKEDIN</h3>
+              <p className="text-gray-400 font-mono text-sm mb-6 leading-relaxed">
+                Connect with our leadership team
               </p>
-              <button className="text-[var(--night-vision)] font-mono text-sm hover:text-glow transition-all">
-                DOWNLOAD KEY →
-              </button>
-            </div>
+              <a
+                href="https://www.linkedin.com/company/clawpoint"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <CTAButton href="https://www.linkedin.com/company/clawpoint" variant="secondary" size="sm">
+                  CONNECT
+                </CTAButton>
+              </a>
+            </article>
 
-            <div className="border border-[var(--tactical-green)] bg-black p-6 text-center hover:border-[var(--night-vision)] transition-tactical">
-              <div className="w-16 h-16 border-2 border-[var(--night-vision)] flex items-center justify-center text-[var(--night-vision)] text-2xl mx-auto mb-4">
-                💬
+            <article className="border-2 border-[var(--tactical-green-dark)] bg-black p-8 text-center hover:border-[var(--tactical-green)] transition-all duration-300 stalk-in" style={{ animationDelay: '0.3s' }}>
+              <div className="w-16 h-16 border-2 border-[var(--night-vision)] flex items-center justify-center text-3xl mx-auto mb-6">
+                ✉️
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 font-mono">SIGNAL</h3>
-              <p className="text-gray-400 font-mono text-sm mb-4">
-                Secure messaging for urgent matters
+              <h3 className="text-xl font-bold text-white mb-3 font-mono">CEO DIRECT</h3>
+              <p className="text-gray-400 font-mono text-sm mb-6 leading-relaxed">
+                Reach out to our CEO directly
               </p>
-              <button className="text-[var(--night-vision)] font-mono text-sm hover:text-glow transition-all">
-                GET NUMBER →
-              </button>
-            </div>
+              <a
+                href="mailto:will.smith@clawpointsecuritycollective.com"
+                className="inline-block"
+              >
+                <CTAButton href="mailto:will.smith@clawpointsecuritycollective.com" variant="secondary" size="sm">
+                  EMAIL WILL
+                </CTAButton>
+              </a>
+            </article>
           </div>
         </div>
       </section>
 
-      {/* Response Time */}
-      <section className="relative py-56 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-black via-[var(--tactical-green-dark)] to-black">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6 font-mono tracking-wider">
-            RAPID RESPONSE GUARANTEE
+      {/* Final CTA */}
+      <section className="relative py-40 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/AdobeStock_352206247.jpeg"
+            alt=""
+            fill
+            className="object-cover opacity-15 mix-blend-screen"
+          />
+        </div>
+
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <div className="mb-12">
+            <div className="inline-block w-20 h-20 border-2 border-[var(--night-vision)] mb-8 eye-glow predator-movement" />
+          </div>
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-10 font-mono tracking-wider">
+            READY TO SECURE YOUR MISSION?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 font-mono leading-relaxed">
-            We understand that security threats do not wait for business hours.
+
+          <p className="text-lg md:text-xl text-gray-300 mb-16 font-mono leading-relaxed max-w-3xl mx-auto">
+            Let&apos;s discuss how we can align your security posture with your mission objectives.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border-2 border-[var(--tactical-green)] bg-black/50 backdrop-blur-sm p-8">
-              <div className="text-5xl font-bold text-[var(--night-vision)] mb-2 font-mono">
-                &lt; 4 hours
-              </div>
-              <div className="text-sm text-gray-400 font-mono">GENERAL INQUIRIES</div>
-            </div>
-
-            <div className="border-2 border-white bg-white/10 p-8">
-              <div className="text-5xl font-bold text-white mb-2 font-mono eye-glow">
-                &lt; 15 min
-              </div>
-              <div className="text-sm text-gray-400 font-mono">EMERGENCY RESPONSE</div>
-            </div>
+          <div className="pt-20 border-t border-[var(--tactical-green-dark)]">
+            <p className="text-sm text-gray-500 font-mono tracking-wider">
+              ENCRYPTED COMMUNICATIONS | ZERO KNOWLEDGE | ALWAYS VIGILANT
+            </p>
           </div>
         </div>
       </section>
