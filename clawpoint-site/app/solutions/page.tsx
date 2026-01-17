@@ -3,9 +3,9 @@ import SolutionCard from '@/components/SolutionCard'
 import CTAButton from '@/components/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'Solutions | Clawpoint Security',
+  title: 'Solutions | Cyber Strategy Consultants',
   description:
-    'Strategic cybersecurity solutions designed for business-critical protection. Security assessment, tech stack defense, and protection assurance.',
+    'Mission-centric assurance, cyber operations design, and security architecture services. We transform compliance into operational advantage.',
 }
 
 export default function SolutionsPage() {
@@ -19,16 +19,15 @@ export default function SolutionsPage() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-block border border-[var(--night-vision)] px-4 py-2 mb-6 font-mono text-xs text-[var(--night-vision)] bg-black/50 backdrop-blur-sm">
             <span className="inline-block w-2 h-2 bg-[var(--night-vision)] rounded-full mr-2 eye-glow" />
-            BUSINESS CRITICAL CAPABILITIES
+            OUR SERVICES
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider">
-            STRATEGIC <span className="text-[var(--night-vision)] text-glow">SOLUTIONS</span>
+            EMPOWER YOUR <span className="text-[var(--night-vision)] text-glow">CYBER STRATEGY</span> WITH CSC
           </h1>
 
           <p className="text-xl text-gray-300 leading-relaxed font-mono">
-            Precision-engineered security services for organizations that cannot afford
-            compromise. Every solution is objective-focused, threat-aware, and operationally sound.
+            We turn frameworks into force multipliers—linking controls to real threats, workflows, and outcomes.
           </p>
         </div>
       </section>
@@ -36,15 +35,6 @@ export default function SolutionsPage() {
       {/* Core Solutions */}
       <section id="core-solutions" className="relative py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono tracking-wider">
-              PROTECTION ASSURANCE SUITE
-            </h2>
-            <p className="text-xl text-gray-300 font-mono">
-              COMPREHENSIVE SECURITY SERVICES
-            </p>
-          </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <SolutionCard
               icon={
@@ -62,14 +52,14 @@ export default function SolutionsPage() {
                   />
                 </svg>
               }
-              title="THREAT TRACKING"
-              description="Continuous threat hunting and vulnerability assessment. We identify weaknesses before adversaries exploit them."
+              title="MISSION-CENTRIC ASSURANCE"
+              description="Compliance reframed as operational advantage. We turn frameworks into force multipliers—linking RMF/CSF/FedRAMP controls to real threats, real workflows, and real outcomes. Instead of paperwork for auditors, you get instruments for operators: control sets tied to attack paths, evidence pipelines that auto-collect from your stack, and metrics that track readiness the same way you track revenue. The result is assurance that moves with the mission—faster approvals, cleaner risk decisions, and controls that harden every day you use them."
               features={[
-                'Real-time vulnerability scanning',
-                'Penetration testing and red team engagements',
-                'Threat intelligence integration',
-                'Attack surface mapping',
-                'Zero-day threat monitoring',
+                'RMF/CSF/FedRAMP framework integration',
+                'Control sets tied to attack paths',
+                'Automated evidence pipelines',
+                'Revenue-style readiness metrics',
+                'Faster approvals and cleaner risk decisions',
               ]}
             />
 
@@ -85,18 +75,20 @@ export default function SolutionsPage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
                   />
                 </svg>
               }
-              title="TECH STACK DEFENSE"
-              description="Comprehensive security hardening for your entire technology ecosystem. From infrastructure to application layer."
+              title="CYBER OPERATIONS DESIGN"
+              description="Build what matters. Lead what you design. We help you architect cyber programs that actually ship outcomes—operating models, playbooks, and automation that scale with your business. From intake and triage to incident response and recovery, we define crisp roles, measurable SLAs, and 'detectors-to-decisions' workflows that reduce dwell time. Expect tight SIEM/SOAR integrations, purple-team feedback loops, and dashboards that turn KPIs into action. We'll coach your leaders to run the mission, not the fire drill—so your team owns the design and the results."
               features={[
-                'Infrastructure security assessment',
-                'Application security testing',
-                'Cloud security posture management',
-                'Container and Kubernetes security',
-                'API security validation',
+                'Operating models and playbooks',
+                'Scalable automation',
+                'Crisp roles and measurable SLAs',
+                '"Detectors-to-decisions" workflows',
+                'SIEM/SOAR integrations',
+                'Purple-team feedback loops',
+                'Actionable KPI dashboards',
               ]}
             />
 
@@ -112,18 +104,26 @@ export default function SolutionsPage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                   />
                 </svg>
               }
-              title="COMPLIANCE SERVICES"
-              description="Automated compliance management that bridges the gap between checkboxes and actual security."
+              title="SECURITY ARCHITECTURE & THREAT INTELLIGENCE"
+              description="Infinite View is our concept-stage analyst augmentation tool—built to bridge telemetry gaps, normalize chaos, and slash time-to-decision in mission-first environments. It stitches together alerts, logs, identity, and intel into a single, living picture of risk—ranked by business impact and mapped to ATT&CK. Instead of swivel-chair hunting, analysts get a guided path from signal to story to action."
               features={[
-                'SOC 2, ISO 27001, FedRAMP compliance',
-                'Continuous compliance monitoring',
-                'Automated evidence collection',
-                'Gap analysis and remediation',
-                'Audit preparation and support',
+                'Bridges telemetry gaps',
+                'Normalizes chaos across systems',
+                'Reduces time-to-decision',
+                'Unifies alerts, logs, identity, and intel',
+                'Business impact-ranked risk view',
+                'ATT&CK framework mapping',
+                'Guided workflow from signal to action',
               ]}
             />
           </div>
@@ -347,17 +347,17 @@ export default function SolutionsPage() {
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-black via-[var(--tactical-green-dark)] to-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono tracking-wider">
-            ACTIVATE SOLUTIONS
+            READY TO DESIGN YOUR NEXT MOVE?
           </h2>
           <p className="text-xl text-gray-300 mb-12 font-mono leading-relaxed">
-            Every second your security gaps remain open, threats move closer. Engage now.
+            Join the Hunt
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <CTAButton href="/contact" variant="alert" size="lg">
-              REQUEST STRATEGIC ASSESSMENT
+              CONTACT US
             </CTAButton>
             <CTAButton href="/about" variant="secondary" size="lg">
-              MEET THE TEAM
+              LEARN MORE
             </CTAButton>
           </div>
         </div>
