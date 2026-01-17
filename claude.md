@@ -214,3 +214,39 @@ Before marking any task as complete, MUST use:
 - **React Expert**: Validate code follows React best practices
 
 Document all validation results in the session log.
+
+## Git Workflow (CRITICAL)
+
+**ALWAYS follow this workflow before pushing any changes:**
+
+### Before Every Push:
+
+1. **Fetch and pull the latest main branch**
+   ```bash
+   git fetch origin
+   git checkout main
+   git pull origin main
+   ```
+
+2. **Return to your feature branch**
+   ```bash
+   git checkout <your-feature-branch>
+   ```
+
+3. **Rebase your branch onto main**
+   ```bash
+   git rebase main
+   ```
+   - Resolve any conflicts that arise
+   - Use `git rebase --continue` after resolving conflicts
+   - Use `git rebase --abort` if you need to start over
+
+4. **Push your changes**
+   - For new branches: `git push origin <branch-name>`
+   - For rebased branches: `git push origin <branch-name> --force-with-lease`
+
+### Important Notes:
+- **NEVER push without rebasing onto main first**
+- This ensures your branch is always up-to-date with the latest changes
+- Prevents merge conflicts and "branch behind main" issues
+- Use `--force-with-lease` (NOT `--force`) when pushing after rebase to protect against overwriting others' work
