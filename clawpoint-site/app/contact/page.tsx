@@ -215,12 +215,12 @@ export default function ContactPage() {
                     EMAIL
                   </h3>
                   <p className="text-white font-mono text-lg">General Inquiries</p>
-                  <a href="mailto:contact@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors">
-                    contact@clawpointsecuritycollective.com
+                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors">
+                    CSC_growth@clawpointsecuritycollective.com
                   </a>
                   <p className="text-white font-mono text-lg mt-4">Business Development</p>
-                  <a href="mailto:business@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors">
-                    business@clawpointsecuritycollective.com
+                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors">
+                    CSC_growth@clawpointsecuritycollective.com
                   </a>
                 </div>
 
@@ -483,14 +483,14 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3 font-mono">CEO DIRECT</h3>
               <p className="text-gray-400 font-mono text-sm mb-6 leading-relaxed">
-                Reach out to our CEO directly
+                Reach out to our leadership team directly
               </p>
               <a
-                href="mailto:will.smith@clawpointsecuritycollective.com"
+                href="mailto:CSC_growth@clawpointsecuritycollective.com"
                 className="inline-block"
               >
-                <CTAButton href="mailto:will.smith@clawpointsecuritycollective.com" variant="secondary" size="sm">
-                  EMAIL WILL
+                <CTAButton href="mailto:CSC_growth@clawpointsecuritycollective.com" variant="secondary" size="sm">
+                  EMAIL US
                 </CTAButton>
               </a>
             </article>

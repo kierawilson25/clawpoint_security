@@ -252,7 +252,7 @@ Proprietary - Clawpoint Security
 ## Contact
 
 For questions or support regarding this website:
-- Email: contact@clawpoint.security
+- Email: CSC_growth@clawpointsecuritycollective.com
 - Emergency: 1-800-CLAW-911
 
 ---

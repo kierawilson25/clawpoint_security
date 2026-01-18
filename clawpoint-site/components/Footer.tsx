@@ -3,24 +3,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-const navigationLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/solutions', label: 'Solutions' },
-  { href: '/careers', label: 'Careers' },
-  { href: '/information', label: 'Information' },
-  { href: '/infinite-view', label: 'Infinite View' },
-  { href: '/contact', label: 'Contact' }
-]
-
 const contactInfo = [
-  { label: 'Email', value: 'contact@clawpoint.security', href: 'mailto:contact@clawpoint.security' },
+  { label: 'Email', value: 'CSC_growth@clawpointsecuritycollective.com', href: 'mailto:CSC_growth@clawpointsecuritycollective.com' },
   { label: 'Phone', value: '+1 (555) PREDATOR', href: 'tel:+15557733286' },
   { label: 'Location', value: 'Classified', href: null }
 ]
 
 const socialLinks = [
-  { label: 'LinkedIn', href: '#', icon: 'LI' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/company/clawpoint/', icon: 'LI' },
   { label: 'Twitter/X', href: '#', icon: 'X' },
   { label: 'GitHub', href: '#', icon: 'GH' }
 ]
@@ -40,7 +30,7 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-tactical-green-dark">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-tactical-green-dark">
           {/* Logo & Tagline */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-3 group mb-6">
@@ -68,27 +58,6 @@ export default function Footer() {
               <span className="inline-block w-2 h-2 bg-night-vision rounded-full eye-glow animate-pulse" />
               HUNTERS READY
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-white font-mono font-bold text-sm tracking-wider uppercase mb-6 relative inline-block">
-              Quick Navigation
-              <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-night-vision to-transparent" />
-            </h3>
-            <ul className="space-y-3">
-              {navigationLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 font-mono text-sm hover:text-night-vision transition-colors duration-300 inline-flex items-center gap-2 group"
-                  >
-                    <span className="w-1 h-1 bg-tactical-green group-hover:bg-night-vision transition-colors duration-300" />
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Contact Info */}
