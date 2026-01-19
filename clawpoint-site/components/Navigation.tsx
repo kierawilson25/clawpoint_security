@@ -10,7 +10,7 @@ const navigationLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/solutions', label: 'Solutions' },
-  { href: '/information', label: 'Information' },
+  // { href: '/information', label: 'Information' }, // Commented out for now
   { href: '/infinite-view', label: 'Infinite View' },
   { href: '/contact', label: 'Contact' }
 ]
