@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import CTAButton from '@/components/CTAButton'
+import DownloadBrief from '@/components/DownloadBrief'
 
 export default function AboutPage() {
   const [eyesVisible, setEyesVisible] = useState(false)
@@ -440,6 +441,8 @@ export default function AboutPage() {
           <p className="text-base md:text-lg text-gray-300 mb-12 font-mono leading-relaxed max-w-3xl mx-auto">
             Let&apos;s discuss how we can align your security posture with your mission objectives.
           </p>
+
+          <DownloadBrief variant="banner" className="mb-16" />
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <CTAButton href="/contact" variant="alert" size="lg">

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import CTAButton from '@/components/CTAButton'
+import DownloadBrief from '@/components/DownloadBrief'
 
 export default function ContactPage() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -509,6 +510,8 @@ export default function ContactPage() {
           <p className="text-lg md:text-xl text-gray-300 mb-16 font-mono leading-relaxed max-w-3xl mx-auto">
             Let&apos;s discuss how we can align your security posture with your mission objectives.
           </p>
+
+          <DownloadBrief variant="banner" className="mb-16" />
 
           <div className="pt-20 border-t border-[var(--tactical-green-dark)]">
             <p className="text-sm text-gray-500 font-mono tracking-wider">

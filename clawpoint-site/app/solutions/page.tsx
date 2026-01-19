@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import SolutionCard from '@/components/SolutionCard'
 import CTAButton from '@/components/CTAButton'
+import DownloadBrief from '@/components/DownloadBrief'
 
 export const metadata: Metadata = {
   title: 'Solutions | Cyber Strategy Consultants',
@@ -217,6 +218,9 @@ export default function SolutionsPage() {
           <p className="text-xl text-gray-300 mb-12 font-mono leading-relaxed">
             Join the Hunt
           </p>
+
+          <DownloadBrief variant="banner" className="mb-16" />
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <CTAButton href="/contact" variant="alert" size="lg">
               CONTACT US
