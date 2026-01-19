@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import CTAButton from '@/components/CTAButton'
+import DownloadBrief from '@/components/DownloadBrief'
 
 export default function ContactPage() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -215,12 +216,12 @@ export default function ContactPage() {
                     EMAIL
                   </h3>
                   <p className="text-white font-mono text-lg">General Inquiries</p>
-                  <a href="mailto:contact@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors">
-                    contact@clawpointsecuritycollective.com
+                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors">
+                    CSC_growth@clawpointsecuritycollective.com
                   </a>
                   <p className="text-white font-mono text-lg mt-4">Business Development</p>
-                  <a href="mailto:business@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors">
-                    business@clawpointsecuritycollective.com
+                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors">
+                    CSC_growth@clawpointsecuritycollective.com
                   </a>
                 </div>
 
@@ -465,16 +466,9 @@ export default function ContactPage() {
               <p className="text-gray-400 font-mono text-sm mb-6 leading-relaxed">
                 Connect with our leadership team
               </p>
-              <a
-                href="https://www.linkedin.com/company/clawpoint"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <CTAButton href="https://www.linkedin.com/company/clawpoint" variant="secondary" size="sm">
-                  CONNECT
-                </CTAButton>
-              </a>
+              <CTAButton href="https://www.linkedin.com/company/clawpoint" variant="secondary" size="sm">
+                CONNECT
+              </CTAButton>
             </article>
 
             <article className="border-2 border-[var(--tactical-green-dark)] bg-black p-8 text-center hover:border-[var(--tactical-green)] transition-all duration-300 stalk-in" style={{ animationDelay: '0.3s' }}>
@@ -483,16 +477,11 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3 font-mono">CEO DIRECT</h3>
               <p className="text-gray-400 font-mono text-sm mb-6 leading-relaxed">
-                Reach out to our CEO directly
+                Reach out to our leadership team directly
               </p>
-              <a
-                href="mailto:will.smith@clawpointsecuritycollective.com"
-                className="inline-block"
-              >
-                <CTAButton href="mailto:will.smith@clawpointsecuritycollective.com" variant="secondary" size="sm">
-                  EMAIL WILL
-                </CTAButton>
-              </a>
+              <CTAButton href="mailto:CSC_growth@clawpointsecuritycollective.com" variant="secondary" size="sm">
+                EMAIL US
+              </CTAButton>
             </article>
           </div>
         </div>
@@ -521,6 +510,8 @@ export default function ContactPage() {
           <p className="text-lg md:text-xl text-gray-300 mb-16 font-mono leading-relaxed max-w-3xl mx-auto">
             Let&apos;s discuss how we can align your security posture with your mission objectives.
           </p>
+
+          <DownloadBrief variant="banner" className="mb-16" />
 
           <div className="pt-20 border-t border-[var(--tactical-green-dark)]">
             <p className="text-sm text-gray-500 font-mono tracking-wider">

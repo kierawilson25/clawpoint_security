@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import EyeAnimation from '@/components/EyeAnimation'
 import CTAButton from '@/components/CTAButton'
+import DownloadBrief from '@/components/DownloadBrief'
 
 export default function InfiniteViewPage() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -236,6 +237,8 @@ export default function InfiniteViewPage() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-10 font-mono tracking-wider">
             Ready to design your next move? <span className="text-[var(--night-vision)]">Join the Hunt</span>
           </h2>
+
+          <DownloadBrief variant="banner" className="mb-16" />
 
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
             <CTAButton href="/contact" variant="alert" size="lg">

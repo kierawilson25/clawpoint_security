@@ -10,7 +10,7 @@ const navigationLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/solutions', label: 'Solutions' },
-  { href: '/information', label: 'Information' },
+  // { href: '/information', label: 'Information' }, // Commented out for now
   { href: '/infinite-view', label: 'Infinite View' },
   { href: '/contact', label: 'Contact' }
 ]
@@ -140,7 +140,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed inset-0 top-20 bg-black/98 backdrop-blur-lg transition-all duration-500 ${
+        className={`lg:hidden fixed inset-0 top-24 bg-black/98 backdrop-blur-lg transition-all duration-500 ${
           isMenuOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'

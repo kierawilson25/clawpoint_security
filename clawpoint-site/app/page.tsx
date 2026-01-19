@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import CTAButton from '@/components/CTAButton'
+import DownloadBrief from '@/components/DownloadBrief'
 
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -410,6 +411,8 @@ export default function Home() {
             The threats are real. The stakes are high. Your business cannot afford security gaps.
             Let&apos;s eliminate them together.
           </p>
+
+          <DownloadBrief variant="banner" className="mb-16" />
 
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20">
             <CTAButton href="/contact" variant="alert" size="lg">

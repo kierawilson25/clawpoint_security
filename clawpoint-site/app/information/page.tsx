@@ -230,43 +230,6 @@ export default function InformationPage() {
         </div>
       </section>
 
-      {/* Topics */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-black via-[var(--tactical-green-dark)] to-black">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono tracking-wider">
-              INTELLIGENCE CATEGORIES
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              'THREAT INTELLIGENCE',
-              'INCIDENT RESPONSE',
-              'CLOUD SECURITY',
-              'CONTAINER DEFENSE',
-              'COMPLIANCE',
-              'THREAT HUNTING',
-              'RED TEAM HUNTS',
-              'DEVSECOPS',
-              'ZERO TRUST',
-              'API SECURITY',
-              'SUPPLY CHAIN',
-              'HUNTING TACTICS',
-            ].map((topic, index) => (
-              <div
-                key={index}
-                className="border border-[var(--tactical-green-dark)] bg-black px-4 py-3 text-center hover:border-[var(--night-vision)] hover:bg-[var(--tactical-green-dark)]/20 transition-tactical cursor-pointer"
-              >
-                <span className="text-gray-400 hover:text-white font-mono text-xs tracking-wider transition-colors">
-                  {topic}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
