@@ -465,16 +465,9 @@ export default function ContactPage() {
               <p className="text-gray-400 font-mono text-sm mb-6 leading-relaxed">
                 Connect with our leadership team
               </p>
-              <a
-                href="https://www.linkedin.com/company/clawpoint"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <CTAButton href="https://www.linkedin.com/company/clawpoint" variant="secondary" size="sm">
-                  CONNECT
-                </CTAButton>
-              </a>
+              <CTAButton href="https://www.linkedin.com/company/clawpoint" variant="secondary" size="sm">
+                CONNECT
+              </CTAButton>
             </article>
 
             <article className="border-2 border-[var(--tactical-green-dark)] bg-black p-8 text-center hover:border-[var(--tactical-green)] transition-all duration-300 stalk-in" style={{ animationDelay: '0.3s' }}>
@@ -485,14 +478,9 @@ export default function ContactPage() {
               <p className="text-gray-400 font-mono text-sm mb-6 leading-relaxed">
                 Reach out to our leadership team directly
               </p>
-              <a
-                href="mailto:CSC_growth@clawpointsecuritycollective.com"
-                className="inline-block"
-              >
-                <CTAButton href="mailto:CSC_growth@clawpointsecuritycollective.com" variant="secondary" size="sm">
-                  EMAIL US
-                </CTAButton>
-              </a>
+              <CTAButton href="mailto:CSC_growth@clawpointsecuritycollective.com" variant="secondary" size="sm">
+                EMAIL US
+              </CTAButton>
             </article>
           </div>
         </div>
