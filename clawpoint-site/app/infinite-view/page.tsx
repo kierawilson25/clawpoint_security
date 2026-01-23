@@ -59,7 +59,7 @@ export default function InfiniteViewPage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.2s' }}>
-            Cut noise. <span className="text-[var(--night-vision)]">Reduce cognitive load.</span> Outpace threats.
+            CUT NOISE. <span className="text-[var(--night-vision)]">REDUCE COGNITIVE LOAD.</span> OUTPACE THREATS.
           </h1>
         </div>
       </section>
