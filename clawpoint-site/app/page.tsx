@@ -250,12 +250,12 @@ export default function Home() {
 
               {/* Metric 3 */}
               <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.3s' }}>
-                <div className="credential-shine relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
-                  <div className="text-4xl md:text-5xl font-bold text-[var(--night-vision)] font-mono mb-4">
+                <div className="credential-shine relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 overflow-hidden" aria-hidden="true" />
+                  <div className="text-4xl md:text-5xl font-bold text-[var(--night-vision)] font-mono mb-4 relative">
                     ACCELERATED
                   </div>
-                  <p className="text-base text-gray-300 font-mono leading-relaxed">
+                  <p className="text-base text-gray-300 font-mono leading-relaxed relative">
                     Authorization delivery across multiple enclaves
                   </p>
                 </div>
