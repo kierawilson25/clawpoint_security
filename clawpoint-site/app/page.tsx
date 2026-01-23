@@ -212,6 +212,57 @@ export default function Home() {
             we secure the gaps others miss.
           </p>
 
+          {/* Past Performance Snapshot */}
+          <section aria-labelledby="performance-heading" className="mt-20 mb-24 max-w-6xl mx-auto relative">
+            <div className="text-center mb-12">
+              <h2 id="performance-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-4">
+                PAST PERFORMANCE SNAPSHOT
+              </h2>
+              <div className="w-24 h-px bg-gradient-to-r from-transparent via-[var(--night-vision)] to-transparent mx-auto" aria-hidden="true" />
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Metric 1 */}
+              <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.1s' }}>
+                <div className="credential-shine relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
+                  <div className="text-5xl md:text-6xl font-bold text-[var(--night-vision)] font-mono mb-4">
+                    300K+
+                  </div>
+                  <p className="text-base text-gray-300 font-mono leading-relaxed">
+                    Users supported across enterprise environments
+                  </p>
+                </div>
+              </article>
+
+              {/* Metric 2 */}
+              <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.2s' }}>
+                <div className="credential-shine relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
+                  <div className="text-5xl md:text-6xl font-bold text-[var(--night-vision)] font-mono mb-4">
+                    22,000
+                  </div>
+                  <p className="text-base text-gray-300 font-mono leading-relaxed">
+                    Privileged accounts secured
+                  </p>
+                </div>
+              </article>
+
+              {/* Metric 3 */}
+              <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.3s' }}>
+                <div className="credential-shine relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
+                  <div className="text-4xl md:text-5xl font-bold text-[var(--night-vision)] font-mono mb-4">
+                    ACCELERATED
+                  </div>
+                  <p className="text-base text-gray-300 font-mono leading-relaxed">
+                    Authorization delivery across multiple enclaves
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
           {/* Tactical Credentials Readout */}
           <section aria-labelledby="credentials-heading" className="mt-20 space-y-8 max-w-6xl mx-auto relative">
             {/* Visually hidden heading for screen readers */}
@@ -357,57 +408,6 @@ export default function Home() {
 
             {/* Bottom accent line */}
             <div className="w-full h-px bg-gradient-to-r from-transparent via-[var(--tactical-green)] to-transparent opacity-40 mt-12" aria-hidden="true" />
-          </section>
-
-          {/* Past Performance Snapshot */}
-          <section aria-labelledby="performance-heading" className="mt-24 max-w-6xl mx-auto relative">
-            <div className="text-center mb-12">
-              <h2 id="performance-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-4">
-                PAST PERFORMANCE SNAPSHOT
-              </h2>
-              <div className="w-24 h-px bg-gradient-to-r from-transparent via-[var(--night-vision)] to-transparent mx-auto" aria-hidden="true" />
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Metric 1 */}
-              <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.1s' }}>
-                <div className="credential-shine relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
-                  <div className="text-5xl md:text-6xl font-bold text-[var(--night-vision)] font-mono mb-4">
-                    300K+
-                  </div>
-                  <p className="text-base text-gray-300 font-mono leading-relaxed">
-                    Users supported across enterprise environments
-                  </p>
-                </div>
-              </article>
-
-              {/* Metric 2 */}
-              <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.2s' }}>
-                <div className="credential-shine relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
-                  <div className="text-5xl md:text-6xl font-bold text-[var(--night-vision)] font-mono mb-4">
-                    22,000
-                  </div>
-                  <p className="text-base text-gray-300 font-mono leading-relaxed">
-                    Privileged accounts secured
-                  </p>
-                </div>
-              </article>
-
-              {/* Metric 3 */}
-              <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.3s' }}>
-                <div className="credential-shine relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
-                  <div className="text-4xl md:text-5xl font-bold text-[var(--night-vision)] font-mono mb-4">
-                    ACCELERATED
-                  </div>
-                  <p className="text-base text-gray-300 font-mono leading-relaxed">
-                    Authorization delivery across multiple enclaves
-                  </p>
-                </div>
-              </article>
-            </div>
           </section>
 
           {/* CTA Buttons */}

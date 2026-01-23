@@ -10,9 +10,7 @@ const contactInfo = [
 ]
 
 const socialLinks = [
-  { label: 'LinkedIn', href: 'https://linkedin.com/company/clawpoint/', icon: 'LI' },
-  { label: 'Twitter/X', href: '#', icon: 'X' },
-  { label: 'GitHub', href: '#', icon: 'GH' }
+  { label: 'LinkedIn', href: 'https://linkedin.com/company/clawpoint/', icon: 'LI' }
 ]
 
 export default function Footer() {
