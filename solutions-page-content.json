@@ -1,0 +1,183 @@
+{
+  "title": "Solutions | Cyber Strategy Consultants",
+  "url": "https://www.clawpointsecuritycollective.com/solutions",
+  "navigation": [
+    {
+      "text": "Clawpoint Security",
+      "href": "https://www.clawpointsecuritycollective.com"
+    },
+    {
+      "text": "Collective",
+      "href": "https://www.clawpointsecuritycollective.com"
+    },
+    {
+      "text": "Contact Us",
+      "href": "https://www.clawpointsecuritycollective.com/aboutus"
+    }
+  ],
+  "hero": {
+    "text": "Our Services\nEmpower Your Cyber Strategy with CSC",
+    "hasImage": true,
+    "imageAlt": ""
+  },
+  "sections": [
+    {
+      "index": 1,
+      "text": "Our Services\nEmpower Your Cyber Strategy with CSC",
+      "headings": [
+        "Our Services",
+        "Empower Your Cyber Strategy with CSC"
+      ],
+      "hasImages": true,
+      "imageCount": 1
+    },
+    {
+      "index": 2,
+      "text": "Our Services\nEmpower Your Cyber Strategy with CSC",
+      "headings": [
+        "Our Services",
+        "Empower Your Cyber Strategy with CSC"
+      ],
+      "hasImages": true,
+      "imageCount": 1
+    },
+    {
+      "index": 3,
+      "text": "Mission-Centric Assurance\n\nCompliance reframed as operational advantage. We turn frameworks into force multipliers—linking RMF/CSF/FedRAMP controls to real threats, real workflows, and real outcomes. Instead of paperwork for auditors, you get instruments for operators: control sets tied to attack paths, evidence pipelines that auto-collect from your stack, and metrics that track readiness the same way you track revenue. The result is assurance that moves with the mission—faster approvals, cleaner risk decisions, and controls that harden every day you use them.\n\nCyber Operations Design\n\nBuild what matters. Lead what you design. We help you architect cyber programs that actually ship outcomes—operating models, playbooks, and automation that scale with your business. From intake and triage to incident response and recovery, we define crisp roles, measurable SLAs, and “detectors-to-decisions” workflows that reduce dwell time. Expect tight SIEM/SOAR integrations, purple-team feedback loops, and dashboards that turn KPIs into action. We’ll coach your leaders to run the mission, not the fire drill—so your team owns the design and the results.\n\nSecurity Architecture & Threat Intelligence\n\nInfinite View is our concept-stage analyst augmentation tool—built to bridge telemetry gaps, normalize chaos, and slash time-to-decision in mission-first environments. It stitches together alerts, logs, identity, and intel into a single, living picture of risk—ranked by business impact and mapped to ATT&CK. Instead of swivel-chair hunting, analysts get a guided path from signal to story to action.",
+      "headings": [
+        "Mission-Centric Assurance",
+        "Cyber Operations Design",
+        "Security Architecture & Threat Intelligence"
+      ],
+      "hasImages": true,
+      "imageCount": 3
+    },
+    {
+      "index": 4,
+      "text": "Mission-Centric Assurance\n\nCompliance reframed as operational advantage. We turn frameworks into force multipliers—linking RMF/CSF/FedRAMP controls to real threats, real workflows, and real outcomes. Instead of paperwork for auditors, you get instruments for operators: control sets tied to attack paths, evidence pipelines that auto-collect from your stack, and metrics that track readiness the same way you track revenue. The result is assurance that moves with the mission—faster approvals, cleaner risk decisions, and controls that harden every day you use them.",
+      "headings": [
+        "Mission-Centric Assurance"
+      ],
+      "hasImages": true,
+      "imageCount": 1
+    },
+    {
+      "index": 5,
+      "text": "Cyber Operations Design\n\nBuild what matters. Lead what you design. We help you architect cyber programs that actually ship outcomes—operating models, playbooks, and automation that scale with your business. From intake and triage to incident response and recovery, we define crisp roles, measurable SLAs, and “detectors-to-decisions” workflows that reduce dwell time. Expect tight SIEM/SOAR integrations, purple-team feedback loops, and dashboards that turn KPIs into action. We’ll coach your leaders to run the mission, not the fire drill—so your team owns the design and the results.",
+      "headings": [
+        "Cyber Operations Design"
+      ],
+      "hasImages": true,
+      "imageCount": 1
+    },
+    {
+      "index": 6,
+      "text": "Security Architecture & Threat Intelligence\n\nInfinite View is our concept-stage analyst augmentation tool—built to bridge telemetry gaps, normalize chaos, and slash time-to-decision in mission-first environments. It stitches together alerts, logs, identity, and intel into a single, living picture of risk—ranked by business impact and mapped to ATT&CK. Instead of swivel-chair hunting, analysts get a guided path from signal to story to action.",
+      "headings": [
+        "Security Architecture & Threat Intelligence"
+      ],
+      "hasImages": true,
+      "imageCount": 1
+    }
+  ],
+  "footer": {
+    "text": "Ready to design\nyour next move?\n\nJoin the Hunt\n\nContact Us\n\n© 2025 by Clawpoint Security Collective. All Rights Reserved",
+    "links": [
+      {
+        "text": "Ready to design\nyour next move?",
+        "href": "https://www.clawpointsecuritycollective.com"
+      },
+      {
+        "text": "",
+        "href": "https://www.linkedin.com/company/11472503"
+      },
+      {
+        "text": "Contact Us",
+        "href": "https://www.clawpointsecuritycollective.com/aboutus"
+      }
+    ]
+  },
+  "allText": [
+    "Clawpoint Security",
+    "Collective",
+    "Contact Us",
+    "Our Services",
+    "Empower Your Cyber Strategy with CSC",
+    "Mission-Centric Assurance",
+    "Cyber Operations Design",
+    "Security Architecture & Threat Intelligence",
+    "Infinite View is our concept-stage analyst augmentation tool—built to bridge telemetry gaps, normalize chaos, and slash time-to-decision in mission-first environments. It stitches together alerts, logs, identity, and intel into a single, living picture of risk—ranked by business impact and mapped to ATT&CK. Instead of swivel-chair hunting, analysts get a guided path from signal to story to action.",
+    "Ready to design",
+    "your next move?",
+    "Join the Hunt",
+    "© 2025 by Clawpoint Security Collective. All Rights Reserved"
+  ],
+  "ctaButtons": [
+    {
+      "text": "Skip to Main Content",
+      "type": "BUTTON",
+      "classes": "SKIP_TO_CONTENT_BTN LHrbPP has-custom-focus",
+      "href": null
+    },
+    {
+      "text": "Contact Us",
+      "type": "A",
+      "classes": "uDW_Qe wixui-button PlZyDq",
+      "href": "https://www.clawpointsecuritycollective.com/aboutus"
+    },
+    {
+      "text": "Contact Us",
+      "type": "A",
+      "classes": "uDW_Qe wixui-button PlZyDq",
+      "href": "https://www.clawpointsecuritycollective.com/aboutus"
+    }
+  ],
+  "headings": {
+    "h1": [
+      {
+        "text": "Empower Your Cyber Strategy with CSC",
+        "level": "h1"
+      }
+    ],
+    "h2": [
+      {
+        "text": "Clawpoint Security Collective",
+        "level": "h2"
+      },
+      {
+        "text": "Our Services",
+        "level": "h2"
+      }
+    ],
+    "h3": [
+      {
+        "text": "Mission-Centric Assurance",
+        "level": "h3"
+      },
+      {
+        "text": "Cyber Operations Design",
+        "level": "h3"
+      },
+      {
+        "text": "Security Architecture & Threat Intelligence",
+        "level": "h3"
+      }
+    ],
+    "h4": [],
+    "h5": [],
+    "h6": [
+      {
+        "text": "Ready to design\nyour next move?",
+        "level": "h6"
+      }
+    ]
+  },
+  "paragraphs": [
+    "Compliance reframed as operational advantage. We turn frameworks into force multipliers—linking RMF/CSF/FedRAMP controls to real threats, real workflows, and real outcomes. Instead of paperwork for auditors, you get instruments for operators: control sets tied to attack paths, evidence pipelines that auto-collect from your stack, and metrics that track readiness the same way you track revenue. The result is assurance that moves with the mission—faster approvals, cleaner risk decisions, and controls that harden every day you use them.",
+    "Build what matters. Lead what you design. We help you architect cyber programs that actually ship outcomes—operating models, playbooks, and automation that scale with your business. From intake and triage to incident response and recovery, we define crisp roles, measurable SLAs, and “detectors-to-decisions” workflows that reduce dwell time. Expect tight SIEM/SOAR integrations, purple-team feedback loops, and dashboards that turn KPIs into action. We’ll coach your leaders to run the mission, not the fire drill—so your team owns the design and the results.",
+    "Infinite View is our concept-stage analyst augmentation tool—built to bridge telemetry gaps, normalize chaos, and slash time-to-decision in mission-first environments. It stitches together alerts, logs, identity, and intel into a single, living picture of risk—ranked by business impact and mapped to ATT&CK. Instead of swivel-chair hunting, analysts get a guided path from signal to story to action.",
+    "Join the Hunt",
+    "© 2025 by Clawpoint Security Collective. All Rights Reserved"
+  ],
+  "listItems": []
+}

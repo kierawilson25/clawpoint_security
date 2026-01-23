@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-01-19T03:13:04.333Z",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 3,
+    "isMobile": true,
+    "hasTouch": true
+  },
+  "tests": [
+    {
+      "page": "home",
+      "url": "http://localhost:3000/",
+      "tests": [
+        {
+          "test": "Hamburger Menu Exists",
+          "passed": true,
+          "details": {
+            "hamburgerExists": true,
+            "hamburgerVisible": true,
+            "mobileMenuExists": false,
+            "mobileMenuVisible": false,
+            "mobileMenuClasses": "not found"
+          }
+        },
+        {
+          "test": "Mobile Menu Overlay Coverage",
+          "passed": false,
+          "details": {
+            "error": "Mobile menu element not found"
+          }
+        },
+        {
+          "test": "Menu Items Present",
+          "passed": false,
+          "details": {
+            "itemCount": 0,
+            "items": []
+          }
+        },
+        {
+          "test": "Menu Closes Properly",
+          "passed": true,
+          "details": {
+            "menuVisible": false
+          }
+        }
+      ]
+    },
+    {
+      "page": "contact",
+      "url": "http://localhost:3000/contact",
+      "tests": [
+        {
+          "test": "Hamburger Menu Exists",
+          "passed": true,
+          "details": {
+            "hamburgerExists": true,
+            "hamburgerVisible": true,
+            "mobileMenuExists": false,
+            "mobileMenuVisible": false,
+            "mobileMenuClasses": "not found"
+          }
+        },
+        {
+          "test": "Mobile Menu Overlay Coverage",
+          "passed": false,
+          "details": {
+            "error": "Mobile menu element not found"
+          }
+        },
+        {
+          "test": "Menu Items Present",
+          "passed": false,
+          "details": {
+            "itemCount": 0,
+            "items": []
+          }
+        },
+        {
+          "test": "Menu Closes Properly",
+          "passed": true,
+          "details": {
+            "menuVisible": false
+          }
+        }
+      ]
+    }
+  ]
+}

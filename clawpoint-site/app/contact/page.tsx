@@ -162,9 +162,9 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.4s' }}>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.4s' }}>
             LET&apos;S START THE
-            <span className="block text-[var(--night-vision)] mt-4">
+            <span className="block text-[var(--night-vision)] text-glow mt-4">
               CONVERSATION
             </span>
           </h1>
@@ -215,21 +215,9 @@ export default function ContactPage() {
                   <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
                     EMAIL
                   </h3>
-                  <p className="text-white font-mono text-lg">General Inquiries</p>
                   <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors break-all">
                     CSC_growth@clawpointsecuritycollective.com
                   </a>
-                  <p className="text-white font-mono text-lg mt-4">Business Development</p>
-                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors break-all">
-                    CSC_growth@clawpointsecuritycollective.com
-                  </a>
-                </div>
-
-                <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">
-                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
-                    PHONE
-                  </h3>
-                  <p className="text-white font-mono text-lg">(703) 266-XXXX</p>
                 </div>
 
                 <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">

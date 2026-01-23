@@ -58,8 +58,8 @@ export default function InfiniteViewPage() {
             <EyeAnimation />
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.2s' }}>
-            CUT NOISE. <span className="text-[var(--night-vision)]">REDUCE COGNITIVE LOAD.</span> OUTPACE THREATS.
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.2s' }}>
+            CUT NOISE. <span className="text-[var(--night-vision)] text-glow">REDUCE COGNITIVE LOAD.</span> OUTPACE THREATS.
           </h1>
         </div>
       </section>

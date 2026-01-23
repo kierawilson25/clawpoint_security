@@ -86,9 +86,9 @@ export default function AboutPage() {
             <div className="inline-block w-10 h-10 border border-[var(--night-vision)] rotate-45 opacity-40 predator-movement" />
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.4s' }}>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.4s' }}>
             CLAWPOINT SECURITY
-            <span className="block text-[var(--night-vision)] mt-3">
+            <span className="block text-[var(--night-vision)] text-glow mt-3">
               COLLECTIVE
             </span>
           </h1>
