@@ -163,7 +163,7 @@ export default function AboutPage() {
               WHAT WE DO
             </h2>
             <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
-              CSC partners with mission-critical organizations to:
+              Clawpoint Security Collective partners with mission-critical organizations to:
             </p>
           </div>
 
@@ -355,7 +355,7 @@ export default function AboutPage() {
               WHO WE SERVE
             </h2>
             <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
-              CSC aligns with organizations that:
+              Clawpoint Security Collective aligns with organizations that:
             </p>
           </div>
 

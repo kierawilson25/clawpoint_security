@@ -4,7 +4,7 @@ import CTAButton from '@/components/CTAButton'
 import DownloadBrief from '@/components/DownloadBrief'
 
 export const metadata: Metadata = {
-  title: 'Solutions | Cyber Strategy Consultants',
+  title: 'Solutions | Clawpoint Security Collective',
   description:
     'Mission-centric assurance, cyber operations design, and security architecture services. We transform compliance into operational advantage.',
 }
@@ -24,7 +24,7 @@ export default function SolutionsPage() {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider">
-            EMPOWER YOUR <span className="text-[var(--night-vision)] text-glow">CYBER STRATEGY</span> WITH CSC
+            EMPOWER YOUR <span className="text-[var(--night-vision)] text-glow">CYBER STRATEGY</span> WITH CLAWPOINT SECURITY COLLECTIVE
           </h1>
 
           <p className="text-xl text-gray-300 leading-relaxed font-mono">
