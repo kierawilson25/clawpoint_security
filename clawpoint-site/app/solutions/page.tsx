@@ -37,8 +37,9 @@ export default function SolutionsPage() {
       <section id="core-solutions" className="relative py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 gap-12">
-            <SolutionCard
-              icon={
+            <div className="stalk-in" style={{ animationDelay: '0.1s' }}>
+              <SolutionCard
+                icon={
                 <svg
                   className="w-10 h-10"
                   fill="none"
@@ -62,9 +63,11 @@ export default function SolutionsPage() {
                 'Revenue-style readiness metrics',
                 'Faster approvals and cleaner risk decisions',
               ]}
-            />
+              />
+            </div>
 
-            <SolutionCard
+            <div className="stalk-in" style={{ animationDelay: '0.2s' }}>
+              <SolutionCard
               icon={
                 <svg
                   className="w-10 h-10"
@@ -91,9 +94,11 @@ export default function SolutionsPage() {
                 'Purple-team feedback loops',
                 'Actionable KPI dashboards',
               ]}
-            />
+              />
+            </div>
 
-            <SolutionCard
+            <div className="stalk-in" style={{ animationDelay: '0.3s' }}>
+              <SolutionCard
               icon={
                 <svg
                   className="w-10 h-10"
@@ -126,7 +131,8 @@ export default function SolutionsPage() {
                 'ATT&CK framework mapping',
                 'Guided workflow from signal to action',
               ]}
-            />
+              />
+            </div>
           </div>
         </div>
       </section>

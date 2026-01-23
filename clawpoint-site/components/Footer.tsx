@@ -5,7 +5,6 @@ import Image from 'next/image'
 
 const contactInfo = [
   { label: 'Email', value: 'CSC_growth@clawpointsecuritycollective.com', href: 'mailto:CSC_growth@clawpointsecuritycollective.com' },
-  { label: 'Phone', value: '+1 (757) 358-4044', href: 'tel:+17573584044' },
   { label: 'Location', value: 'Charlotte, NC', href: null }
 ]
 

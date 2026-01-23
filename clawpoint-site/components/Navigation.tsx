@@ -111,7 +111,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.5 group"
+            className="lg:hidden relative w-12 h-12 flex flex-col items-center justify-center gap-1.5 group"
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
           >
