@@ -358,9 +358,12 @@ body {
   outline-offset: 2px;
 }
 
-/* Text glow effect */
+/* Text glow effect - night vision aesthetic */
 .text-glow {
-  text-shadow: 0 0 10px currentColor;
+  text-shadow:
+    0 0 20px rgba(0, 255, 65, 0.8),
+    0 0 40px rgba(0, 255, 65, 0.6),
+    0 0 60px rgba(0, 255, 65, 0.4);
 }
 
 /* Pulse animation for CTAs - predator breathing */
