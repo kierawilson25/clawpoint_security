@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import CTAButton from '@/components/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'Careers | Clawpoint Security',
+  title: 'Careers | Clawpoint Security Collective',
   description:
     'Join the hunt. Elite cybersecurity hunters wanted for business-critical security services.',
 }

@@ -63,7 +63,7 @@ export default function Navigation() {
             <div className="relative w-16 h-16 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/images/logo.png"
-                alt="Clawpoint Security"
+                alt="Clawpoint Security Collective"
                 fill
                 className="object-contain drop-shadow-[0_0_10px_rgba(0,255,65,0.3)]"
                 priority

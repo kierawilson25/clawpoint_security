@@ -216,11 +216,11 @@ export default function ContactPage() {
                     EMAIL
                   </h3>
                   <p className="text-white font-mono text-lg">General Inquiries</p>
-                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors">
+                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors break-all">
                     CSC_growth@clawpointsecuritycollective.com
                   </a>
                   <p className="text-white font-mono text-lg mt-4">Business Development</p>
-                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors">
+                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors break-all">
                     CSC_growth@clawpointsecuritycollective.com
                   </a>
                 </div>
@@ -515,7 +515,7 @@ export default function ContactPage() {
 
           <div className="pt-20 border-t border-[var(--tactical-green-dark)]">
             <p className="text-sm text-gray-500 font-mono tracking-wider">
-              ENCRYPTED COMMUNICATIONS | ZERO KNOWLEDGE | ALWAYS VIGILANT
+              ENCRYPTED COMMUNICATION | SECURE BY DEFAULT | ALWAYS VIGILANT
             </p>
           </div>
         </div>
