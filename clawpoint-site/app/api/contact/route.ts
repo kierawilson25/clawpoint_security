@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { ContactFormEmail } from '@/components/email-templates/ContactFormEmail';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Define the expected request body structure
 interface ContactFormData {
   name: string;
@@ -16,7 +14,17 @@ interface ContactFormData {
 
 export async function POST(request: NextRequest) {
   try {
-    // Log API key status (without exposing the actual key)
+    // Check if API key is configured
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not configured');
+      return NextResponse.json(
+        { error: 'Email service is not configured. Please contact the administrator.' },
+        { status: 503 }
+      );
+    }
+
+    // Initialize Resend with API key (lazy initialization to avoid build errors)
+    const resend = new Resend(process.env.RESEND_API_KEY);
     console.log('API Key present:', !!process.env.RESEND_API_KEY);
 
     // Parse the request body
