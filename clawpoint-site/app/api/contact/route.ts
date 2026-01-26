@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
     console.log('Attempting to send email...');
     const { data, error } = await resend.emails.send({
       from: 'Clawpoint Security <onboarding@resend.dev>', // Use test domain for development
-      to: ['kierawilson025@gmail.com'], // Testing email (matches Resend account - change to CSC_growth@clawpointsecuritycollective.com for production)
+      to: ['CSC_growth@clawpointsecuritycollective.com'], // Production email
       replyTo: body.email, // User's email for easy replies
       subject: `New Contact Form Submission from ${body.name} - ${body.company}`,
       react: ContactFormEmail({
