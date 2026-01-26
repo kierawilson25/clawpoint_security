@@ -5,14 +5,11 @@ import Image from 'next/image'
 
 const contactInfo = [
   { label: 'Email', value: 'CSC_growth@clawpointsecuritycollective.com', href: 'mailto:CSC_growth@clawpointsecuritycollective.com' },
-  { label: 'Phone', value: '+1 (555) PREDATOR', href: 'tel:+15557733286' },
-  { label: 'Location', value: 'Classified', href: null }
+  { label: 'Location', value: 'Charlotte, NC', href: null }
 ]
 
 const socialLinks = [
-  { label: 'LinkedIn', href: 'https://linkedin.com/company/clawpoint/', icon: 'LI' },
-  { label: 'Twitter/X', href: '#', icon: 'X' },
-  { label: 'GitHub', href: '#', icon: 'GH' }
+  { label: 'LinkedIn', href: 'https://linkedin.com/company/clawpoint/', icon: 'LI' }
 ]
 
 export default function Footer() {
@@ -37,7 +34,7 @@ export default function Footer() {
               <div className="relative w-12 h-12 transition-transform duration-300 group-hover:scale-110">
                 <Image
                   src="/images/logo.png"
-                  alt="Clawpoint Security"
+                  alt="Clawpoint Security Collective"
                   fill
                   className="object-contain drop-shadow-[0_0_10px_rgba(0,255,65,0.3)]"
                 />
@@ -108,29 +105,6 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-
-            {/* Security Badges */}
-            <div className="space-y-2">
-              <div className="border border-tactical-green-dark bg-black/50 px-3 py-2 font-mono text-xs text-gray-400">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="w-1.5 h-1.5 bg-night-vision rounded-full" />
-                  <span className="text-night-vision">SSL SECURED</span>
-                </div>
-                <div className="text-[10px] text-gray-500">
-                  256-BIT ENCRYPTION
-                </div>
-              </div>
-
-              <div className="border border-tactical-green-dark bg-black/50 px-3 py-2 font-mono text-xs text-gray-400">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="w-1.5 h-1.5 bg-night-vision rounded-full" />
-                  <span className="text-night-vision">GDPR COMPLIANT</span>
-                </div>
-                <div className="text-[10px] text-gray-500">
-                  DATA PROTECTED
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -139,10 +113,7 @@ export default function Footer() {
           {/* Copyright */}
           <div className="text-gray-500 font-mono text-xs text-center md:text-left">
             <p>
-              &copy; {currentYear} Clawpoint Security. All rights reserved.
-            </p>
-            <p className="mt-1 text-tactical-green-light">
-              CLASSIFIED HUNTING OPERATIONS | NEED-TO-KNOW BASIS
+              &copy; {currentYear} Clawpoint Security Collective. All rights reserved.
             </p>
           </div>
 

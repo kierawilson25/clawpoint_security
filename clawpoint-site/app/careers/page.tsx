@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import CTAButton from '@/components/CTAButton'
 
 export const metadata: Metadata = {
-  title: 'Careers | Clawpoint Security',
+  title: 'Careers | Clawpoint Security Collective',
   description:
     'Join the hunt. Elite cybersecurity hunters wanted for business-critical security services.',
 }
@@ -67,16 +67,16 @@ export default function CareersPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-block border border-[var(--night-vision)] px-4 py-2 mb-6 font-mono text-xs text-[var(--night-vision)] bg-black/50 backdrop-blur-sm">
+          <div className="inline-block border border-[var(--night-vision)] px-4 py-2 mb-6 font-mono text-xs text-[var(--night-vision)] bg-black/50 backdrop-blur-sm stalk-in" style={{ animationDelay: '0.2s' }}>
             <span className="inline-block w-2 h-2 bg-[var(--night-vision)] rounded-full mr-2 eye-glow" />
             RECRUITMENT | JOIN THE PACK
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.4s' }}>
             JOIN THE <span className="text-[var(--night-vision)] text-glow">HUNT</span>
           </h1>
 
-          <p className="text-xl text-gray-300 leading-relaxed font-mono mb-8">
+          <p className="text-xl text-gray-300 leading-relaxed font-mono mb-8 stalk-in" style={{ animationDelay: '0.6s' }}>
             We are building an elite pack of security hunters who think like predators, plan like
             strategists, and execute with precision. If you have the mentality, we want you on the
             team.

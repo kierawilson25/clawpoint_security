@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claw Point Security QA Test Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Monaco', 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #00ff41;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #00ff41;
+            border-bottom: 2px solid #00ff41;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        h2 {
+            color: #0a4d0a;
+            background: #00ff41;
+            padding: 8px 12px;
+            margin: 30px 0 15px 0;
+            font-size: 18px;
+        }
+
+        h3 {
+            color: #00ff41;
+            margin: 20px 0 10px 0;
+            font-size: 16px;
+        }
+
+        .iframe-container {
+            border: 2px solid #00ff41;
+            margin: 20px 0;
+            background: white;
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+            display: block;
+        }
+
+        .controls {
+            background: #1a1a1a;
+            padding: 15px;
+            border: 1px solid #00ff41;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background: #00ff41;
+            color: #0a0a0a;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #0a4d0a;
+            color: #00ff41;
+            box-shadow: 0 0 10px #00ff41;
+        }
+
+        .test-result {
+            background: #1a1a1a;
+            border-left: 4px solid #00ff41;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .test-result.pass {
+            border-left-color: #00ff41;
+        }
+
+        .test-result.fail {
+            border-left-color: #ff4141;
+            color: #ff4141;
+        }
+
+        .test-result.warning {
+            border-left-color: #ffa500;
+            color: #ffa500;
+        }
+
+        .severity {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+
+        .severity.critical {
+            background: #ff0000;
+            color: white;
+        }
+
+        .severity.high {
+            background: #ff6600;
+            color: white;
+        }
+
+        .severity.medium {
+            background: #ffa500;
+            color: black;
+        }
+
+        .severity.low {
+            background: #00ff41;
+            color: black;
+        }
+
+        .severity.pass {
+            background: #00ff41;
+            color: black;
+        }
+
+        .timestamp {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .code-block {
+            background: #000;
+            padding: 10px;
+            border: 1px solid #333;
+            overflow-x: auto;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+
+        #results {
+            margin-top: 20px;
+        }
+
+        .bug-report {
+            background: #1a0a0a;
+            border: 2px solid #ff4141;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .bug-report h4 {
+            color: #ff4141;
+            margin-bottom: 10px;
+        }
+
+        .screenshot-placeholder {
+            background: #222;
+            border: 1px dashed #666;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .metric {
+            display: inline-block;
+            background: #1a1a1a;
+            padding: 10px 15px;
+            margin: 5px;
+            border: 1px solid #00ff41;
+        }
+
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ff41;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CLAW POINT SECURITY - QA TEST REPORT</h1>
+        <div class="timestamp">Test Session: <span id="timestamp"></span></div>
+
+        <div class="controls">
+            <button onclick="setViewport(1280, 720)">Desktop (1280x720)</button>
+            <button onclick="setViewport(768, 1024)">Tablet (768x1024)</button>
+            <button onclick="setViewport(375, 667)">Mobile (375x667)</button>
+            <button onclick="runAllTests()">Run All Tests</button>
+            <button onclick="exportReport()">Export Report</button>
+        </div>
+
+        <div class="iframe-container">
+            <iframe id="testFrame" src="http://localhost:3000" height="800"></iframe>
+        </div>
+
+        <div id="results"></div>
+
+        <h2>TEST EXECUTION LOG</h2>
+        <div id="testLog"></div>
+    </div>
+
+    <script>
+        const results = [];
+        const timestamp = new Date().toISOString();
+        document.getElementById('timestamp').textContent = timestamp;
+
+        function log(message, type = 'info') {
+            const logDiv = document.getElementById('testLog');
+            const entry = document.createElement('div');
+            entry.className = `test-result ${type}`;
+            entry.innerHTML = `<span class="timestamp">[${new Date().toLocaleTimeString()}]</span> ${message}`;
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function addResult(test, status, severity, details) {
+            results.push({ test, status, severity, details, timestamp: new Date().toISOString() });
+            displayResults();
+        }
+
+        function setViewport(width, height) {
+            const iframe = document.getElementById('testFrame');
+            iframe.style.width = width + 'px';
+            iframe.style.height = height + 'px';
+            log(`Viewport changed to ${width}x${height}`, 'pass');
+        }
+
+        function displayResults() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<h2>TEST RESULTS SUMMARY</h2>';
+
+            const passed = results.filter(r => r.status === 'pass').length;
+            const failed = results.filter(r => r.status === 'fail').length;
+            const warnings = results.filter(r => r.status === 'warning').length;
+
+            resultsDiv.innerHTML += `
+                <div>
+                    <span class="metric"><span class="metric-value">${results.length}</span><br><span class="metric-label">Total Tests</span></span>
+                    <span class="metric"><span class="metric-value">${passed}</span><br><span class="metric-label">Passed</span></span>
+                    <span class="metric"><span class="metric-value">${failed}</span><br><span class="metric-label">Failed</span></span>
+                    <span class="metric"><span class="metric-value">${warnings}</span><br><span class="metric-label">Warnings</span></span>
+                </div>
+            `;
+
+            results.forEach(result => {
+                const div = document.createElement('div');
+                div.className = `test-result ${result.status}`;
+                div.innerHTML = `
+                    <span class="severity ${result.severity}">${result.severity.toUpperCase()}</span>
+                    <strong>${result.test}</strong><br>
+                    ${result.details}
+                `;
+                resultsDiv.appendChild(div);
+            });
+        }
+
+        async function runAllTests() {
+            log('Starting comprehensive test suite...', 'pass');
+            results.length = 0; // Clear previous results
+
+            const iframe = document.getElementById('testFrame');
+
+            // Wait for iframe to load
+            await new Promise(resolve => {
+                iframe.onload = resolve;
+                iframe.src = 'http://localhost:3000';
+            });
+
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            const iframeWindow = iframe.contentWindow;
+
+            log('Testing Recent Changes...', 'info');
+
+            // TEST 1: Predator Eyes Animation (6 spots, staggered)
+            log('Test 1: Checking for 6 predator eye pairs...', 'info');
+            const eyePairs = iframeDoc.querySelectorAll('.predator-eyes-fade');
+            if (eyePairs.length === 6) {
+                addResult('Predator Eyes Count', 'pass', 'pass', `Found ${eyePairs.length} eye pairs as expected`);
+                log('✓ Found 6 eye pairs', 'pass');
+
+                // Check staggered animation delays
+                const delays = [];
+                eyePairs.forEach((pair, idx) => {
+                    const delay = pair.style.animationDelay;
+                    delays.push(delay);
+                });
+
+                const uniqueDelays = new Set(delays);
+                if (uniqueDelays.size === 6) {
+                    addResult('Predator Eyes Staggered Animation', 'pass', 'pass', `All 6 eye pairs have different animation delays: ${delays.join(', ')}`);
+                    log('✓ Animation delays are staggered: ' + delays.join(', '), 'pass');
+                } else {
+                    addResult('Predator Eyes Staggered Animation', 'fail', 'high', `Only ${uniqueDelays.size} unique delays found. Expected 6 different delays.`);
+                    log('✗ Animation delays are NOT properly staggered', 'fail');
+                }
+            } else {
+                addResult('Predator Eyes Count', 'fail', 'high', `Found ${eyePairs.length} eye pairs, expected 6`);
+                log(`✗ Found ${eyePairs.length} eye pairs, expected 6`, 'fail');
+            }
+
+            // TEST 2: Logo and Tagline Timing
+            log('Test 2: Checking logo and tagline animation timing...', 'info');
+            const logoElements = iframeDoc.querySelectorAll('.stalk-in');
+            if (logoElements.length >= 2) {
+                const logoDelay = logoElements[0].style.animationDelay;
+                const taglineDelay = logoElements[1].style.animationDelay;
+
+                if (logoDelay === '0.5s' && taglineDelay === '2s') {
+                    addResult('Logo & Tagline Timing', 'pass', 'pass', `Logo delay: ${logoDelay}, Tagline delay: ${taglineDelay}`);
+                    log('✓ Logo appears at 0.5s, tagline at 2s', 'pass');
+                } else {
+                    addResult('Logo & Tagline Timing', 'fail', 'medium', `Logo delay: ${logoDelay} (expected 0.5s), Tagline delay: ${taglineDelay} (expected 2s)`);
+                    log(`✗ Timing mismatch - Logo: ${logoDelay}, Tagline: ${taglineDelay}`, 'fail');
+                }
+            } else {
+                addResult('Logo & Tagline Timing', 'fail', 'high', `Found ${logoElements.length} elements with stalk-in class, expected at least 2`);
+                log('✗ Could not find logo and tagline elements', 'fail');
+            }
+
+            // TEST 3: No Duplicate "CLAW POINT SECURITY" Text
+            log('Test 3: Checking for duplicate "CLAW POINT SECURITY" heading text...', 'info');
+            const bodyText = iframeDoc.body.innerText;
+            const matches = bodyText.match(/CLAW POINT SECURITY/gi) || [];
+
+            // The text should only appear in the logo alt text, not as visible heading
+            const h1Elements = iframeDoc.querySelectorAll('h1');
+            const h2Elements = iframeDoc.querySelectorAll('h2');
+            const headingsWithText = Array.from([...h1Elements, ...h2Elements]).filter(el =>
+                el.textContent.includes('CLAW POINT SECURITY')
+            );
+
+            if (headingsWithText.length === 0) {
+                addResult('No Duplicate Heading Text', 'pass', 'pass', 'No "CLAW POINT SECURITY" found in heading elements (only in logo)');
+                log('✓ No duplicate heading text found', 'pass');
+            } else {
+                addResult('No Duplicate Heading Text', 'fail', 'medium', `Found ${headingsWithText.length} heading(s) containing "CLAW POINT SECURITY": ${headingsWithText.map(h => h.tagName).join(', ')}`);
+                log(`✗ Found duplicate heading text in ${headingsWithText.length} element(s)`, 'fail');
+            }
+
+            // TEST 4: CTA Buttons in Mission Section, NOT in Hero
+            log('Test 4: Checking CTA button placement...', 'info');
+            const sections = iframeDoc.querySelectorAll('section');
+            let heroSection = sections[0]; // First section should be hero
+            let missionSection = sections[1]; // Second section should be mission
+
+            const heroButtons = heroSection.querySelectorAll('a[href="/contact"], a[href="/solutions"]');
+            const missionButtons = missionSection.querySelectorAll('a[href="/contact"], a[href="/solutions"]');
+
+            if (heroButtons.length === 0 && missionButtons.length >= 2) {
+                addResult('CTA Button Placement', 'pass', 'pass', `Found ${missionButtons.length} CTA buttons in mission section, 0 in hero section`);
+                log('✓ CTA buttons correctly placed in mission section', 'pass');
+            } else {
+                addResult('CTA Button Placement', 'fail', 'high', `Hero section has ${heroButtons.length} buttons (expected 0), Mission section has ${missionButtons.length} buttons (expected 2)`);
+                log(`✗ CTA button placement incorrect - Hero: ${heroButtons.length}, Mission: ${missionButtons.length}`, 'fail');
+            }
+
+            // TEST 5: Alice in Wonderland Elements (Falling Shapes)
+            log('Test 5: Checking for Alice in Wonderland themed elements...', 'info');
+            const rabbitHoleElements = iframeDoc.querySelectorAll('.rabbit-hole-element');
+            const cheshireElements = iframeDoc.querySelectorAll('.cheshire-element');
+
+            if (rabbitHoleElements.length >= 4 && cheshireElements.length >= 3) {
+                addResult('Alice in Wonderland Elements', 'pass', 'pass', `Found ${rabbitHoleElements.length} falling geometric shapes and ${cheshireElements.length} fading forest elements`);
+                log(`✓ Found ${rabbitHoleElements.length} rabbit hole elements and ${cheshireElements.length} Cheshire elements`, 'pass');
+            } else {
+                addResult('Alice in Wonderland Elements', 'warning', 'medium', `Found ${rabbitHoleElements.length} falling shapes (expected ≥4) and ${cheshireElements.length} forest elements (expected ≥3)`);
+                log(`⚠ Found fewer elements than expected - Shapes: ${rabbitHoleElements.length}, Forest: ${cheshireElements.length}`, 'warning');
+            }
+
+            // TEST 6: Animation Smoothness Check
+            log('Test 6: Checking for animation performance...', 'info');
+            const animatedElements = iframeDoc.querySelectorAll('[class*="fade"], [class*="stalk"], [class*="predator"]');
+            if (animatedElements.length > 0) {
+                addResult('Animated Elements Present', 'pass', 'pass', `Found ${animatedElements.length} animated elements on the page`);
+                log(`✓ Found ${animatedElements.length} animated elements`, 'pass');
+            }
+
+            // TEST 7: Check for Console Errors
+            log('Test 7: Checking browser console for errors...', 'info');
+            // Note: We can't directly access iframe console errors from parent window due to CORS
+            // This would need to be done manually or with proper browser automation tools
+            addResult('Console Errors', 'warning', 'low', 'Manual check required - Please open browser DevTools and check console for errors');
+            log('⚠ Console errors must be checked manually in browser DevTools', 'warning');
+
+            // TEST 8: Progress Bar Z-Index
+            log('Test 8: Checking progress bar z-index...', 'info');
+            const progressBar = iframeDoc.querySelector('.fixed.top-0.left-0.w-full.h-1');
+            if (progressBar) {
+                const zIndex = iframeWindow.getComputedStyle(progressBar).zIndex;
+                if (zIndex === '50') {
+                    addResult('Progress Bar Z-Index', 'pass', 'pass', `Progress bar z-index is ${zIndex}`);
+                    log(`✓ Progress bar z-index is ${zIndex}`, 'pass');
+                } else {
+                    addResult('Progress Bar Z-Index', 'fail', 'medium', `Progress bar z-index is ${zIndex}, expected 50`);
+                    log(`✗ Progress bar z-index is ${zIndex}, expected 50`, 'fail');
+                }
+            }
+
+            // TEST 9: Check for Element Overlaps
+            log('Test 9: Checking for element overlaps...', 'info');
+            const logo = iframeDoc.querySelector('img[alt="Claw Point Security"]');
+            const tagline = iframeDoc.querySelector('.text-xl.sm\\:text-2xl.md\\:text-3xl.lg\\:text-4xl');
+
+            if (logo && tagline) {
+                const logoRect = logo.getBoundingClientRect();
+                const taglineRect = tagline.getBoundingClientRect();
+
+                const overlapping = !(logoRect.right < taglineRect.left ||
+                                    logoRect.left > taglineRect.right ||
+                                    logoRect.bottom < taglineRect.top ||
+                                    logoRect.top > taglineRect.bottom);
+
+                if (!overlapping) {
+                    addResult('Element Overlaps', 'pass', 'pass', 'Logo and tagline do not overlap');
+                    log('✓ No overlapping between logo and tagline', 'pass');
+                } else {
+                    addResult('Element Overlaps', 'fail', 'high', 'Logo and tagline are overlapping');
+                    log('✗ Logo and tagline are overlapping', 'fail');
+                }
+            }
+
+            log('All automated tests completed!', 'pass');
+            log('Starting mobile responsiveness test...', 'info');
+
+            // Mobile Test
+            setViewport(375, 667);
+            setTimeout(() => {
+                runMobileTests(iframeDoc, iframeWindow);
+            }, 1000);
+        }
+
+        function runMobileTests(iframeDoc, iframeWindow) {
+            log('Running mobile responsiveness tests (375px)...', 'info');
+
+            // TEST 10: Mobile Menu Gap Check
+            const navigation = iframeDoc.querySelector('nav');
+            if (navigation) {
+                // Look for mobile menu
+                const mobileMenu = iframeDoc.querySelector('[class*="top-"]');
+                if (mobileMenu) {
+                    const classes = mobileMenu.className;
+                    const topClass = classes.match(/top-(\d+)/);
+                    if (topClass) {
+                        addResult('Mobile Menu Gap', 'pass', 'pass', `Mobile menu using ${topClass[0]} class`);
+                        log(`✓ Mobile menu gap class: ${topClass[0]}`, 'pass');
+                    }
+                }
+            }
+
+            // TEST 11: Mobile Viewport - No Horizontal Scroll
+            const bodyWidth = iframeDoc.body.scrollWidth;
+            const viewportWidth = iframeWindow.innerWidth;
+
+            if (bodyWidth <= viewportWidth + 5) { // 5px tolerance
+                addResult('Mobile Horizontal Scroll', 'pass', 'pass', `Body width (${bodyWidth}px) fits within viewport (${viewportWidth}px)`);
+                log('✓ No horizontal scrolling on mobile', 'pass');
+            } else {
+                addResult('Mobile Horizontal Scroll', 'fail', 'high', `Body width (${bodyWidth}px) exceeds viewport (${viewportWidth}px) by ${bodyWidth - viewportWidth}px`);
+                log(`✗ Horizontal scrolling detected: ${bodyWidth - viewportWidth}px overflow`, 'fail');
+            }
+
+            // TEST 12: Mobile Text Readability
+            const tagline = iframeDoc.querySelector('.text-xl.sm\\:text-2xl.md\\:text-3xl.lg\\:text-4xl');
+            if (tagline) {
+                const fontSize = parseFloat(iframeWindow.getComputedStyle(tagline).fontSize);
+                if (fontSize >= 16) {
+                    addResult('Mobile Text Readability', 'pass', 'pass', `Tagline font size is ${fontSize}px (readable)`);
+                    log(`✓ Mobile text size is readable: ${fontSize}px`, 'pass');
+                } else {
+                    addResult('Mobile Text Readability', 'warning', 'low', `Tagline font size is ${fontSize}px (may be too small)`);
+                    log(`⚠ Mobile text may be too small: ${fontSize}px`, 'warning');
+                }
+            }
+
+            log('Mobile tests completed!', 'pass');
+            log('=== TEST SUITE COMPLETE ===', 'pass');
+        }
+
+        function exportReport() {
+            const reportData = {
+                timestamp,
+                results,
+                summary: {
+                    total: results.length,
+                    passed: results.filter(r => r.status === 'pass').length,
+                    failed: results.filter(r => r.status === 'fail').length,
+                    warnings: results.filter(r => r.status === 'warning').length
+                }
+            };
+
+            const blob = new Blob([JSON.stringify(reportData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `claw-point-qa-report-${timestamp}.json`;
+            a.click();
+
+            log('Report exported successfully', 'pass');
+        }
+
+        // Auto-run tests on load
+        setTimeout(() => {
+            log('Auto-starting test suite in 2 seconds...', 'info');
+        }, 100);
+
+        setTimeout(() => {
+            runAllTests();
+        }, 2000);
+    </script>
+</body>
+</html>

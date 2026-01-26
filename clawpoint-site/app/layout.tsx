@@ -39,7 +39,7 @@ export const viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Clawpoint Security | Hunting Threats in the Digital Forest',
+  title: 'Clawpoint Security Collective | Hunting Threats in the Digital Forest',
   description: 'Elite cybersecurity hunters with predatory precision. We are the apex predators that hunt down digital threats in the darkness between compliance and operational reality.',
   keywords: [
     'cybersecurity',
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
     'penetration testing',
     'vulnerability assessment'
   ],
-  authors: [{ name: 'Clawpoint Security' }],
-  creator: 'Clawpoint Security',
-  publisher: 'Clawpoint Security',
+  authors: [{ name: 'Clawpoint Security Collective' }],
+  creator: 'Clawpoint Security Collective',
+  publisher: 'Clawpoint Security Collective',
   robots: {
     index: true,
     follow: true,
@@ -70,21 +70,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://clawpoint.security',
-    siteName: 'Clawpoint Security',
-    title: 'Clawpoint Security | Hunting Threats in the Digital Forest',
+    siteName: 'Clawpoint Security Collective',
+    title: 'Clawpoint Security Collective | Hunting Threats in the Digital Forest',
     description: 'Elite cybersecurity hunters with predatory precision. We hunt threats you cannot see.',
     images: [
       {
         url: '/images/logo.png',
         width: 1200,
         height: 630,
-        alt: 'Clawpoint Security - Apex Cybersecurity Hunters'
+        alt: 'Clawpoint Security Collective - Apex Cybersecurity Hunters'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Clawpoint Security | Hunting Threats in the Digital Forest',
+    title: 'Clawpoint Security Collective | Hunting Threats in the Digital Forest',
     description: 'Elite cybersecurity hunters with predatory precision.',
     images: ['/images/logo.png']
   },

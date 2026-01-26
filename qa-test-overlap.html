@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claw Point Security - Overlap Testing</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: monospace;
+    }
+
+    /* Simulate the actual z-index layers */
+    .test-container {
+      position: relative;
+      height: 200vh;
+    }
+
+    /* Progress bar - z-50 */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 4px;
+      background: linear-gradient(to right, #0a4d0a, #00ff41, #1a6b1a);
+      z-index: 50;
+      border: 1px solid red; /* Visual indicator */
+    }
+
+    /* Navigation - z-50 */
+    .navigation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 96px; /* h-24 = 6rem = 96px */
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #052805;
+      z-index: 50;
+      border: 1px solid blue; /* Visual indicator */
+    }
+
+    /* Stalker - z-40 */
+    .stalker {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      background: #00ff41;
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: 40;
+      border: 1px solid yellow; /* Visual indicator */
+    }
+
+    /* Hero content - z-10 */
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      padding-top: 200px;
+      text-align: center;
+      border: 1px solid green; /* Visual indicator */
+    }
+
+    /* Scanline - z-9999 */
+    .scanline {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(transparent, #00ff41, transparent);
+      opacity: 0.05;
+      z-index: 9999;
+      animation: scanline 15s linear infinite;
+      border: 1px solid purple; /* Visual indicator */
+    }
+
+    @keyframes scanline {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100vh); }
+    }
+
+    .info {
+      padding: 120px 20px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #00ff41;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .layer-info {
+      background: #001a00;
+      border: 1px solid #00ff41;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .layer-info h2 {
+      color: #00ff41;
+      margin-top: 0;
+    }
+
+    .layer-info p {
+      line-height: 1.6;
+    }
+
+    .warning {
+      background: #4d0a0a;
+      border: 2px solid #ff0000;
+      padding: 15px;
+      margin: 20px 0;
+    }
+
+    .warning h3 {
+      color: #ff4141;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="test-container">
+    <!-- Scanline (z-9999) -->
+    <div class="scanline"></div>
+
+    <!-- Progress bar (z-50) -->
+    <div class="progress-bar"></div>
+
+    <!-- Navigation (z-50) -->
+    <div class="navigation">
+      <div style="padding: 20px; color: #00ff41;">
+        NAVIGATION (z-50) - Height: 96px
+      </div>
+    </div>
+
+    <!-- Stalker (z-40) -->
+    <div class="stalker"></div>
+
+    <!-- Hero content (z-10) -->
+    <div class="hero-content">
+      <div class="info">
+        <h1>Z-INDEX LAYER TESTING</h1>
+
+        <div class="layer-info">
+          <h2>Layer Stack (Top to Bottom):</h2>
+          <p>1. Scanline: z-9999 (Purple border - animated)</p>
+          <p>2. Progress Bar: z-50 (Red border - 4px height at very top)</p>
+          <p>3. Navigation: z-50 (Blue border - 96px height from top)</p>
+          <p>4. Stalker: z-40 (Yellow border - center of screen)</p>
+          <p>5. Hero Content: z-10 (Green border - this section)</p>
+        </div>
+
+        <div class="warning">
+          <h3>IDENTIFIED ISSUE:</h3>
+          <p><strong>Z-Index Conflict:</strong> Progress bar and navigation both have z-50</p>
+          <p><strong>Impact:</strong> The 4px progress bar (red border) sits at the absolute top. The navigation (blue border) starts from top-0 as well.</p>
+          <p><strong>Visual Test:</strong> Look at the top-left corner. Can you see BOTH the red border (progress bar) AND the blue border (navigation)?</p>
+          <p><strong>Expected:</strong> If both are visible, they're NOT overlapping. If only blue is visible, the navigation is covering the progress bar.</p>
+        </div>
+
+        <div class="layer-info">
+          <h2>Mobile Menu Concern:</h2>
+          <p>Mobile menu is positioned with: <code>fixed inset-0 top-20</code></p>
+          <p>This means: top: 80px (5rem = 80px), but navigation height is 96px</p>
+          <p><strong>Potential Gap:</strong> 16px gap between nav bottom and mobile menu top</p>
+        </div>
+
+        <div class="layer-info">
+          <h2>Scroll down to test scroll behavior...</h2>
+          <p>Watch the progress bar grow from left to right</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simulate scroll progress
+    window.addEventListener('scroll', () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      document.querySelector('.progress-bar').style.width = `${progress}%`;
+    });
+
+    // Simulate stalker following cursor
+    document.addEventListener('mousemove', (e) => {
+      const stalker = document.querySelector('.stalker');
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+      stalker.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+</body>
+</html>

@@ -4,7 +4,7 @@ import CTAButton from '@/components/CTAButton'
 import DownloadBrief from '@/components/DownloadBrief'
 
 export const metadata: Metadata = {
-  title: 'Solutions | Cyber Strategy Consultants',
+  title: 'Solutions | Clawpoint Security Collective',
   description:
     'Mission-centric assurance, cyber operations design, and security architecture services. We transform compliance into operational advantage.',
 }
@@ -18,16 +18,16 @@ export default function SolutionsPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-block border border-[var(--night-vision)] px-4 py-2 mb-6 font-mono text-xs text-[var(--night-vision)] bg-black/50 backdrop-blur-sm">
+          <div className="inline-block border border-[var(--night-vision)] px-4 py-2 mb-6 font-mono text-xs text-[var(--night-vision)] bg-black/50 backdrop-blur-sm stalk-in" style={{ animationDelay: '0.2s' }}>
             <span className="inline-block w-2 h-2 bg-[var(--night-vision)] rounded-full mr-2 eye-glow" />
             OUR SERVICES
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider">
-            EMPOWER YOUR <span className="text-[var(--night-vision)] text-glow">CYBER STRATEGY</span> WITH CSC
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.4s' }}>
+            EMPOWER YOUR <span className="text-[var(--night-vision)] text-glow">CYBER STRATEGY</span> WITH CLAWPOINT SECURITY COLLECTIVE
           </h1>
 
-          <p className="text-xl text-gray-300 leading-relaxed font-mono">
+          <p className="text-xl text-gray-300 leading-relaxed font-mono stalk-in" style={{ animationDelay: '0.6s' }}>
             We turn frameworks into force multipliers—linking controls to real threats, workflows, and outcomes.
           </p>
         </div>
@@ -37,8 +37,9 @@ export default function SolutionsPage() {
       <section id="core-solutions" className="relative py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 gap-12">
-            <SolutionCard
-              icon={
+            <div className="stalk-in" style={{ animationDelay: '0.1s' }}>
+              <SolutionCard
+                icon={
                 <svg
                   className="w-10 h-10"
                   fill="none"
@@ -62,9 +63,11 @@ export default function SolutionsPage() {
                 'Revenue-style readiness metrics',
                 'Faster approvals and cleaner risk decisions',
               ]}
-            />
+              />
+            </div>
 
-            <SolutionCard
+            <div className="stalk-in" style={{ animationDelay: '0.2s' }}>
+              <SolutionCard
               icon={
                 <svg
                   className="w-10 h-10"
@@ -91,9 +94,11 @@ export default function SolutionsPage() {
                 'Purple-team feedback loops',
                 'Actionable KPI dashboards',
               ]}
-            />
+              />
+            </div>
 
-            <SolutionCard
+            <div className="stalk-in" style={{ animationDelay: '0.3s' }}>
+              <SolutionCard
               icon={
                 <svg
                   className="w-10 h-10"
@@ -126,7 +131,8 @@ export default function SolutionsPage() {
                 'ATT&CK framework mapping',
                 'Guided workflow from signal to action',
               ]}
-            />
+              />
+            </div>
           </div>
         </div>
       </section>
