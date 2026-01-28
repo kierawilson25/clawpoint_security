@@ -109,36 +109,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-6">
           {/* Copyright */}
-          <div className="text-gray-500 font-mono text-xs text-center md:text-left">
+          <div className="text-gray-500 font-mono text-xs text-center">
             <p>
               &copy; {currentYear} Clawpoint Security Collective. All rights reserved.
             </p>
-          </div>
-
-          {/* Legal Links */}
-          <div className="flex items-center gap-6">
-            <Link
-              href="/privacy"
-              className="text-gray-500 hover:text-night-vision font-mono text-xs transition-colors duration-300"
-            >
-              Privacy Policy
-            </Link>
-            <span className="text-tactical-green-dark">|</span>
-            <Link
-              href="/terms"
-              className="text-gray-500 hover:text-night-vision font-mono text-xs transition-colors duration-300"
-            >
-              Terms of Service
-            </Link>
-            <span className="text-tactical-green-dark">|</span>
-            <Link
-              href="/security"
-              className="text-gray-500 hover:text-night-vision font-mono text-xs transition-colors duration-300"
-            >
-              Security Policy
-            </Link>
           </div>
         </div>
 
