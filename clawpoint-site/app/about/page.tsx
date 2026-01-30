@@ -560,7 +560,7 @@ export default function AboutPage() {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <CTAButton href="/contact" variant="alert" size="lg">
-              SCHEDULE MISSION BRIEFING
+              Schedule a Call
             </CTAButton>
             <CTAButton href="/solutions" variant="secondary" size="lg">
               VIEW CAPABILITIES

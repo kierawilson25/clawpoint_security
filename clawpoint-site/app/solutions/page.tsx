@@ -229,7 +229,7 @@ export default function SolutionsPage() {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <CTAButton href="/contact" variant="alert" size="lg">
-              CONTACT US
+              Schedule a Call
             </CTAButton>
             <CTAButton href="/about" variant="secondary" size="lg">
               LEARN MORE
