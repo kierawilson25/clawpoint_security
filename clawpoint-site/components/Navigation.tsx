@@ -104,7 +104,7 @@ export default function Navigation() {
           {/* Desktop CTA */}
           <div className="hidden lg:block">
             <CTAButton href="/contact" variant="alert" size="sm">
-              Secure Now
+              Schedule a Call
             </CTAButton>
           </div>
 
@@ -190,7 +190,7 @@ export default function Navigation() {
             }}
           >
             <CTAButton href="/contact" variant="alert" size="lg">
-              Secure Now
+              Schedule a Call
             </CTAButton>
           </div>
 

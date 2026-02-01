@@ -344,7 +344,7 @@ export default function Home() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-16">
             <CTAButton href="/contact" variant="alert" size="lg">
-              INITIATE CONTACT
+              Schedule a Call
             </CTAButton>
             <CTAButton href="/solutions" variant="secondary" size="lg">
               VIEW CAPABILITIES
@@ -398,7 +398,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20">
             <CTAButton href="/contact" variant="alert" size="lg">
-              SCHEDULE STRATEGY SESSION
+              Schedule a Call
             </CTAButton>
             <CTAButton href="/solutions" variant="secondary" size="lg">
               REVIEW CAPABILITIES

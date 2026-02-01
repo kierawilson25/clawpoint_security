@@ -218,7 +218,7 @@ export default function CareersPage() {
                     <p className="text-[var(--night-vision)] font-mono text-sm">{position.type}</p>
                   </div>
                   <CTAButton href="/contact" variant="secondary" size="sm">
-                    APPLY NOW
+                    Schedule a Call
                   </CTAButton>
                 </div>
 
@@ -314,7 +314,7 @@ export default function CareersPage() {
             hear from you.
           </p>
           <CTAButton href="/contact" variant="alert" size="lg">
-            SUBMIT APPLICATION
+            Schedule a Call
           </CTAButton>
         </div>
       </section>

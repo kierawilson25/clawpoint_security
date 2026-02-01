@@ -208,10 +208,10 @@ export default function InfiniteViewPage() {
 
             <div className="flex flex-col sm:flex-row gap-6 stalk-in" style={{ animationDelay: '0.4s' }}>
               <CTAButton href="/contact" variant="primary" size="lg">
-                SCHEDULE A BRIEFING
+                Schedule a Call
               </CTAButton>
               <CTAButton href="/contact" variant="secondary" size="lg">
-                REQUEST A PILOT
+                Schedule a Call
               </CTAButton>
             </div>
           </div>
@@ -242,7 +242,7 @@ export default function InfiniteViewPage() {
 
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
             <CTAButton href="/contact" variant="alert" size="lg">
-              CONTACT US
+              Schedule a Call
             </CTAButton>
           </div>
         </div>
