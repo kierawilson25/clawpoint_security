@@ -84,13 +84,12 @@ export default function SolutionsPage() {
                 </svg>
               }
               title="CYBER OPERATIONS DESIGN"
-              description="Build what matters. Lead what you design. We help you architect cyber programs that actually ship outcomes—operating models, playbooks, and automation that scale with your business. From intake and triage to incident response and recovery, we define crisp roles, measurable SLAs, and 'detectors-to-decisions' workflows that reduce dwell time. Expect tight SIEM/SOAR integrations, purple-team feedback loops, and dashboards that turn KPIs into action. We'll coach your leaders to run the mission, not the fire drill—so your team owns the design and the results."
+              description="Build what matters. Lead what you design. We help you architect cyber programs that actually ship outcomes—operating models, playbooks, and automation that scale with your business. From intake and triage to incident response and recovery, we define crisp roles, measurable SLAs, and 'detectors-to-decisions' workflows that reduce dwell time. Expect purple-team feedback loops and dashboards that turn KPIs into action. We'll coach your leaders to run the mission, not the fire drill—so your team owns the design and the results."
               features={[
                 'Operating models and playbooks',
                 'Scalable automation',
                 'Crisp roles and measurable SLAs',
                 '"Detectors-to-decisions" workflows',
-                'SIEM/SOAR integrations',
                 'Purple-team feedback loops',
                 'Actionable KPI dashboards',
               ]}
@@ -157,7 +156,7 @@ export default function SolutionsPage() {
               },
               {
                 advantage: 'ALWAYS VIGILANT',
-                description: '24/7/365 monitoring and response. Threats never sleep. Neither do we.',
+                description: 'Continuous monitoring and rapid response. Threats never sleep. Neither do we.',
               },
               {
                 advantage: 'HUNTER MENTALITY',
