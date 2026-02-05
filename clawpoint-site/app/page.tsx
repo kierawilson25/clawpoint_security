@@ -3,7 +3,6 @@
 import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import CTAButton from '@/components/CTAButton'
-import DownloadBrief from '@/components/DownloadBrief'
 
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -154,21 +153,21 @@ export default function Home() {
           <div className="rabbit-hole-element absolute w-2.5 h-2.5 border border-[var(--tactical-green)] rotate-45" style={{ left: '75%', animationDelay: '15s' }} />
         </div>
 
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-center pt-32 pb-32 sm:pb-40">
+        <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-center pt-20 pb-16">
           {/* Logo - Main Focus - Shows First */}
-          <div className="mb-20 flex justify-center stalk-in" style={{ animationDelay: '0.5s', animationDuration: '2s' }}>
+          <div className="mb-8 flex justify-center stalk-in" style={{ animationDelay: '0.5s', animationDuration: '2s' }}>
             <Image
               src="/images/logo.png"
               alt="Clawpoint Security Collective"
-              width={480}
-              height={480}
+              width={400}
+              height={400}
               className="object-contain drop-shadow-[0_0_40px_rgba(0,255,65,0.4)] predator-movement"
             />
           </div>
 
           {/* Tagline - Fades In After Logo */}
           <div className="stalk-in" style={{ animationDelay: '1s', animationDuration: '2.5s' }}>
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-200 mb-24 sm:mb-32 font-mono tracking-wide max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-200 mb-12 font-mono tracking-wide max-w-4xl mx-auto leading-relaxed">
               HUNTING THREATS IN THE DIGITAL FOREST
             </p>
           </div>
@@ -184,7 +183,7 @@ export default function Home() {
       </section>
 
       {/* Mission Statement Section */}
-      <section className="relative py-40 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
+      <section className="relative py-6 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
         {/* Background image - speed lines */}
         <div className="absolute inset-0">
           <Image
@@ -198,163 +197,164 @@ export default function Home() {
         <div className="absolute inset-0 tactical-grid opacity-10" />
 
         <div className="max-w-6xl mx-auto text-center relative z-10 emerge-from-forest">
-          <div className="mb-12">
-            <div className="inline-block w-12 h-12 border border-[var(--night-vision)] rotate-45 mb-8 opacity-40" />
-          </div>
-
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12 font-mono tracking-wider">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-mono tracking-wider">
             YOUR HUNT IS OUR HUNT
           </h2>
 
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-mono mb-16 max-w-5xl mx-auto">
-            In the darkness between compliance requirements and operational reality, threats lurk.
-            We are the apex predators that hunt them down. With predatory precision and relentless focus,
-            we secure the gaps others miss.
-          </p>
+          <div className="max-w-5xl mx-auto mb-4 space-y-2">
+            {/* Main intro - ultra concise */}
+            <p className="text-base md:text-lg text-white leading-snug font-mono">
+              Clawpoint Security Collective (SDVOSB) reduces operational risk by translating fragmented security data into actionable decisions.
+            </p>
 
-          {/* Past Performance Snapshot */}
-          <section aria-labelledby="performance-heading" className="mt-20 mb-24 max-w-6xl mx-auto relative">
-            <div className="text-center mb-12">
-              <h2 id="performance-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-4">
-                PAST PERFORMANCE SNAPSHOT
-              </h2>
-              <div className="w-24 h-px bg-gradient-to-r from-transparent via-[var(--night-vision)] to-transparent mx-auto" aria-hidden="true" />
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Metric 1 */}
-              <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.1s' }}>
-                <div className="credential-shine relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
-                  <div className="text-5xl md:text-6xl font-bold text-[var(--night-vision)] font-mono mb-4">
-                    300K+
-                  </div>
-                  <p className="text-base text-gray-300 font-mono leading-relaxed">
-                    Users supported across enterprise environments
-                  </p>
-                </div>
-              </article>
-
-              {/* Metric 2 */}
-              <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.2s' }}>
-                <div className="credential-shine relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
-                  <div className="text-5xl md:text-6xl font-bold text-[var(--night-vision)] font-mono mb-4">
-                    22,000
-                  </div>
-                  <p className="text-base text-gray-300 font-mono leading-relaxed">
-                    Privileged accounts secured
-                  </p>
-                </div>
-              </article>
-
-              {/* Metric 3 */}
-              <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.3s' }}>
-                <div className="credential-shine relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 overflow-hidden" aria-hidden="true" />
-                  <div className="text-4xl md:text-5xl font-bold text-[var(--night-vision)] font-mono mb-4 relative">
-                    ACCELERATED
-                  </div>
-                  <p className="text-base text-gray-300 font-mono leading-relaxed relative">
-                    Authorization delivery across multiple enclaves
-                  </p>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          {/* Operational Credentials - Table Layout */}
-          <section aria-labelledby="credentials-heading" className="mt-32 max-w-5xl mx-auto relative">
-            {/* Section Header */}
-            <div className="text-center mb-16">
-              <h2 id="credentials-heading" className="text-3xl md:text-4xl font-bold text-white font-mono tracking-wider">
-                OPERATIONAL CREDENTIALS
-              </h2>
-            </div>
-
-            {/* Credentials Table */}
-            <div className="space-y-0">
-              {/* Row 1: 24+ Years */}
-              <div
-                className="grid grid-cols-1 md:grid-cols-[160px_1fr_2fr] gap-4 md:gap-6 py-6 border-b border-[var(--tactical-green-dark)]/30 hover:border-[var(--night-vision)]/50 transition-colors duration-300 stalk-in"
-                style={{ animationDelay: '0.1s' }}
-              >
-                <div className="font-bold text-[var(--night-vision)] font-mono">
-                  <span className="text-3xl md:text-4xl">24+</span>
-                  <span className="text-base md:text-lg ml-2">YEARS</span>
-                </div>
-                <div className="text-base md:text-lg font-bold text-white font-mono tracking-wide">
-                  Mission-Critical Cybersecurity Leadership
-                </div>
-                <div className="text-sm md:text-base text-gray-400 font-mono">
-                  Mission-critical cybersecurity leadership in high-consequence environments
-                </div>
-              </div>
-
-              {/* Row 2: Mission Assurance */}
-              <div
-                className="grid grid-cols-1 md:grid-cols-[160px_1fr_2fr] gap-4 md:gap-6 py-6 border-b border-[var(--tactical-green-dark)]/30 hover:border-[var(--night-vision)]/50 transition-colors duration-300 stalk-in"
-                style={{ animationDelay: '0.2s' }}
-              >
-                <div className="text-lg md:text-xl font-bold text-[var(--night-vision)] font-mono uppercase">
-                  Mission Assurance
-                </div>
-                <div className="text-base md:text-lg font-bold text-white font-mono tracking-wide">
-                  Closing the Gap
-                </div>
-                <div className="text-sm md:text-base text-gray-400 font-mono">
-                  Bridging compliance and operational reality
-                </div>
-              </div>
-
-              {/* Row 3: Frameworks */}
-              <div
-                className="grid grid-cols-1 md:grid-cols-[160px_1fr_2fr] gap-4 md:gap-6 py-6 border-b border-[var(--tactical-green-dark)]/30 hover:border-[var(--night-vision)]/50 transition-colors duration-300 stalk-in"
-                style={{ animationDelay: '0.3s' }}
-              >
-                <div className="text-sm md:text-base font-bold text-[var(--night-vision)] font-mono">
-                  NIST • RMF • Zero Trust
-                </div>
-                <div className="text-base md:text-lg font-bold text-white font-mono tracking-wide">
-                  Framework-Driven Execution
-                </div>
-                <div className="text-sm md:text-base text-gray-400 font-mono">
-                  NIST-aligned, RMF-informed, Zero Trust-ready
-                </div>
-              </div>
-
-              {/* Row 4: Cleared Leadership */}
-              <div
-                className="grid grid-cols-1 md:grid-cols-[160px_1fr_2fr] gap-4 md:gap-6 py-6 border-b border-[var(--tactical-green-dark)]/30 hover:border-[var(--night-vision)]/50 transition-colors duration-300 stalk-in"
-                style={{ animationDelay: '0.4s' }}
-              >
-                <div className="text-lg md:text-xl font-bold text-[var(--night-vision)] font-mono uppercase">
-                  Cleared Leadership
-                </div>
-                <div className="text-base md:text-lg font-bold text-white font-mono tracking-wide">
-                  Federal & Defense-Grade Security
-                </div>
-                <div className="text-sm md:text-base text-gray-400 font-mono">
-                  Cleared leadership for sensitive operations
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-16">
-            <CTAButton href="/contact" variant="alert" size="lg">
-              Schedule a Call
-            </CTAButton>
-            <CTAButton href="/solutions" variant="secondary" size="lg">
-              VIEW CAPABILITIES
-            </CTAButton>
+            {/* Our work section - single line */}
+            <p className="text-xs md:text-sm text-gray-300 font-mono leading-snug pl-3 border-l-2 border-[var(--tactical-green-dark)]">
+              <span className="text-[var(--night-vision)]">01</span> Baseline risk
+              <span className="text-[var(--tactical-green-dark)] mx-1.5">|</span>
+              <span className="text-[var(--night-vision)]">02</span> Scenario exercises
+              <span className="text-[var(--tactical-green-dark)] mx-1.5">|</span>
+              <span className="text-[var(--night-vision)]">03</span> Adversary hunting
+            </p>
           </div>
+
+          {/* Operational Credentials - Vertical Layout */}
+          <section aria-labelledby="credentials-heading" className="mt-8 space-y-2 max-w-6xl mx-auto relative">
+            <h2 id="credentials-heading" className="sr-only">
+              Clawpoint Security Credentials and Expertise
+            </h2>
+
+            {/* Credential 01: 300K+ Users */}
+            <article
+              className="relative group stalk-in"
+              style={{ animationDelay: '0.1s' }}
+            >
+              <div className="credential-shine flex items-start gap-3 md:gap-4 border-l-4 border-[var(--tactical-green)] pl-3 md:pl-4 py-4 bg-black/40 backdrop-blur-sm relative overflow-hidden hover:bg-black/60 hover:border-[var(--night-vision)] transition-all duration-500 min-h-[120px] md:h-[120px]">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
+
+                <div className="flex-shrink-0 w-[160px] md:w-[200px]">
+                  <div className="text-xs text-[var(--tactical-green-light)] font-mono tracking-widest mb-1" aria-hidden="true">
+                    PERFORMANCE-01
+                  </div>
+                  <div className="text-3xl md:text-4xl font-bold text-[var(--night-vision)] font-mono leading-none relative">
+                    300K+
+                    <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[var(--night-vision)]/40" aria-hidden="true" />
+                    <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[var(--night-vision)]/40" aria-hidden="true" />
+                  </div>
+                  <div className="text-xs text-[var(--tactical-green-light)] font-mono mt-1 tracking-wider" aria-hidden="true">
+                    USERS
+                  </div>
+                </div>
+
+                <div className="flex-1 pt-1 md:pt-2">
+                  <h3 className="text-sm md:text-base font-semibold text-white font-mono tracking-wide mb-1 leading-tight">
+                    Enterprise-Scale Operations
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-300 font-mono tracking-wide leading-relaxed">
+                    Users supported across enterprise environments with proven mission success
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            {/* Credential 02: 24+ Years */}
+            <article
+              className="relative group stalk-in"
+              style={{ animationDelay: '0.2s' }}
+            >
+              <div className="credential-shine flex items-start gap-3 md:gap-4 border-l-4 border-[var(--tactical-green)] pl-3 md:pl-4 py-4 bg-black/40 backdrop-blur-sm relative overflow-hidden hover:bg-black/60 hover:border-[var(--night-vision)] transition-all duration-500 min-h-[120px] md:h-[120px]">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
+
+                <div className="flex-shrink-0 w-[160px] md:w-[200px]">
+                  <div className="text-xs text-[var(--tactical-green-light)] font-mono tracking-widest mb-1" aria-hidden="true">
+                    CLEARANCE-02
+                  </div>
+                  <div className="text-3xl md:text-4xl font-bold text-[var(--night-vision)] font-mono leading-none relative">
+                    24+
+                    <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[var(--night-vision)]/40" aria-hidden="true" />
+                    <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[var(--night-vision)]/40" aria-hidden="true" />
+                  </div>
+                  <div className="text-xs text-[var(--tactical-green-light)] font-mono mt-1 tracking-wider" aria-hidden="true">
+                    YEARS
+                  </div>
+                </div>
+
+                <div className="flex-1">
+                  <h3 className="text-sm md:text-base font-semibold text-white font-mono tracking-wide mb-1 leading-tight">
+                    Mission-Critical Cybersecurity Leadership
+                  </h3>
+                  <p className="text-xs text-gray-300 font-mono tracking-wide leading-tight">
+                    Proven track record in high-stakes security operations and strategic defense architecture
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            {/* Credential 03: NIST Frameworks */}
+            <article
+              className="relative group stalk-in"
+              style={{ animationDelay: '0.3s' }}
+            >
+              <div className="credential-shine flex items-start gap-3 md:gap-4 border-l-4 border-[var(--tactical-green)] pl-3 md:pl-4 py-4 bg-black/40 backdrop-blur-sm relative overflow-hidden hover:bg-black/60 hover:border-[var(--night-vision)] transition-all duration-500 min-h-[120px] md:h-[120px]">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
+
+                <div className="flex-shrink-0 w-[160px] md:w-[200px]">
+                  <div className="text-xs text-[var(--tactical-green-light)] font-mono tracking-widest mb-1" aria-hidden="true">
+                    PROTOCOL-03
+                  </div>
+                  <div className="text-2xl md:text-3xl font-bold text-[var(--night-vision)] font-mono leading-tight relative">
+                    NIST<br/>RMF<br/>ZERO TRUST
+                    <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[var(--night-vision)]/40" aria-hidden="true" />
+                    <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[var(--night-vision)]/40" aria-hidden="true" />
+                  </div>
+                </div>
+
+                <div className="flex-1 pt-1 md:pt-2">
+                  <h3 className="text-sm md:text-base font-semibold text-white font-mono tracking-wide mb-1 leading-tight">
+                    Framework-Driven Execution
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-300 font-mono tracking-wide leading-relaxed">
+                    Proven implementation of NIST standards, Risk Management Framework, and Zero Trust Architecture
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            {/* Credential 04: Cleared Leadership */}
+            <article
+              className="relative group stalk-in"
+              style={{ animationDelay: '0.4s' }}
+            >
+              <div className="credential-shine flex items-start gap-3 md:gap-4 border-l-4 border-[var(--tactical-green)] pl-3 md:pl-4 py-4 bg-black/40 backdrop-blur-sm relative overflow-hidden hover:bg-black/60 hover:border-[var(--night-vision)] transition-all duration-500 min-h-[120px] md:h-[120px]">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
+
+                <div className="flex-shrink-0 w-[160px] md:w-[200px]">
+                  <div className="text-xs text-[var(--tactical-green-light)] font-mono tracking-widest mb-1" aria-hidden="true">
+                    CLASSIFIED-04
+                  </div>
+                  <div className="text-2xl md:text-3xl font-bold text-[var(--night-vision)] font-mono leading-tight relative">
+                    CLEARED<br/>LEADERSHIP
+                    <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[var(--night-vision)]/40" aria-hidden="true" />
+                    <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[var(--night-vision)]/40" aria-hidden="true" />
+                  </div>
+                </div>
+
+                <div className="flex-1 pt-1 md:pt-2">
+                  <h3 className="text-sm md:text-base font-semibold text-white font-mono tracking-wide mb-1 leading-tight">
+                    Federal & Defense-Grade Security
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-300 font-mono tracking-wide leading-relaxed">
+                    Trusted leadership experience in high-consequence, classified environments with mission-critical security requirements
+                  </p>
+                </div>
+              </div>
+            </article>
+
+          </section>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="relative py-56 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-black via-[var(--forest-depth-2)] to-black">
+      <section className="relative py-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-black via-[var(--forest-depth-2)] to-black mt-16">
         {/* Background image - light curves */}
         <div className="absolute inset-0">
           <Image
@@ -381,22 +381,16 @@ export default function Home() {
         </div>
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="mb-12">
-            <div className="inline-block w-20 h-20 border-2 border-[var(--night-vision)] mb-8 eye-glow predator-movement" />
-          </div>
-
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-10 font-mono tracking-wider">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 font-mono tracking-wider">
             READY TO ENGAGE?
           </h2>
 
-          <p className="text-lg md:text-xl text-gray-300 mb-16 font-mono leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-300 mb-8 font-mono leading-relaxed max-w-3xl mx-auto">
             The threats are real. The stakes are high. Your business cannot afford security gaps.
             Let&apos;s eliminate them together.
           </p>
 
-          <DownloadBrief variant="banner" className="mb-16" />
-
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20">
+          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-8">
             <CTAButton href="/contact" variant="alert" size="lg">
               Schedule a Call
             </CTAButton>
@@ -405,7 +399,7 @@ export default function Home() {
             </CTAButton>
           </div>
 
-          <div className="pt-20 border-t border-[var(--tactical-green-dark)]">
+          <div className="pt-12 border-t border-[var(--tactical-green-dark)]">
             <p className="text-sm text-gray-500 font-mono tracking-wider">
               ENCRYPTED COMMUNICATION | SECURE BY DEFAULT | ALWAYS VIGILANT
             </p>

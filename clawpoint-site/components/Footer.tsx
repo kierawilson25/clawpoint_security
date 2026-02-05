@@ -85,7 +85,7 @@ export default function Footer() {
           </div>
 
           {/* Social & Security */}
-          <div>
+          <div className="md:flex md:flex-col md:items-end">
             <h3 className="text-white font-mono font-bold text-sm tracking-wider uppercase mb-6 relative inline-block">
               Tactical Links
               <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-night-vision to-transparent" />
