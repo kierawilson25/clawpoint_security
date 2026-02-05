@@ -142,6 +142,76 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Track Record Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
+        <div className="absolute inset-0 tactical-grid opacity-5" />
+
+        <div className="absolute inset-0">
+          <Image
+            src="/images/AdobeStock_328406149.jpeg"
+            alt=""
+            fill
+            className="object-cover opacity-10 mix-blend-lighten"
+          />
+        </div>
+
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="mb-12 emerge-from-forest">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-px bg-[var(--tactical-green)]" />
+              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">TRACK RECORD</span>
+            </div>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-6">
+              PROVEN PERFORMANCE
+            </h2>
+            <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
+              Our operational track record demonstrates mission success at scale
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Metric 1: Privileged Accounts */}
+            <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.1s' }}>
+              <div className="credential-shine relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
+                <div className="text-5xl md:text-6xl font-bold text-[var(--night-vision)] font-mono mb-4">
+                  22,000
+                </div>
+                <p className="text-base text-gray-300 font-mono leading-relaxed">
+                  Privileged accounts secured
+                </p>
+              </div>
+            </article>
+
+            {/* Metric 2: Authorization Delivery */}
+            <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.2s' }}>
+              <div className="credential-shine relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 overflow-hidden" aria-hidden="true" />
+                <div className="text-4xl md:text-5xl font-bold text-[var(--night-vision)] font-mono mb-4 relative">
+                  ACCELERATED
+                </div>
+                <p className="text-base text-gray-300 font-mono leading-relaxed relative">
+                  Authorization delivery across multiple enclaves
+                </p>
+              </div>
+            </article>
+
+            {/* Metric 3: Mission Assurance */}
+            <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.3s' }}>
+              <div className="credential-shine relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
+                <div className="text-3xl md:text-4xl font-bold text-[var(--night-vision)] font-mono mb-4 uppercase">
+                  Mission Assurance
+                </div>
+                <p className="text-base text-gray-300 font-mono leading-relaxed">
+                  Bridging compliance and operational reality
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* What We Do Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
         <div className="absolute inset-0">

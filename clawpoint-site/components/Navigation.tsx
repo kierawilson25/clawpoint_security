@@ -140,11 +140,12 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed inset-0 top-24 bg-black/98 backdrop-blur-lg transition-all duration-500 ${
+        className={`lg:hidden fixed left-0 right-0 bottom-0 bg-black/98 backdrop-blur-lg transition-all duration-500 ${
           isMenuOpen
             ? 'opacity-100 pointer-events-auto'
             : 'opacity-0 pointer-events-none'
         }`}
+        style={{ top: '96px' }}
       >
         {/* Tactical grid background */}
         <div className="absolute inset-0 tactical-grid opacity-10" />
@@ -209,8 +210,8 @@ export default function Navigation() {
         </div>
 
         {/* Decorative elements */}
-        <div className="absolute top-8 left-8 w-16 h-16 border-2 border-tactical-green/20 rotate-45" />
-        <div className="absolute bottom-8 right-8 w-12 h-12 border-2 border-night-vision/20" />
+        <div className="absolute top-8 left-8 w-16 h-16 border-2 border-tactical-green/20 rotate-45 pointer-events-none" />
+        <div className="absolute bottom-8 right-8 w-12 h-12 border-2 border-night-vision/20 pointer-events-none" />
       </div>
     </nav>
   )
