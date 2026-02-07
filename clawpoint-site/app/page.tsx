@@ -59,35 +59,37 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background image - green particle waves */}
+        {/* Background video - reverse video */}
         <div className="absolute inset-0">
-          <Image
-            src="/images/AdobeStock_241827782.jpeg"
-            alt=""
-            fill
-            className="object-cover opacity-20 mix-blend-screen"
-            priority
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-35 mix-blend-screen"
+          >
+            <source src="/images/Reverse Video.mp4" type="video/mp4" />
+          </video>
         </div>
 
         {/* Parallax forest layers - stalking through the undergrowth */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="forest-layer forest-layer-1 opacity-10">
+          <div className="forest-layer forest-layer-1 opacity-5">
             <div className="absolute inset-0 bg-gradient-to-b from-[var(--forest-depth-3)] via-[var(--forest-depth-2)] to-transparent" />
           </div>
 
-          <div className="forest-layer forest-layer-2 opacity-15">
+          <div className="forest-layer forest-layer-2 opacity-8">
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--forest-depth-2)] via-[var(--forest-depth-1)] to-transparent" />
           </div>
 
-          <div className="forest-layer forest-layer-3 opacity-20">
+          <div className="forest-layer forest-layer-3 opacity-10">
             <div className="absolute inset-0 bg-gradient-to-br from-[var(--forest-depth-1)] to-transparent" />
           </div>
 
           {/* Mysterious forest shapes - appearing and disappearing like moving through foliage */}
-          <div className="absolute left-0 top-0 w-1/3 h-full bg-gradient-to-r from-[var(--forest-depth-2)] to-transparent cheshire-element opacity-20" style={{ animationDelay: '0s' }} />
-          <div className="absolute right-0 top-0 w-1/4 h-full bg-gradient-to-l from-[var(--forest-depth-3)] to-transparent cheshire-element opacity-25" style={{ animationDelay: '3s' }} />
-          <div className="absolute left-1/4 bottom-0 w-1/2 h-2/3 bg-gradient-to-t from-[var(--forest-depth-1)] to-transparent cheshire-element opacity-15" style={{ animationDelay: '6s' }} />
+          <div className="absolute left-0 top-0 w-1/3 h-full bg-gradient-to-r from-[var(--forest-depth-2)] to-transparent cheshire-element opacity-10" style={{ animationDelay: '0s' }} />
+          <div className="absolute right-0 top-0 w-1/4 h-full bg-gradient-to-l from-[var(--forest-depth-3)] to-transparent cheshire-element opacity-12" style={{ animationDelay: '3s' }} />
+          <div className="absolute left-1/4 bottom-0 w-1/2 h-2/3 bg-gradient-to-t from-[var(--forest-depth-1)] to-transparent cheshire-element opacity-8" style={{ animationDelay: '6s' }} />
         </div>
 
         {/* Additional green particles floating */}
@@ -136,7 +138,10 @@ export default function Home() {
         )}
 
         {/* Vignette */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.7)_70%,rgba(0,0,0,0.95)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.4)_70%,rgba(0,0,0,0.8)_100%)]" />
+
+        {/* Bottom fade to black */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
 
         {/* Floating wild elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
