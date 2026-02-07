@@ -135,7 +135,7 @@ export default function AboutPage() {
                 <span className="text-[var(--night-vision)] font-mono text-xs tracking-widest font-bold">OUR MISSION</span>
               </div>
               <p className="text-lg md:text-xl text-white font-mono leading-relaxed font-semibold">
-                To empower federal mission owners and defense operators with actionable insight, resilient risk frameworks, and decision advantage in complex security environments.
+                Clawpoint Security Collective (CSC) is a mission-centric cybersecurity company built to deliver precision over panic—turning fragmented telemetry, complex risk, and operational uncertainty into actionable outcomes. CSC operates at the intersection of mission assurance, cyber resilience, and analyst enablement to reduce exposure while strengthening mission continuity.
               </p>
             </div>
           </div>

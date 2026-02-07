@@ -127,18 +127,18 @@ export default function SolutionsPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
-              'THREAT INTELLIGENCE',
+              'MISSION ASSURANCE',
+              'CYBER RESILIENCE',
+              'ANALYST ENABLEMENT',
+              'DECISION SUPPORT',
               'INCIDENT RESPONSE',
-              'CLOUD SECURITY',
-              'CONTAINER DEFENSE',
-              'COMPLIANCE',
               'THREAT HUNTING',
-              'RED TEAM HUNTS',
-              'DEVSECOPS',
+              'OPERATIONAL TRUTH',
+              'COMPLIANCE POSTURE',
               'ZERO TRUST',
-              'API SECURITY',
-              'SUPPLY CHAIN',
-              'HUNTING TACTICS',
+              'SIGNAL EXTRACTION',
+              'MISSION CONTINUITY',
+              'COGNITIVE LOAD REDUCTION',
             ].map((topic, index) => (
               <div
                 key={index}

@@ -53,18 +53,25 @@ export default function InfiniteViewPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.7)_70%,rgba(0,0,0,0.95)_100%)]" />
 
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center py-20">
-          {/* Eye Animation - Signature Element */}
-          <div className="mb-12 stalk-in">
-            <EyeAnimation />
+          {/* Infinite View Logo */}
+          <div className="mb-8 stalk-in flex justify-center">
+            <Image
+              src="/images/Copy of InfiniteView-logo-white-02 3.png"
+              alt="Infinite View"
+              width={700}
+              height={700}
+              className="object-contain drop-shadow-[0_0_40px_rgba(0,255,65,0.4)]"
+              priority
+            />
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.2s' }}>
-            CUT NOISE. <span className="text-[var(--night-vision)] text-glow">REDUCE COGNITIVE LOAD.</span> OUTPACE THREATS.
-          </h1>
+          <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto font-mono leading-relaxed stalk-in" style={{ animationDelay: '0.2s' }}>
+            Cut Noise. Reduce Cognitive Load. Outpace Threats.
+          </p>
         </div>
       </section>
 
-      {/* Problem Section */}
+      {/* Platform Overview */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
         <div className="absolute inset-0 tactical-grid opacity-5" />
 
@@ -77,24 +84,30 @@ export default function InfiniteViewPage() {
           />
         </div>
 
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="emerge-from-forest">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-sm tracking-widest">PROBLEM</span>
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="emerge-from-forest text-center">
+            <div className="inline-flex items-center gap-4 mb-6">
+              <div className="w-12 h-px bg-[var(--tactical-green)]" />
+              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CONCEPT-STAGE PLATFORM</span>
+              <div className="w-12 h-px bg-[var(--tactical-green)]" />
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-8">
-              PROBLEM
-            </h2>
-            <p className="text-lg md:text-xl text-gray-300 font-mono leading-relaxed">
-              Analysts drown in duplicated alerts, compliance fatigue, and fragmented tools. Adversaries adapt faster. Leadership is forced to buy more tools — or accept blind spots.
-            </p>
+
+            <div className="border-2 border-[var(--night-vision)] bg-black/60 backdrop-blur-sm p-10 relative">
+              <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[var(--tactical-green)]" />
+              <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[var(--tactical-green)]" />
+              <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[var(--tactical-green)]" />
+              <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[var(--tactical-green)]" />
+
+              <p className="text-lg md:text-xl text-white font-mono leading-relaxed">
+                Infinite View is Clawpoint&apos;s concept-stage analyst augmentation platform designed to reduce cognitive load and accelerate mission response by translating scattered security telemetry into a coherent operational picture. It is built to strengthen analyst judgment—not replace it.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* What It Is - Three Pillars Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black">
+      {/* Three Pillars Section */}
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: 'linear-gradient(var(--tactical-green) 1px, transparent 1px), linear-gradient(90deg, var(--tactical-green) 1px, transparent 1px)',
@@ -103,117 +116,90 @@ export default function InfiniteViewPage() {
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="mb-16 emerge-from-forest">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-sm tracking-widest">SOLUTION</span>
-            </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-8">
-              WHAT IT IS
+          <div className="text-center mb-16 emerge-from-forest">
+            <h2 className="text-3xl md:text-4xl font-bold text-white font-mono tracking-wider mb-4">
+              THREE PILLARS
             </h2>
+            <p className="text-gray-400 font-mono text-sm tracking-wider">
+              MODULAR ARCHITECTURE FOR MISSION SUCCESS
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="space-y-8">
+            {/* Pillar 1: MCI */}
             <article className="relative group stalk-in" style={{ animationDelay: '0.1s' }}>
-              <div className="credential-shine border-l-4 border-[var(--tactical-green)] pl-6 py-8 bg-black/40 backdrop-blur-sm relative overflow-hidden hover:bg-black/60 hover:border-[var(--night-vision)] transition-all duration-500 h-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
 
-                <h3 className="text-xl md:text-2xl font-bold text-[var(--night-vision)] font-mono mb-4 tracking-wide">
-                  Telemetry Normalization
-                </h3>
-                <p className="text-gray-300 font-mono leading-relaxed text-sm">
-                  Convert flat logs to Common Event Framework, eliminate duplicates.
-                </p>
+              <div className="relative border-l-4 border-[var(--tactical-green)] bg-black/50 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] hover:bg-black/70 transition-all duration-500">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-20 h-20 flex items-center justify-center border-2 border-[var(--tactical-green-dark)] bg-black/60 group-hover:border-[var(--night-vision)] transition-colors">
+                    <span className="text-3xl font-bold text-[var(--night-vision)] font-mono">01</span>
+                  </div>
+
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-2 font-mono tracking-wide">
+                      MCI (Mission Cognition Interface)
+                    </h3>
+                    <div className="text-sm text-[var(--tactical-green-light)] font-mono mb-4 tracking-wider">
+                      PILLAR 1: HUMAN-CENTERED INTERFACE
+                    </div>
+                    <p className="text-base text-gray-300 leading-relaxed">
+                      Infinite View&apos;s human-centered interface layer that converts complexity into comprehension. MCI is how Infinite View presents mission-relevant context, relationships, and meaning so analysts and leaders can understand what is happening, why it matters, and what must happen next.
+                    </p>
+                  </div>
+                </div>
               </div>
             </article>
 
+            {/* Pillar 2: MDSK */}
             <article className="relative group stalk-in" style={{ animationDelay: '0.2s' }}>
-              <div className="credential-shine border-l-4 border-[var(--tactical-green)] pl-6 py-8 bg-black/40 backdrop-blur-sm relative overflow-hidden hover:bg-black/60 hover:border-[var(--night-vision)] transition-all duration-500 h-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
 
-                <h3 className="text-xl md:text-2xl font-bold text-[var(--night-vision)] font-mono mb-4 tracking-wide">
-                  Analyst Personas
-                </h3>
-                <p className="text-gray-300 font-mono leading-relaxed text-sm">
-                  Explainable overlays that accelerate triage.
-                </p>
+              <div className="relative border-l-4 border-[var(--tactical-green)] bg-black/50 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] hover:bg-black/70 transition-all duration-500">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-20 h-20 flex items-center justify-center border-2 border-[var(--tactical-green-dark)] bg-black/60 group-hover:border-[var(--night-vision)] transition-colors">
+                    <span className="text-3xl font-bold text-[var(--night-vision)] font-mono">02</span>
+                  </div>
+
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-2 font-mono tracking-wide">
+                      MDSK (Modular Decision Support Kit)
+                    </h3>
+                    <div className="text-sm text-[var(--tactical-green-light)] font-mono mb-4 tracking-wider">
+                      PILLAR 2: MODULAR BACKBONE
+                    </div>
+                    <p className="text-base text-gray-300 leading-relaxed">
+                      The modular backbone that ingests, stores, normalizes, and quality-checks mission-relevant data so it can be used for decision support. MDSK is the buildable core that makes fusion, explainability, and operational analytics possible without forcing a full-stack replacement.
+                    </p>
+                  </div>
+                </div>
               </div>
             </article>
 
+            {/* Pillar 3: HRE */}
             <article className="relative group stalk-in" style={{ animationDelay: '0.3s' }}>
-              <div className="credential-shine border-l-4 border-[var(--tactical-green)] pl-6 py-8 bg-black/40 backdrop-blur-sm relative overflow-hidden hover:bg-black/60 hover:border-[var(--night-vision)] transition-all duration-500 h-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
 
-                <h3 className="text-xl md:text-2xl font-bold text-[var(--night-vision)] font-mono mb-4 tracking-wide">
-                  Mission Integration
-                </h3>
-                <p className="text-gray-300 font-mono leading-relaxed text-sm">
-                  Zero Trust + NIST alignment, built for national security.
-                </p>
+              <div className="relative border-l-4 border-[var(--tactical-green)] bg-black/50 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] hover:bg-black/70 transition-all duration-500">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-20 h-20 flex items-center justify-center border-2 border-[var(--tactical-green-dark)] bg-black/60 group-hover:border-[var(--night-vision)] transition-colors">
+                    <span className="text-3xl font-bold text-[var(--night-vision)] font-mono">03</span>
+                  </div>
+
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-2 font-mono tracking-wide">
+                      HRE (Horizon Engine)
+                    </h3>
+                    <div className="text-sm text-[var(--tactical-green-light)] font-mono mb-4 tracking-wider">
+                      PILLAR 3: PREDICTIVE INTELLIGENCE
+                    </div>
+                    <p className="text-base text-gray-300 leading-relaxed italic">
+                      Details coming soon...
+                    </p>
+                  </div>
+                </div>
               </div>
             </article>
-          </div>
-        </div>
-      </section>
-
-      {/* What's Available Today Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/AdobeStock_241827782.jpeg"
-            alt=""
-            fill
-            className="object-cover opacity-10 mix-blend-screen"
-          />
-        </div>
-
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="emerge-from-forest">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-sm tracking-widest">AVAILABILITY</span>
-            </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-8">
-              WHAT&apos;S AVAILABLE TODAY
-            </h2>
-
-            <div className="space-y-6 mb-12 stalk-in" style={{ animationDelay: '0.2s' }}>
-              <div className="border-l-4 border-[var(--tactical-green)] pl-6 py-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-[var(--night-vision)] rounded-full flex-shrink-0" />
-                  <p className="text-lg text-gray-300 font-mono">
-                    Pilot engagements (30-min demo or ingestion test)
-                  </p>
-                </div>
-              </div>
-
-              <div className="border-l-4 border-[var(--tactical-green)] pl-6 py-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-[var(--night-vision)] rounded-full flex-shrink-0" />
-                  <p className="text-lg text-gray-300 font-mono">
-                    Integration with Clawpoint assessments
-                  </p>
-                </div>
-              </div>
-
-              <div className="border-l-4 border-[var(--tactical-green)] pl-6 py-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-[var(--night-vision)] rounded-full flex-shrink-0" />
-                  <p className="text-lg text-gray-300 font-mono">
-                    Analyst augmentation trials
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-6 stalk-in" style={{ animationDelay: '0.4s' }}>
-              <CTAButton href="/contact" variant="primary" size="lg">
-                Schedule a Call
-              </CTAButton>
-              <CTAButton href="/contact" variant="secondary" size="lg">
-                Schedule a Call
-              </CTAButton>
-            </div>
           </div>
         </div>
       </section>
