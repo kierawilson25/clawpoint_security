@@ -118,180 +118,26 @@ export default function AboutPage() {
               <div className="w-12 h-px bg-[var(--tactical-green)]" />
               <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">MISSION-01</span>
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-8">
               WHO WE ARE
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 font-mono leading-relaxed mb-6">
-              Clawpoint Security Collective (CSC) is a mission-centric cybersecurity and operational assurance firm focused on reducing decision latency and mission risk for federal and national security stakeholders.
-            </p>
-            <p className="text-base md:text-lg text-gray-400 font-mono leading-relaxed mb-8">
-              We don't sell tools. We deliver clarity, confidence, and control for organizations where mission failure has real consequences.
-            </p>
 
-            {/* Mission Statement Box */}
-            <div className="mt-10 p-8 border-l-4 border-[var(--night-vision)] bg-black/60 backdrop-blur-sm stalk-in" style={{ animationDelay: '0.2s' }}>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-3 h-3 bg-[var(--night-vision)] rounded-full eye-glow" />
-                <span className="text-[var(--night-vision)] font-mono text-xs tracking-widest font-bold">OUR MISSION</span>
-              </div>
-              <p className="text-lg md:text-xl text-white font-mono leading-relaxed font-semibold">
-                Clawpoint Security Collective (CSC) is a mission-centric cybersecurity company built to deliver precision over panic—turning fragmented telemetry, complex risk, and operational uncertainty into actionable outcomes. CSC operates at the intersection of mission assurance, cyber resilience, and analyst enablement to reduce exposure while strengthening mission continuity.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Track Record Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
-        <div className="absolute inset-0 tactical-grid opacity-5" />
-
-        <div className="absolute inset-0">
-          <Image
-            src="/images/AdobeStock_328406149.jpeg"
-            alt=""
-            fill
-            className="object-cover opacity-10 mix-blend-lighten"
-          />
-        </div>
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="mb-12 emerge-from-forest">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">TRACK RECORD</span>
-            </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-6">
-              PROVEN PERFORMANCE
-            </h2>
-            <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
-              Our operational track record demonstrates mission success at scale
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Metric 1: Privileged Accounts */}
-            <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.1s' }}>
-              <div className="credential-shine relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
-                <div className="text-5xl md:text-6xl font-bold text-[var(--night-vision)] font-mono mb-4">
-                  22,000
-                </div>
-                <p className="text-base text-gray-300 font-mono leading-relaxed">
-                  Privileged accounts secured
-                </p>
-              </div>
-            </article>
-
-            {/* Metric 2: Authorization Delivery */}
-            <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.2s' }}>
-              <div className="credential-shine relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 overflow-hidden" aria-hidden="true" />
-                <div className="text-4xl md:text-5xl font-bold text-[var(--night-vision)] font-mono mb-4 relative">
-                  ACCELERATED
-                </div>
-                <p className="text-base text-gray-300 font-mono leading-relaxed relative">
-                  Authorization delivery across multiple enclaves
-                </p>
-              </div>
-            </article>
-
-            {/* Metric 3: Mission Assurance */}
-            <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.3s' }}>
-              <div className="credential-shine relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
-                <div className="text-3xl md:text-4xl font-bold text-[var(--night-vision)] font-mono mb-4 uppercase">
-                  Mission Assurance
-                </div>
-                <p className="text-base text-gray-300 font-mono leading-relaxed">
-                  Bridging compliance and operational reality
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* What We Do Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/AdobeStock_241827782.jpeg"
-            alt=""
-            fill
-            className="object-cover opacity-10 mix-blend-screen"
-          />
-        </div>
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="mb-12 emerge-from-forest">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CAPABILITIES-02</span>
-            </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-6">
-              WHAT WE DO
-            </h2>
-            <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
-              Clawpoint Security Collective partners with mission-critical organizations to:
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {[
-              {
-                num: '01',
-                title: 'Surface enterprise risk that undermines operational effectiveness',
-                delay: '0.1s'
-              },
-              {
-                num: '02',
-                title: 'Accelerate leadership decisions with context and confidence',
-                delay: '0.2s'
-              },
-              {
-                num: '03',
-                title: 'Fortify mission continuity against dynamic threats',
-                delay: '0.3s'
-              }
-            ].map((item, i) => (
-              <article key={i} className="relative group stalk-in" style={{ animationDelay: item.delay }}>
-                <div className="credential-shine flex items-start gap-6 border-l-4 border-[var(--tactical-green)] pl-6 py-6 bg-black/40 backdrop-blur-sm relative overflow-hidden hover:bg-black/60 hover:border-[var(--night-vision)] transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-
-                  <div className="flex-shrink-0">
-                    <div className="text-3xl md:text-4xl font-bold text-[var(--night-vision)]/20 font-mono">
-                      {item.num}
-                    </div>
-                  </div>
-
-                  <div className="flex-1">
-                    <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed">
-                      {item.title}
-                    </p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-10 p-6 border border-[var(--tactical-green-dark)] bg-black/60">
-            <p className="text-sm md:text-base text-gray-400 font-mono leading-relaxed italic">
-              We combine operational experience, risk-informed methodologies, and a human-centered approach to secure the mission—not just infrastructure.
+            <p className="text-lg md:text-xl text-white font-mono leading-relaxed">
+              Clawpoint Security Collective (CSC) is a mission-centric cybersecurity company built to deliver precision over panic—turning fragmented telemetry, complex risk, and operational uncertainty into actionable outcomes. CSC operates at the intersection of mission assurance, cyber resilience, and analyst enablement to reduce exposure while strengthening mission continuity.
             </p>
           </div>
         </div>
       </section>
 
       {/* Team Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black border-t border-[var(--tactical-green-dark)]">
         <div className="absolute inset-0 tactical-grid opacity-5" />
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="mb-16 emerge-from-forest text-center">
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">LEADERSHIP-03</span>
+              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">LEADERSHIP-02</span>
               <div className="w-12 h-px bg-[var(--tactical-green)]" />
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-6">
@@ -411,124 +257,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Who We Serve Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--forest-depth-3)] to-black">
-        <div className="absolute inset-0 tactical-grid opacity-5" />
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="mb-10 emerge-from-forest">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CLIENTS-03</span>
-            </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-6">
-              WHO WE SERVE
-            </h2>
-            <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
-              Clawpoint Security Collective aligns with organizations that:
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-3 gap-6 stalk-in" style={{ animationDelay: '0.3s' }}>
-            {[
-              'Operate under legal, constitutional, or national security imperatives',
-              'Require decisive leadership outcomes',
-              'Cannot tolerate ambiguity in risk or readiness'
-            ].map((criteria, i) => (
-              <div key={i} className="relative group">
-                <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300 h-full">
-                  <div className="w-2 h-2 bg-[var(--night-vision)] rounded-full mb-4 opacity-60 group-hover:opacity-100 transition-opacity" />
-                  <p className="text-gray-300 font-mono text-sm leading-relaxed">
-                    {criteria}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Operational Focus Areas Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/AdobeStock_328406149.jpeg"
-            alt=""
-            fill
-            className="object-cover opacity-10 mix-blend-lighten"
-          />
-        </div>
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="mb-10 emerge-from-forest">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">FOCUS-04</span>
-            </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-6">
-              OPERATIONAL FOCUS AREAS
-            </h2>
-            <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
-              Our work reflects active engagement, solution shaping, and mission alignment with:
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'United States Courts',
-                subtitle: 'AOUSC',
-                icon: '⚖️'
-              },
-              {
-                title: 'Department of Justice',
-                subtitle: 'DOJ',
-                icon: '🏛️'
-              },
-              {
-                title: 'U.S. Special Operations Command',
-                subtitle: 'SOCOM',
-                icon: '⭐'
-              }
-            ].map((focus, i) => (
-              <article key={i} className="relative group stalk-in" style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className="border-2 border-[var(--tactical-green-dark)] bg-black p-6 hover:border-[var(--night-vision)] transition-all duration-300 h-full text-center">
-                  <div className="text-4xl mb-4">{focus.icon}</div>
-                  <h3 className="text-lg font-bold text-white mb-2 font-mono">
-                    {focus.title}
-                  </h3>
-                  <p className="text-[var(--night-vision)] font-mono text-sm font-bold">
-                    {focus.subtitle}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Innovation Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black">
-        <div className="absolute inset-0 tactical-grid opacity-5" />
-
-        <div className="max-w-5xl mx-auto relative z-10 text-center">
-          <div className="mb-10 emerge-from-forest">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">INNOVATION-05</span>
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-            </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 font-mono tracking-wider">
-              INNOVATION & PRODUCT PATHWAYS
-            </h2>
-            <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed max-w-3xl mx-auto">
-              We also pursue mission-aligned capability development through competitive federal programs.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Approach Section */}
+      {/* What We Do Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
         <div className="absolute inset-0">
           <Image
@@ -543,61 +272,128 @@ export default function AboutPage() {
           <div className="mb-12 emerge-from-forest">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">APPROACH-06</span>
+              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CAPABILITIES-02</span>
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-6">
-              OUR APPROACH
+              WHAT WE DO
             </h2>
             <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
-              We design solutions that are:
+              Clawpoint Security Collective partners with mission-critical organizations to:
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-8">
             {[
               {
-                title: 'Mission-first',
-                desc: 'Outcomes over checkboxes',
+                num: '01',
+                title: 'Surface enterprise risk that undermines operational effectiveness',
                 delay: '0.1s'
               },
               {
-                title: 'Human-centered',
-                desc: 'Augmenting judgment, not replacing it',
+                num: '02',
+                title: 'Accelerate leadership decisions with context and confidence',
                 delay: '0.2s'
               },
               {
-                title: 'Operationally grounded',
-                desc: 'Built for real risk environments',
+                num: '03',
+                title: 'Fortify mission continuity against dynamic threats',
                 delay: '0.3s'
-              },
-              {
-                title: 'Explainable',
-                desc: 'Decisions leaders can trust and defend',
-                delay: '0.4s'
               }
-            ].map((principle, i) => (
-              <article key={i} className="relative group stalk-in" style={{ animationDelay: principle.delay }}>
-                <div className="credential-shine border-l-4 border-[var(--tactical-green)] pl-6 py-6 bg-black/40 backdrop-blur-sm relative overflow-hidden hover:bg-black/60 hover:border-[var(--night-vision)] transition-all duration-500">
+            ].map((item, i) => (
+              <article key={i} className="relative group stalk-in" style={{ animationDelay: item.delay }}>
+                <div className="credential-shine flex items-start gap-6 border-l-4 border-[var(--tactical-green)] pl-6 py-6 bg-black/40 backdrop-blur-sm relative overflow-hidden hover:bg-black/60 hover:border-[var(--night-vision)] transition-all duration-500">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
 
-                  <h3 className="text-lg md:text-xl font-bold text-[var(--night-vision)] font-mono mb-3 tracking-wide">
-                    {principle.title}
-                  </h3>
-                  <p className="text-gray-300 font-mono leading-relaxed text-sm">
-                    {principle.desc}
-                  </p>
+                  <div className="flex-shrink-0">
+                    <div className="text-3xl md:text-4xl font-bold text-[var(--night-vision)]/20 font-mono">
+                      {item.num}
+                    </div>
+                  </div>
 
-                  <div className="absolute top-3 right-3 w-2 h-2 border-t-2 border-r-2 border-[var(--tactical-green)]/30" />
-                  <div className="absolute bottom-3 left-3 w-2 h-2 border-b-2 border-l-2 border-[var(--tactical-green)]/30" />
+                  <div className="flex-1">
+                    <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed">
+                      {item.title}
+                    </p>
+                  </div>
                 </div>
               </article>
             ))}
           </div>
 
-          <div className="mt-12 p-8 border-2 border-[var(--night-vision)] bg-black/60 text-center emerge-from-forest" style={{ animationDelay: '0.5s' }}>
-            <p className="text-xl md:text-2xl text-[var(--night-vision)] font-mono font-bold">
-              Secure the mission. Lead the future.
+          <div className="mt-10 p-6 border border-[var(--tactical-green-dark)] bg-black/60">
+            <p className="text-sm md:text-base text-gray-400 font-mono leading-relaxed italic">
+              We combine operational experience, risk-informed methodologies, and a human-centered approach to secure the mission—not just infrastructure.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Track Record Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
+        <div className="absolute inset-0 tactical-grid opacity-5" />
+
+        <div className="absolute inset-0">
+          <Image
+            src="/images/AdobeStock_328406149.jpeg"
+            alt=""
+            fill
+            className="object-cover opacity-10 mix-blend-lighten"
+          />
+        </div>
+
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="mb-12 emerge-from-forest">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-px bg-[var(--tactical-green)]" />
+              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">TRACK RECORD</span>
+            </div>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-6">
+              PROVEN PERFORMANCE
+            </h2>
+            <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
+              Our operational track record demonstrates mission success at scale
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Metric 1: Privileged Accounts */}
+            <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.1s' }}>
+              <div className="credential-shine relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
+                <div className="text-5xl md:text-6xl font-bold text-[var(--night-vision)] font-mono mb-4">
+                  22,000
+                </div>
+                <p className="text-base text-gray-300 font-mono leading-relaxed">
+                  Privileged accounts secured
+                </p>
+              </div>
+            </article>
+
+            {/* Metric 2: Authorization Delivery */}
+            <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.2s' }}>
+              <div className="credential-shine relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
+                <div className="text-3xl md:text-4xl font-bold text-[var(--night-vision)] font-mono mb-4 relative">
+                  ACCELERATED
+                </div>
+                <p className="text-base text-gray-300 font-mono leading-relaxed relative">
+                  Authorization delivery across multiple enclaves
+                </p>
+              </div>
+            </article>
+
+            {/* Metric 3: Mission Assurance */}
+            <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.3s' }}>
+              <div className="credential-shine relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
+                <div className="text-3xl md:text-4xl font-bold text-[var(--night-vision)] font-mono mb-4 uppercase">
+                  Mission Assurance
+                </div>
+                <p className="text-base text-gray-300 font-mono leading-relaxed">
+                  Bridging compliance and operational reality
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
