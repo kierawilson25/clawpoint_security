@@ -56,7 +56,7 @@ export default function InfiniteViewPage() {
           {/* Infinite View Logo */}
           <div className="mb-8 stalk-in flex justify-center">
             <Image
-              src="/images/Copy of InfiniteView-logo-white-02 3.png"
+              src="/images/infiniteview-logo-white.png"
               alt="Infinite View"
               width={700}
               height={700}
