@@ -172,7 +172,7 @@ export default function Home() {
 
           {/* Tagline - Fades In After Logo */}
           <div className="stalk-in" style={{ animationDelay: '1s', animationDuration: '2.5s' }}>
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-200 mb-12 font-mono tracking-wide max-w-4xl mx-auto leading-relaxed">
+            <p className="body-large tracking-wide max-w-4xl text-gray-200 mb-12 mx-auto">
               HUNTING THREATS IN THE DIGITAL FOREST
             </p>
           </div>
@@ -202,7 +202,7 @@ export default function Home() {
         <div className="absolute inset-0 tactical-grid opacity-10" />
 
         <div className="max-w-6xl mx-auto text-center relative z-10 emerge-from-forest">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-mono tracking-wider">
+          <h2 className="heading-h2 text-white mb-4">
             YOUR HUNT IS OUR HUNT
           </h2>
 
@@ -251,7 +251,7 @@ export default function Home() {
                 </div>
 
                 <div className="flex-1 pt-1 md:pt-2">
-                  <h3 className="text-sm md:text-base font-semibold text-white font-mono tracking-wide mb-1 leading-tight">
+                  <h3 className="body-small font-bold text-white tracking-wide mb-1 leading-tight">
                     Enterprise-Scale Operations
                   </h3>
                   <p className="text-sm md:text-base text-gray-300 font-mono tracking-wide leading-relaxed">
@@ -386,7 +386,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 font-mono tracking-wider">
+          <h2 className="heading-h2 text-white mb-5">
             READY TO ENGAGE?
           </h2>
 

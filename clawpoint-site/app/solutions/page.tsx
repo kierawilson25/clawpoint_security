@@ -91,7 +91,7 @@ export default function SolutionsPage() {
                       <h3 className="text-xl md:text-2xl font-bold text-white mb-4 font-mono tracking-wide group-hover:text-[var(--night-vision)] transition-colors">
                         {item.title}
                       </h3>
-                      <p className="text-base text-gray-300 mb-6 leading-relaxed">
+                      <p className="body-regular text-gray-300 mb-6">
                         {item.description}
                       </p>
 
