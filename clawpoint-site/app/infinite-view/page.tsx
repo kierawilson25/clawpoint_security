@@ -117,7 +117,7 @@ export default function InfiniteViewPage() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16 emerge-from-forest">
-            <h2 className="text-3xl md:text-4xl font-bold text-white font-mono tracking-wider mb-4">
+            <h2 className="heading-h2 text-white mb-4">
               THREE PILLARS
             </h2>
             <p className="text-gray-400 font-mono text-sm tracking-wider">
@@ -137,13 +137,13 @@ export default function InfiniteViewPage() {
                   </div>
 
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2 font-mono tracking-wide">
+                    <h3 className="heading-h3 text-white mb-2">
                       MCI (Mission Cognition Interface)
                     </h3>
                     <div className="text-sm text-[var(--tactical-green-light)] font-mono mb-4 tracking-wider">
                       PILLAR 1: HUMAN-CENTERED INTERFACE
                     </div>
-                    <p className="text-base text-gray-300 leading-relaxed">
+                    <p className="body-regular text-gray-300">
                       Infinite View&apos;s human-centered interface layer that converts complexity into comprehension. MCI is how Infinite View presents mission-relevant context, relationships, and meaning so analysts and leaders can understand what is happening, why it matters, and what must happen next.
                     </p>
                   </div>
@@ -162,13 +162,13 @@ export default function InfiniteViewPage() {
                   </div>
 
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2 font-mono tracking-wide">
+                    <h3 className="heading-h3 text-white mb-2">
                       MDSK (Modular Decision Support Kit)
                     </h3>
                     <div className="text-sm text-[var(--tactical-green-light)] font-mono mb-4 tracking-wider">
                       PILLAR 2: MODULAR BACKBONE
                     </div>
-                    <p className="text-base text-gray-300 leading-relaxed">
+                    <p className="body-regular text-gray-300">
                       The modular backbone that ingests, stores, normalizes, and quality-checks mission-relevant data so it can be used for decision support. MDSK is the buildable core that makes fusion, explainability, and operational analytics possible without forcing a full-stack replacement.
                     </p>
                   </div>
@@ -187,13 +187,13 @@ export default function InfiniteViewPage() {
                   </div>
 
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2 font-mono tracking-wide">
+                    <h3 className="heading-h3 text-white mb-2">
                       HRE (Horizon Engine)
                     </h3>
                     <div className="text-sm text-[var(--tactical-green-light)] font-mono mb-4 tracking-wider">
                       PILLAR 3: PREDICTIVE INTELLIGENCE
                     </div>
-                    <p className="text-base text-gray-300 leading-relaxed italic">
+                    <p className="body-regular text-gray-300 italic">
                       Details coming soon...
                     </p>
                   </div>
@@ -220,17 +220,11 @@ export default function InfiniteViewPage() {
             <div className="inline-block w-20 h-20 border-2 border-[var(--night-vision)] mb-8 eye-glow predator-movement" />
           </div>
 
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-10 font-mono tracking-wider">
+          <h2 className="heading-h2 text-white mb-10">
             Ready to design your next move? <span className="text-[var(--night-vision)]">Join the Hunt</span>
           </h2>
 
           <DownloadBrief variant="banner" className="mb-16" />
-
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-            <CTAButton href="/contact" variant="alert" size="lg">
-              Schedule a Call
-            </CTAButton>
-          </div>
         </div>
       </section>
     </div>

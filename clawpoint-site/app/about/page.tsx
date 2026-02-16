@@ -118,7 +118,7 @@ export default function AboutPage() {
               <div className="w-12 h-px bg-[var(--tactical-green)]" />
               <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">MISSION-01</span>
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-8">
+            <h2 className="heading-h2 text-white mb-8">
               WHO WE ARE
             </h2>
 
@@ -140,7 +140,7 @@ export default function AboutPage() {
               <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">LEADERSHIP-02</span>
               <div className="w-12 h-px bg-[var(--tactical-green)]" />
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-6">
+            <h2 className="heading-h2 text-white mb-6">
               MEET THE TEAM
             </h2>
             <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed max-w-3xl mx-auto">
@@ -274,7 +274,7 @@ export default function AboutPage() {
               <div className="w-12 h-px bg-[var(--tactical-green)]" />
               <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CAPABILITIES-02</span>
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-6">
+            <h2 className="heading-h2 text-white mb-6">
               WHAT WE DO
             </h2>
             <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
@@ -347,7 +347,7 @@ export default function AboutPage() {
               <div className="w-12 h-px bg-[var(--tactical-green)]" />
               <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">TRACK RECORD</span>
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-mono tracking-wider mb-6">
+            <h2 className="heading-h2 text-white mb-6">
               PROVEN PERFORMANCE
             </h2>
             <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
@@ -414,7 +414,7 @@ export default function AboutPage() {
             <div className="inline-block w-16 h-16 border-2 border-[var(--night-vision)] mb-6 eye-glow predator-movement" />
           </div>
 
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 font-mono tracking-wider">
+          <h2 className="heading-h2 text-white mb-8">
             READY TO WORK WITH STRATEGIC PARTNERS?
           </h2>
 
@@ -423,15 +423,6 @@ export default function AboutPage() {
           </p>
 
           <DownloadBrief variant="banner" className="mb-16" />
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <CTAButton href="/contact" variant="alert" size="lg">
-              Schedule a Call
-            </CTAButton>
-            <CTAButton href="/solutions" variant="secondary" size="lg">
-              VIEW CAPABILITIES
-            </CTAButton>
-          </div>
 
           <div className="pt-16 border-t border-[var(--tactical-green-dark)]">
             <p className="text-xs text-gray-500 font-mono tracking-wider">

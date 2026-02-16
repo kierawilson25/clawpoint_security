@@ -197,7 +197,7 @@ export default function ContactPage() {
                   <div className="w-16 h-px bg-[var(--tactical-green)]" />
                   <span className="text-[var(--tactical-green-light)] font-mono text-sm tracking-widest">CONTACT-INFO</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white font-mono tracking-wider mb-8">
+                <h2 className="heading-h2 text-white mb-8">
                   CONTACT INFORMATION
                 </h2>
               </div>
@@ -427,7 +427,7 @@ export default function ContactPage() {
             <div className="inline-block w-20 h-20 border-2 border-[var(--night-vision)] mb-8 eye-glow predator-movement" />
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-10 font-mono tracking-wider">
+          <h2 className="heading-h2 text-white mb-10">
             READY TO SECURE YOUR MISSION?
           </h2>
 

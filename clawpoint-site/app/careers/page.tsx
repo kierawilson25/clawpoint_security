@@ -313,9 +313,6 @@ export default function CareersPage() {
             If you have what it takes to be part of an elite security operations team, we want to
             hear from you.
           </p>
-          <CTAButton href="/contact" variant="alert" size="lg">
-            Schedule a Call
-          </CTAButton>
         </div>
       </section>
     </div>
