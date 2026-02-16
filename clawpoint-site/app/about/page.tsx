@@ -424,15 +424,6 @@ export default function AboutPage() {
 
           <DownloadBrief variant="banner" className="mb-16" />
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <CTAButton href="/contact" variant="alert" size="lg">
-              Schedule a Call
-            </CTAButton>
-            <CTAButton href="/solutions" variant="secondary" size="lg">
-              VIEW CAPABILITIES
-            </CTAButton>
-          </div>
-
           <div className="pt-16 border-t border-[var(--tactical-green-dark)]">
             <p className="text-xs text-gray-500 font-mono tracking-wider">
               MISSION-CENTRIC | FEDERAL-FOCUSED | ALWAYS VIGILANT

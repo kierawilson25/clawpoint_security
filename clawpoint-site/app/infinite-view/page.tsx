@@ -225,12 +225,6 @@ export default function InfiniteViewPage() {
           </h2>
 
           <DownloadBrief variant="banner" className="mb-16" />
-
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-            <CTAButton href="/contact" variant="alert" size="lg">
-              Schedule a Call
-            </CTAButton>
-          </div>
         </div>
       </section>
     </div>

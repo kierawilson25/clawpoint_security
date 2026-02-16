@@ -390,19 +390,10 @@ export default function Home() {
             READY TO ENGAGE?
           </h2>
 
-          <p className="text-lg md:text-xl text-gray-300 mb-8 font-mono leading-relaxed max-w-3xl mx-auto">
-            The threats are real. The stakes are high. Your business cannot afford security gaps.
+          <p className="text-lg md:text-xl text-gray-300 mb-12 font-mono leading-relaxed max-w-3xl mx-auto">
+            The threats are real. The Stakes are high. Your business cannot afford security gaps.
             Let&apos;s eliminate them together.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-8">
-            <CTAButton href="/contact" variant="alert" size="lg">
-              Schedule a Call
-            </CTAButton>
-            <CTAButton href="/solutions" variant="secondary" size="lg">
-              REVIEW CAPABILITIES
-            </CTAButton>
-          </div>
 
           <div className="pt-12 border-t border-[var(--tactical-green-dark)]">
             <p className="text-sm text-gray-500 font-mono tracking-wider">

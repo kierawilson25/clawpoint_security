@@ -239,14 +239,6 @@ export default function InformationPage() {
           <p className="text-xl text-gray-300 mb-12 font-mono leading-relaxed">
             Reading about security is valuable. Having expert hunters on your team is business-critical.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <CTAButton href="/contact" variant="alert" size="lg">
-              Schedule a Call
-            </CTAButton>
-            <CTAButton href="/solutions" variant="secondary" size="lg">
-              VIEW CAPABILITIES
-            </CTAButton>
-          </div>
         </div>
       </section>
     </div>

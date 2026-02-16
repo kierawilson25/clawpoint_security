@@ -153,19 +153,6 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <CTAButton href="/contact" variant="alert" size="lg">
-              Schedule a Call
-            </CTAButton>
-            <CTAButton href="/about" variant="secondary" size="lg">
-              LEARN MORE
-            </CTAButton>
-          </div>
-        </div>
-      </section>
 
       {/* Download Brief Section */}
       <section className="relative py-16 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
