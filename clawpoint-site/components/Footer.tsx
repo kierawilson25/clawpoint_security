@@ -49,18 +49,14 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-gray-400 font-mono text-sm leading-relaxed">
-              Hunting threats in the digital forest. Always vigilant. Always ready.
+              Protecting what matters most. Expert cybersecurity for modern threats.
             </p>
-            <div className="mt-4 flex items-center gap-2 text-night-vision/60 font-mono text-xs">
-              <span className="inline-block w-2 h-2 bg-night-vision rounded-full eye-glow animate-pulse" />
-              HUNTERS READY
-            </div>
           </div>
 
           {/* Contact Info */}
           <div>
             <h3 className="text-white font-mono font-bold text-sm tracking-wider uppercase mb-6 relative inline-block">
-              Contact Intel
+              Contact
               <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-night-vision to-transparent" />
             </h3>
             <ul className="space-y-4">
@@ -87,7 +83,7 @@ export default function Footer() {
           {/* Social & Security */}
           <div className="md:flex md:flex-col md:items-end">
             <h3 className="text-white font-mono font-bold text-sm tracking-wider uppercase mb-6 relative inline-block">
-              Tactical Links
+              Connect
               <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-night-vision to-transparent" />
             </h3>
             <div className="flex gap-3 mb-6">
@@ -121,7 +117,7 @@ export default function Footer() {
         {/* Tactical decoration */}
         <div className="mt-8 pt-8 border-t border-tactical-green-dark/50 flex items-center justify-center gap-4 text-tactical-green/20 font-mono text-xs">
           <span className="w-8 h-0.5 bg-gradient-to-r from-transparent to-tactical-green" />
-          <span>[ PREDATOR ACTIVE ]</span>
+          <span>[ SECURE ]</span>
           <span className="w-8 h-0.5 bg-gradient-to-l from-transparent to-tactical-green" />
         </div>
       </div>

@@ -271,7 +271,7 @@ export default function Home() {
 
                 <div className="flex-shrink-0 w-[160px] md:w-[200px]">
                   <div className="text-xs text-[var(--tactical-green-light)] font-mono tracking-widest mb-1" aria-hidden="true">
-                    CLEARANCE-02
+                    EXPERIENCE-02
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-[var(--night-vision)] font-mono leading-none relative">
                     24+
@@ -334,7 +334,7 @@ export default function Home() {
 
                 <div className="flex-shrink-0 w-[160px] md:w-[200px]">
                   <div className="text-xs text-[var(--tactical-green-light)] font-mono tracking-widest mb-1" aria-hidden="true">
-                    CLASSIFIED-04
+                    EXPERTISE-04
                   </div>
                   <div className="text-2xl md:text-3xl font-bold text-[var(--night-vision)] font-mono leading-tight relative">
                     CLEARED<br/>LEADERSHIP
@@ -358,50 +358,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="relative py-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-black via-[var(--forest-depth-2)] to-black mt-16">
-        {/* Background image - light curves */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/AdobeStock_352206247.jpeg"
-            alt=""
-            fill
-            className="object-cover opacity-15 mix-blend-screen"
-          />
-        </div>
-
-        {/* Eyes watching */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-          {[
-            { left: '15%', top: '20%', gap: 6 },
-            { right: '20%', top: '30%', gap: 8 },
-            { left: '25%', bottom: '25%', gap: 5 },
-            { right: '30%', bottom: '35%', gap: 7 },
-          ].map((pos, i) => (
-            <div key={i} className={`absolute flex`} style={{...pos, gap: `${pos.gap * 4}px`}}>
-              <div className="w-2 h-2 bg-[var(--night-vision)] rounded-full eye-glow" />
-              <div className="w-2 h-2 bg-[var(--night-vision)] rounded-full eye-glow" />
-            </div>
-          ))}
-        </div>
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <h2 className="heading-h2 text-white mb-5">
-            READY TO ENGAGE?
-          </h2>
-
-          <p className="text-lg md:text-xl text-gray-300 mb-12 font-mono leading-relaxed max-w-3xl mx-auto">
-            The threats are real. The Stakes are high. Your business cannot afford security gaps.
-            Let&apos;s eliminate them together.
-          </p>
-
-          <div className="pt-12 border-t border-[var(--tactical-green-dark)]">
-            <p className="text-sm text-gray-500 font-mono tracking-wider">
-              ENCRYPTED COMMUNICATION | SECURE BY DEFAULT | ALWAYS VIGILANT
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
