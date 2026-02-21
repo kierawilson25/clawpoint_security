@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import CTAButton from '@/components/CTAButton'
-import DownloadBrief from '@/components/DownloadBrief'
 
 export default function ContactPage() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -155,14 +153,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.7)_70%,rgba(0,0,0,0.95)_100%)]" />
 
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center py-32">
-          <div className="mb-8 stalk-in" style={{ animationDelay: '0.2s' }}>
-            <div className="inline-block border border-[var(--night-vision)] px-4 py-2 font-mono text-xs text-[var(--night-vision)] bg-black/50 backdrop-blur-sm">
-              <span className="inline-block w-2 h-2 bg-[var(--night-vision)] rounded-full mr-2 eye-glow" />
-              SECURE COMMUNICATION CHANNEL
-            </div>
-          </div>
-
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.4s' }}>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.2s' }}>
             LET&apos;S START THE
             <span className="block text-[var(--night-vision)] text-glow mt-4">
               CONVERSATION
@@ -215,7 +206,7 @@ export default function ContactPage() {
                   <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
                     EMAIL
                   </h3>
-                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors break-all">
+                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-gray-200 font-mono text-sm hover:text-[var(--night-vision)] transition-colors break-all">
                     CSC_growth@clawpointsecuritycollective.com
                   </a>
                 </div>
@@ -228,7 +219,7 @@ export default function ContactPage() {
                     href="https://www.linkedin.com/company/clawpoint"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[var(--tactical-green)] font-mono text-sm hover:text-[var(--night-vision)] transition-colors inline-flex items-center gap-2"
+                    className="text-gray-200 font-mono text-sm hover:text-[var(--night-vision)] transition-colors inline-flex items-center gap-2"
                   >
                     <span>Connect with us</span>
                     <span>→</span>
@@ -411,39 +402,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="relative py-40 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/AdobeStock_352206247.jpeg"
-            alt=""
-            fill
-            className="object-cover opacity-15 mix-blend-screen"
-          />
-        </div>
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="mb-12">
-            <div className="inline-block w-20 h-20 border-2 border-[var(--night-vision)] mb-8 eye-glow predator-movement" />
-          </div>
-
-          <h2 className="heading-h2 text-white mb-10">
-            READY TO SECURE YOUR MISSION?
-          </h2>
-
-          <p className="text-lg md:text-xl text-gray-300 mb-16 font-mono leading-relaxed max-w-3xl mx-auto">
-            Let&apos;s discuss how we can align your security posture with your mission objectives.
-          </p>
-
-          <DownloadBrief variant="banner" className="mb-16" />
-
-          <div className="pt-20 border-t border-[var(--tactical-green-dark)]">
-            <p className="text-sm text-gray-500 font-mono tracking-wider">
-              ENCRYPTED COMMUNICATION | SECURE BY DEFAULT | ALWAYS VIGILANT
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
