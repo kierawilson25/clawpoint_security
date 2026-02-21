@@ -22,7 +22,7 @@ export default function DownloadBrief({ variant = 'inline', className = '' }: Do
             <div className="flex-1 text-center md:text-left">
               <div className="inline-block border border-[var(--night-vision)] px-3 py-1 mb-4 font-mono text-xs text-[var(--night-vision)] bg-black/50">
                 <span className="inline-block w-1.5 h-1.5 bg-[var(--night-vision)] rounded-full mr-2 eye-glow" />
-                TACTICAL INTELLIGENCE
+                SECURITY OVERVIEW
               </div>
               <h3 className="text-2xl font-bold text-white mb-2 font-mono tracking-wider">
                 CLAWPOINT SECURITY BRIEF

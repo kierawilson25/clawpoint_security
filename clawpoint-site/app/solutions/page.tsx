@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import SolutionCard from '@/components/SolutionCard'
 import CTAButton from '@/components/CTAButton'
 import DownloadBrief from '@/components/DownloadBrief'
@@ -11,25 +12,37 @@ export const metadata: Metadata = {
 
 export default function SolutionsPage() {
   return (
-    <div className="bg-black min-h-screen pt-20">
+    <div className="bg-black min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 tactical-grid opacity-20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/AdobeStock_352206247.jpeg"
+            alt=""
+            fill
+            className="object-cover opacity-15 mix-blend-screen"
+            priority
+          />
+        </div>
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-block border border-[var(--night-vision)] px-4 py-2 mb-6 font-mono text-xs text-[var(--night-vision)] bg-black/50 backdrop-blur-sm stalk-in" style={{ animationDelay: '0.2s' }}>
-            <span className="inline-block w-2 h-2 bg-[var(--night-vision)] rounded-full mr-2 eye-glow" />
-            OUR SERVICES
-          </div>
+        {/* Tactical grid */}
+        <div className="absolute inset-0 tactical-grid opacity-5" />
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.4s' }}>
-            EMPOWER YOUR <span className="text-[var(--night-vision)] text-glow">CYBER STRATEGY</span> WITH CLAWPOINT SECURITY COLLECTIVE
+        {/* Forest depth layers */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--forest-depth-3)] via-transparent to-[var(--forest-depth-2)] opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--forest-depth-1)] via-transparent to-transparent opacity-15" />
+        </div>
+
+        {/* Vignette */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_70%,rgba(0,0,0,0.9)_100%)]" />
+
+        <div className="max-w-4xl mx-auto text-center relative z-10 px-4 sm:px-6 lg:px-8 py-20">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white font-mono tracking-wider stalk-in" style={{ animationDelay: '0.2s' }}>
+            EMPOWER YOUR
+            <span className="block text-[var(--night-vision)] text-glow mt-3">CYBER STRATEGY</span>
           </h1>
-
-          <p className="text-xl text-gray-300 leading-relaxed font-mono stalk-in" style={{ animationDelay: '0.6s' }}>
-            We turn frameworks into force multipliers—linking controls to real threats, workflows, and outcomes.
-          </p>
         </div>
       </section>
 
@@ -121,7 +134,7 @@ export default function SolutionsPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono tracking-wider">
-              INTELLIGENCE CATEGORIES
+              SECURITY CATEGORIES
             </h2>
           </div>
 
