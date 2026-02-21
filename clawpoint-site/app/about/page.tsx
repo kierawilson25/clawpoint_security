@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import CTAButton from '@/components/CTAButton'
-import DownloadBrief from '@/components/DownloadBrief'
 
 export default function AboutPage() {
   const [eyesVisible, setEyesVisible] = useState(false)
@@ -82,11 +80,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_70%,rgba(0,0,0,0.9)_100%)]" />
 
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center py-20">
-          <div className="mb-6 stalk-in" style={{ animationDelay: '0.2s' }}>
-            <div className="inline-block w-10 h-10 border border-[var(--night-vision)] rotate-45 opacity-40 predator-movement" />
-          </div>
-
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.4s' }}>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.2s' }}>
             CLAWPOINT SECURITY
             <span className="block text-[var(--night-vision)] text-glow mt-3">
               COLLECTIVE
@@ -398,39 +392,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-black via-[var(--forest-depth-2)] to-black">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/AdobeStock_352206247.jpeg"
-            alt=""
-            fill
-            className="object-cover opacity-15 mix-blend-screen"
-          />
-        </div>
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="mb-10">
-            <div className="inline-block w-16 h-16 border-2 border-[var(--night-vision)] mb-6 eye-glow predator-movement" />
-          </div>
-
-          <h2 className="heading-h2 text-white mb-8">
-            READY TO WORK WITH STRATEGIC PARTNERS?
-          </h2>
-
-          <p className="text-base md:text-lg text-gray-300 mb-12 font-mono leading-relaxed max-w-3xl mx-auto">
-            Let&apos;s discuss how we can align your security posture with your mission objectives.
-          </p>
-
-          <DownloadBrief variant="banner" className="mb-16" />
-
-          <div className="pt-16 border-t border-[var(--tactical-green-dark)]">
-            <p className="text-xs text-gray-500 font-mono tracking-wider">
-              MISSION-CENTRIC | FEDERAL-FOCUSED | ALWAYS VIGILANT
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
