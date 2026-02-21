@@ -68,7 +68,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover opacity-35 mix-blend-screen"
           >
-            <source src="/images/Reverse Video.mp4" type="video/mp4" />
+            <source src="https://7xcqtmwmk6ep09bq.public.blob.vercel-storage.com/Reverse%20Video.mp4" type="video/mp4" />
           </video>
         </div>
 
