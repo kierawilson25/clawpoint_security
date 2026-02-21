@@ -303,18 +303,6 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono tracking-wider">
-            READY TO JOIN?
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 font-mono leading-relaxed">
-            If you have what it takes to be part of an elite security operations team, we want to
-            hear from you.
-          </p>
-        </div>
-      </section>
     </div>
   )
 }

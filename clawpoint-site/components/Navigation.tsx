@@ -74,7 +74,7 @@ export default function Navigation() {
                 CLAWPOINT
               </span>
               <span className="text-night-vision font-mono font-bold text-lg tracking-wider ml-2">
-                SECURITY
+                SECURITY COLLECTIVE
               </span>
             </div>
           </Link>
@@ -195,18 +195,6 @@ export default function Navigation() {
             </CTAButton>
           </div>
 
-          {/* Status indicator */}
-          <div
-            className="mt-12 flex items-center gap-3 font-mono text-sm text-night-vision/60"
-            style={{
-              animationDelay: `${(navigationLinks.length + 1) * 50}ms`,
-              opacity: isMenuOpen ? 1 : 0,
-              transition: `all 0.3s ease-out ${(navigationLinks.length + 1) * 50}ms`
-            }}
-          >
-            <span className="inline-block w-2 h-2 bg-night-vision rounded-full eye-glow" />
-            HUNTERS READY
-          </div>
         </div>
 
         {/* Decorative elements */}

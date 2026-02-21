@@ -3,8 +3,6 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import EyeAnimation from '@/components/EyeAnimation'
-import CTAButton from '@/components/CTAButton'
-import DownloadBrief from '@/components/DownloadBrief'
 
 export default function InfiniteViewPage() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -204,29 +202,6 @@ export default function InfiniteViewPage() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-black via-[var(--tactical-green-dark)] to-black">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/AdobeStock_352206247.jpeg"
-            alt=""
-            fill
-            className="object-cover opacity-15 mix-blend-screen"
-          />
-        </div>
-
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="mb-12">
-            <div className="inline-block w-20 h-20 border-2 border-[var(--night-vision)] mb-8 eye-glow predator-movement" />
-          </div>
-
-          <h2 className="heading-h2 text-white mb-10">
-            Ready to design your next move? <span className="text-[var(--night-vision)]">Join the Hunt</span>
-          </h2>
-
-          <DownloadBrief variant="banner" className="mb-16" />
-        </div>
-      </section>
     </div>
   )
 }

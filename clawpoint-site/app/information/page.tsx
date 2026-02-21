@@ -224,23 +224,9 @@ export default function InformationPage() {
             </div>
           </div>
 
-          <p className="text-sm text-gray-500 font-mono">
-            ENCRYPTED DELIVERY | UNSUBSCRIBE ANYTIME | ZERO SPAM POLICY
-          </p>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono tracking-wider">
-            NEED STRATEGIC SUPPORT?
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 font-mono leading-relaxed">
-            Reading about security is valuable. Having expert hunters on your team is business-critical.
-          </p>
-        </div>
-      </section>
     </div>
   )
 }
