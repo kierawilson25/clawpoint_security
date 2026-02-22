@@ -114,12 +114,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Tactical decoration */}
-        <div className="mt-8 pt-8 border-t border-tactical-green-dark/50 flex items-center justify-center gap-4 text-tactical-green/20 font-mono text-xs">
-          <span className="w-8 h-0.5 bg-gradient-to-r from-transparent to-tactical-green" />
-          <span>[ SECURE ]</span>
-          <span className="w-8 h-0.5 bg-gradient-to-l from-transparent to-tactical-green" />
-        </div>
       </div>
 
       {/* Decorative tactical corners */}
