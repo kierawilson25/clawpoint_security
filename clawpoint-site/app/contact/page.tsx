@@ -206,7 +206,7 @@ export default function ContactPage() {
                   <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
                     EMAIL
                   </h3>
-                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-gray-200 font-mono text-sm hover:text-[var(--night-vision)] transition-colors break-all">
+                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-white font-mono text-sm hover:text-[var(--night-vision)] transition-colors break-all">
                     CSC_growth@clawpointsecuritycollective.com
                   </a>
                 </div>
@@ -219,7 +219,7 @@ export default function ContactPage() {
                     href="https://www.linkedin.com/company/clawpoint"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-200 font-mono text-sm hover:text-[var(--night-vision)] transition-colors inline-flex items-center gap-2"
+                    className="text-white font-mono text-sm hover:text-[var(--night-vision)] transition-colors inline-flex items-center gap-2"
                   >
                     <span>Connect with us</span>
                     <span>→</span>
