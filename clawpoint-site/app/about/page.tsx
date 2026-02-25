@@ -112,10 +112,10 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3">
+        <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3">
 
           {/* Left 2/3: WHO WE ARE + WHAT WE DO + PROVEN PERFORMANCE */}
-          <div className="lg:col-span-2 px-4 sm:px-6 lg:px-8 divide-y divide-[var(--tactical-green-dark)]">
+          <div className="md:col-span-2 px-4 sm:px-6 lg:px-8 divide-y divide-[var(--tactical-green-dark)]">
 
             {/* WHAT WE DO — single compressed block */}
             <div className="pt-14 pb-12 emerge-from-forest">
@@ -179,7 +179,7 @@ export default function AboutPage() {
           </div>
 
           {/* Right 1/3: MEET THE TEAM sidebar */}
-          <div className="lg:col-span-1 lg:border-l border-t lg:border-t-0 border-[var(--tactical-green-dark)] px-4 sm:px-6 lg:px-8 pt-14 pb-12 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black">
+          <div className="md:col-span-1 md:border-l border-t md:border-t-0 border-[var(--tactical-green-dark)] px-4 sm:px-6 lg:px-8 pt-14 pb-12 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black">
             <div className="emerge-from-forest">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-px bg-[var(--tactical-green)]" />
@@ -192,7 +192,7 @@ export default function AboutPage() {
                 <article className="relative group stalk-in" style={{ animationDelay: '0.1s' }}>
                   <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                    <div className="relative aspect-square overflow-hidden">
+                    <div className="relative aspect-[4/3] overflow-hidden">
                       <Image src="/images/headshots/will-smith.jpg" alt="Will Smith" fill className="object-cover transition-all duration-500" unoptimized />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                     </div>
@@ -209,7 +209,7 @@ export default function AboutPage() {
                 <article className="relative group stalk-in" style={{ animationDelay: '0.2s' }}>
                   <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                    <div className="relative aspect-square overflow-hidden">
+                    <div className="relative aspect-[4/3] overflow-hidden">
                       <Image src="/images/headshots/edgar-carmenatty.png" alt="Dr. Edgar Carmenatty" fill className="object-cover object-top transition-all duration-500" unoptimized />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                     </div>
@@ -226,7 +226,7 @@ export default function AboutPage() {
                 <article className="relative group stalk-in" style={{ animationDelay: '0.3s' }}>
                   <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                    <div className="relative aspect-square overflow-hidden">
+                    <div className="relative aspect-[4/3] overflow-hidden">
                       <Image src="/images/headshots/charles-walker.png" alt="Charles Walker" fill className="object-cover transition-all duration-500" unoptimized />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                     </div>
