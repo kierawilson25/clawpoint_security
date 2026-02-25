@@ -177,6 +177,11 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* CAPABILITIES STATEMENT */}
+            <div className="py-12 emerge-from-forest">
+              <DownloadBrief variant="banner" title="CAPABILITIES STATEMENT" hideLabel />
+            </div>
+
           </div>
 
           {/* Right 1/3: THE TEAM sidebar */}
@@ -243,13 +248,6 @@ export default function AboutPage() {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* Capabilities Statement */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
-        <div className="max-w-4xl mx-auto">
-          <DownloadBrief variant="banner" title="CAPABILITIES STATEMENT" hideLabel />
         </div>
       </section>
 
