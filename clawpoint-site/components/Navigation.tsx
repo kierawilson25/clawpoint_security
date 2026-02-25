@@ -201,7 +201,6 @@ export default function Navigation() {
 
         {/* Decorative elements */}
         <div className="absolute top-8 left-8 w-16 h-16 border-2 border-tactical-green/20 rotate-45 pointer-events-none" />
-        <div className="absolute bottom-8 right-8 w-12 h-12 border-2 border-night-vision/20 pointer-events-none" />
       </div>
     </>
   )
