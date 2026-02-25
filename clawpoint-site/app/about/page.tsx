@@ -80,7 +80,7 @@ export default function AboutPage() {
         {/* Vignette */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_70%,rgba(0,0,0,0.9)_100%)]" />
 
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center pt-8 pb-20">
+        <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center pt-24 pb-20">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-10 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.2s' }}>
             CLAWPOINT SECURITY
             <span className="block text-[var(--night-vision)] text-glow mt-3">
