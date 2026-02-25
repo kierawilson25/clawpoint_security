@@ -44,7 +44,7 @@ export default function Footer() {
                   CLAWPOINT
                 </div>
                 <div className="text-night-vision font-mono font-bold text-base tracking-wider">
-                  SECURITY
+                  SECURITY COLLECTIVE
                 </div>
               </div>
             </Link>

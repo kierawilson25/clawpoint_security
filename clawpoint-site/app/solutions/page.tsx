@@ -129,7 +129,7 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* Intelligence Categories */}
+      {/* Security Categories */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--tactical-green-dark)] to-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
