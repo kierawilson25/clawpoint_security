@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import DownloadBrief from '@/components/DownloadBrief'
 
 export default function AboutPage() {
   const [eyesVisible, setEyesVisible] = useState(false)
@@ -242,6 +243,13 @@ export default function AboutPage() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* Capabilities Statement */}
+      <section className="relative py-16 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
+        <div className="max-w-4xl mx-auto">
+          <DownloadBrief variant="banner" title="CAPABILITIES STATEMENT" hideLabel />
         </div>
       </section>
 
