@@ -79,17 +79,13 @@ export default function AboutPage() {
         {/* Vignette */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_70%,rgba(0,0,0,0.9)_100%)]" />
 
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center py-20">
+        <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center pt-8 pb-20">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.2s' }}>
             CLAWPOINT SECURITY
             <span className="block text-[var(--night-vision)] text-glow mt-3">
               COLLECTIVE
             </span>
           </h1>
-
-          <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto font-mono leading-relaxed stalk-in" style={{ animationDelay: '0.6s' }}>
-            Mission-centric cybersecurity and operational assurance for federal and national security stakeholders
-          </p>
         </div>
       </section>
 
@@ -107,23 +103,11 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3">
 
-          {/* Left 2/3: WHO WE ARE + WHAT WE DO + PROVEN PERFORMANCE */}
+          {/* Left 2/3: WHAT WE DO + WHO WE ARE + PROVEN PERFORMANCE */}
           <div className="lg:col-span-2 px-4 sm:px-6 lg:px-8 divide-y divide-[var(--tactical-green-dark)]">
 
-            {/* WHO WE ARE */}
+            {/* WHAT WE DO — first section, single compressed block */}
             <div className="pt-14 pb-12 emerge-from-forest">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-px bg-[var(--tactical-green)]" />
-                <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">MISSION-01</span>
-              </div>
-              <h2 className="heading-h2 text-white mb-8">WHO WE ARE</h2>
-              <p className="text-lg md:text-xl text-white font-mono leading-relaxed">
-                Clawpoint Security Collective (CSC) is a mission-centric cybersecurity company built to deliver precision over panic—turning fragmented telemetry, complex risk, and operational uncertainty into actionable outcomes. CSC operates at the intersection of mission assurance, cyber resilience, and analyst enablement to reduce exposure while strengthening mission continuity.
-              </p>
-            </div>
-
-            {/* WHAT WE DO — single compressed block */}
-            <div className="py-12 emerge-from-forest">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-px bg-[var(--tactical-green)]" />
                 <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CAPABILITIES-03</span>
@@ -155,6 +139,18 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* WHO WE ARE */}
+            <div className="py-12 emerge-from-forest">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-px bg-[var(--tactical-green)]" />
+                <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">MISSION-01</span>
+              </div>
+              <h2 className="heading-h2 text-white mb-8">WHO WE ARE</h2>
+              <p className="text-lg md:text-xl text-white font-mono leading-relaxed">
+                Clawpoint Security Collective (CSC) is a mission-centric cybersecurity company built to deliver precision over panic—turning fragmented telemetry, complex risk, and operational uncertainty into actionable outcomes. CSC operates at the intersection of mission assurance, cyber resilience, and analyst enablement to reduce exposure while strengthening mission continuity.
+              </p>
+            </div>
+
             {/* PROVEN PERFORMANCE */}
             <div className="py-12 emerge-from-forest">
               <div className="flex items-center gap-4 mb-4">
@@ -166,16 +162,16 @@ export default function AboutPage() {
                 Our operational track record demonstrates mission success at scale
               </p>
               <div className="grid sm:grid-cols-3 gap-6">
-                <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-6 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.1s' }}>
-                  <div className="text-4xl md:text-5xl font-bold text-[var(--night-vision)] font-mono mb-3">22,000</div>
+                <article className="relative group stalk-in min-w-0 border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-6 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.1s' }}>
+                  <div className="text-4xl font-bold text-[var(--night-vision)] font-mono mb-3 break-words">22,000</div>
                   <p className="text-sm text-gray-300 font-mono leading-relaxed">Privileged accounts secured</p>
                 </article>
-                <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-6 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.2s' }}>
-                  <div className="text-2xl md:text-3xl font-bold text-[var(--night-vision)] font-mono mb-3">ACCELERATED</div>
+                <article className="relative group stalk-in min-w-0 border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-6 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.2s' }}>
+                  <div className="text-2xl font-bold text-[var(--night-vision)] font-mono mb-3 break-words">ACCELERATED</div>
                   <p className="text-sm text-gray-300 font-mono leading-relaxed">Authorization delivery across multiple enclaves</p>
                 </article>
-                <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-6 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.3s' }}>
-                  <div className="text-2xl md:text-3xl font-bold text-[var(--night-vision)] font-mono mb-3 uppercase">Mission Assurance</div>
+                <article className="relative group stalk-in min-w-0 border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-6 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.3s' }}>
+                  <div className="text-2xl font-bold text-[var(--night-vision)] font-mono mb-3 break-words uppercase">Mission Assurance</div>
                   <p className="text-sm text-gray-300 font-mono leading-relaxed">Bridging compliance and operational reality</p>
                 </article>
               </div>
