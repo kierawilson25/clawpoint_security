@@ -52,7 +52,7 @@ export default function InfiniteViewPage() {
 
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center py-20">
           {/* Infinite View Logo */}
-          <div className="mb-8 stalk-in flex justify-center">
+          <div className="mb-8 iv-emerge flex justify-center">
             <Image
               src="/images/infiniteview-logo-white.png"
               alt="Infinite View"
@@ -185,8 +185,8 @@ export default function InfiniteViewPage() {
                     <div className="text-sm text-[var(--tactical-green-light)] font-mono mb-4 tracking-wider">
                       PILLAR 3: PREDICTIVE INTELLIGENCE
                     </div>
-                    <p className="body-regular text-gray-300 italic">
-                      Details coming soon...
+                    <p className="body-regular text-gray-300">
+                      HRE (Horizon Engine) is Infinite View&apos;s human-machine resilience and decision engine that turns information into timelines, beacons, and mission-aligned decision triggers. HRE is where Infinite View becomes a mission system—compressing time-to-truth and enabling proactive action through explainable insight paths.
                     </p>
                   </div>
                 </div>
