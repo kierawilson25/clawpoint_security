@@ -178,14 +178,14 @@ export default function AboutPage() {
 
           </div>
 
-          {/* Right 1/3: MEET THE TEAM sidebar */}
+          {/* Right 1/3: THE TEAM sidebar */}
           <div className="md:col-span-1 md:border-l border-t md:border-t-0 border-[var(--tactical-green-dark)] px-4 sm:px-6 lg:px-8 pt-14 pb-12 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black">
             <div className="emerge-from-forest">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-px bg-[var(--tactical-green)]" />
                 <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">LEADERSHIP-02</span>
               </div>
-              <h2 className="heading-h2 text-white mb-8">MEET THE TEAM</h2>
+              <h2 className="heading-h2 text-white mb-8">THE TEAM</h2>
 
               <div className="space-y-6">
                 {/* Will Smith */}
