@@ -93,10 +93,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Who We Are & Mission Section */}
-      <section className="relative pt-14 pb-8 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
+      {/* Main Body: 2/3 content left + 1/3 team sidebar right */}
+      <section className="relative border-t border-[var(--tactical-green-dark)]">
         <div className="absolute inset-0 tactical-grid opacity-5" />
-
         <div className="absolute inset-0">
           <Image
             src="/images/AdobeStock_328406149.jpeg"
@@ -106,289 +105,148 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="emerge-from-forest">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">MISSION-01</span>
-            </div>
-            <h2 className="heading-h2 text-white mb-8">
-              WHO WE ARE
-            </h2>
+        <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3">
 
-            <p className="text-lg md:text-xl text-white font-mono leading-relaxed">
-              Clawpoint Security Collective (CSC) is a mission-centric cybersecurity company built to deliver precision over panic—turning fragmented telemetry, complex risk, and operational uncertainty into actionable outcomes. CSC operates at the intersection of mission assurance, cyber resilience, and analyst enablement to reduce exposure while strengthening mission continuity.
-            </p>
-          </div>
-        </div>
-      </section>
+          {/* Left 2/3: WHO WE ARE + WHAT WE DO + PROVEN PERFORMANCE */}
+          <div className="lg:col-span-2 px-4 sm:px-6 lg:px-8 divide-y divide-[var(--tactical-green-dark)]">
 
-      {/* Team Section */}
-      <section className="relative pt-10 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black border-t border-[var(--tactical-green-dark)]">
-        <div className="absolute inset-0 tactical-grid opacity-5" />
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="mb-16 emerge-from-forest text-center">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">LEADERSHIP-02</span>
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-            </div>
-            <h2 className="heading-h2 text-white mb-6">
-              MEET THE TEAM
-            </h2>
-            <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed max-w-3xl mx-auto">
-              Mission-focused leaders with deep expertise in federal cybersecurity
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Will Smith - Founder & CEO */}
-            <article className="relative group stalk-in" style={{ animationDelay: '0.1s' }}>
-              <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-
-                {/* Headshot */}
-                <div className="relative aspect-square overflow-hidden">
-                  <Image
-                    src="/images/headshots/will-smith.jpg"
-                    alt="Will Smith"
-                    fill
-                    className="object-cover transition-all duration-500"
-                    unoptimized
-                  />
-                  {/* Tactical overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
-                </div>
-
-                {/* Info */}
-                <div className="p-6 text-center">
-                  <h3 className="text-xl md:text-2xl font-bold text-white font-mono mb-2 tracking-wide">
-                    Will Smith
-                  </h3>
-                  <p className="text-[var(--night-vision)] font-mono text-sm font-bold mb-3">
-                    Founder & CEO
-                  </p>
-                  <div className="w-16 h-px bg-[var(--tactical-green)] mx-auto opacity-50" />
-                </div>
-
-                {/* Tactical corners */}
-                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[var(--night-vision)] opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[var(--night-vision)] opacity-0 group-hover:opacity-100 transition-opacity" />
+            {/* WHO WE ARE */}
+            <div className="pt-14 pb-12 emerge-from-forest">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-px bg-[var(--tactical-green)]" />
+                <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">MISSION-01</span>
               </div>
-            </article>
-
-            {/* Dr. Edgar Carmenatty */}
-            <article className="relative group stalk-in" style={{ animationDelay: '0.2s' }}>
-              <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-
-                {/* Headshot */}
-                <div className="relative aspect-square overflow-hidden">
-                  <Image
-                    src="/images/headshots/edgar-carmenatty.png"
-                    alt="Dr. Edgar Carmenatty"
-                    fill
-                    className="object-cover object-top transition-all duration-500"
-                    unoptimized
-                  />
-                  {/* Tactical overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
-                </div>
-
-                {/* Info */}
-                <div className="p-6 text-center">
-                  <h3 className="text-xl md:text-2xl font-bold text-white font-mono mb-2 tracking-wide">
-                    Dr. Edgar Carmenatty
-                  </h3>
-                  <p className="text-[var(--night-vision)] font-mono text-sm font-bold mb-3">
-                    Principal Cyber Security Consultant
-                  </p>
-                  <div className="w-16 h-px bg-[var(--tactical-green)] mx-auto opacity-50" />
-                </div>
-
-                {/* Tactical corners */}
-                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[var(--night-vision)] opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[var(--night-vision)] opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
-            </article>
-
-            {/* Charles Walker */}
-            <article className="relative group stalk-in" style={{ animationDelay: '0.3s' }}>
-              <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-
-                {/* Headshot */}
-                <div className="relative aspect-square overflow-hidden">
-                  <Image
-                    src="/images/headshots/charles-walker.png"
-                    alt="Charles Walker"
-                    fill
-                    className="object-cover transition-all duration-500"
-                    unoptimized
-                  />
-                  {/* Tactical overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
-                </div>
-
-                {/* Info */}
-                <div className="p-6 text-center">
-                  <h3 className="text-xl md:text-2xl font-bold text-white font-mono mb-2 tracking-wide">
-                    Charles Walker
-                  </h3>
-                  <p className="text-[var(--night-vision)] font-mono text-sm font-bold mb-3">
-                    Director, Mission Capture
-                  </p>
-                  <div className="w-16 h-px bg-[var(--tactical-green)] mx-auto opacity-50" />
-                </div>
-
-                {/* Tactical corners */}
-                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[var(--night-vision)] opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[var(--night-vision)] opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* What We Do Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/AdobeStock_241827782.jpeg"
-            alt=""
-            fill
-            className="object-cover opacity-10 mix-blend-screen"
-          />
-        </div>
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="mb-12 emerge-from-forest">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CAPABILITIES-03</span>
+              <h2 className="heading-h2 text-white mb-8">WHO WE ARE</h2>
+              <p className="text-lg md:text-xl text-white font-mono leading-relaxed">
+                Clawpoint Security Collective (CSC) is a mission-centric cybersecurity company built to deliver precision over panic—turning fragmented telemetry, complex risk, and operational uncertainty into actionable outcomes. CSC operates at the intersection of mission assurance, cyber resilience, and analyst enablement to reduce exposure while strengthening mission continuity.
+              </p>
             </div>
-            <h2 className="heading-h2 text-white mb-6">
-              WHAT WE DO
-            </h2>
-            <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
-              Clawpoint Security Collective partners with mission-critical organizations to:
-            </p>
+
+            {/* WHAT WE DO — single compressed block */}
+            <div className="py-12 emerge-from-forest">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-px bg-[var(--tactical-green)]" />
+                <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CAPABILITIES-03</span>
+              </div>
+              <h2 className="heading-h2 text-white mb-6">WHAT WE DO</h2>
+              <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-6">
+                Clawpoint Security Collective partners with mission-critical organizations to:
+              </p>
+              <div className="border-l-4 border-[var(--tactical-green)] pl-6 py-4 bg-black/40 backdrop-blur-sm space-y-4 stalk-in">
+                <p className="text-base text-gray-300 font-mono leading-relaxed">
+                  <span className="text-[var(--night-vision)] font-bold mr-3">01</span>
+                  Surface enterprise risk that undermines operational effectiveness
+                </p>
+                <div className="h-px bg-[var(--tactical-green-dark)]" />
+                <p className="text-base text-gray-300 font-mono leading-relaxed">
+                  <span className="text-[var(--night-vision)] font-bold mr-3">02</span>
+                  Accelerate leadership decisions with context and confidence
+                </p>
+                <div className="h-px bg-[var(--tactical-green-dark)]" />
+                <p className="text-base text-gray-300 font-mono leading-relaxed">
+                  <span className="text-[var(--night-vision)] font-bold mr-3">03</span>
+                  Fortify mission continuity against dynamic threats
+                </p>
+              </div>
+              <div className="mt-6 p-6 border border-[var(--tactical-green-dark)] bg-black/60">
+                <p className="text-sm md:text-base text-gray-400 font-mono leading-relaxed italic">
+                  We combine operational experience, risk-informed methodologies, and a human-centered approach to secure the mission—not just infrastructure.
+                </p>
+              </div>
+            </div>
+
+            {/* PROVEN PERFORMANCE */}
+            <div className="py-12 emerge-from-forest">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-px bg-[var(--tactical-green)]" />
+                <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">TRACK RECORD</span>
+              </div>
+              <h2 className="heading-h2 text-white mb-6">PROVEN PERFORMANCE</h2>
+              <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
+                Our operational track record demonstrates mission success at scale
+              </p>
+              <div className="grid sm:grid-cols-3 gap-6">
+                <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-6 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.1s' }}>
+                  <div className="text-4xl md:text-5xl font-bold text-[var(--night-vision)] font-mono mb-3">22,000</div>
+                  <p className="text-sm text-gray-300 font-mono leading-relaxed">Privileged accounts secured</p>
+                </article>
+                <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-6 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.2s' }}>
+                  <div className="text-2xl md:text-3xl font-bold text-[var(--night-vision)] font-mono mb-3">ACCELERATED</div>
+                  <p className="text-sm text-gray-300 font-mono leading-relaxed">Authorization delivery across multiple enclaves</p>
+                </article>
+                <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-6 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.3s' }}>
+                  <div className="text-2xl md:text-3xl font-bold text-[var(--night-vision)] font-mono mb-3 uppercase">Mission Assurance</div>
+                  <p className="text-sm text-gray-300 font-mono leading-relaxed">Bridging compliance and operational reality</p>
+                </article>
+              </div>
+            </div>
+
           </div>
 
-          <div className="space-y-8">
-            {[
-              {
-                num: '01',
-                title: 'Surface enterprise risk that undermines operational effectiveness',
-                delay: '0.1s'
-              },
-              {
-                num: '02',
-                title: 'Accelerate leadership decisions with context and confidence',
-                delay: '0.2s'
-              },
-              {
-                num: '03',
-                title: 'Fortify mission continuity against dynamic threats',
-                delay: '0.3s'
-              }
-            ].map((item, i) => (
-              <article key={i} className="relative group stalk-in" style={{ animationDelay: item.delay }}>
-                <div className="credential-shine flex items-start gap-6 border-l-4 border-[var(--tactical-green)] pl-6 py-6 bg-black/40 backdrop-blur-sm relative overflow-hidden hover:bg-black/60 hover:border-[var(--night-vision)] transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+          {/* Right 1/3: MEET THE TEAM sidebar */}
+          <div className="lg:col-span-1 lg:border-l border-t lg:border-t-0 border-[var(--tactical-green-dark)] px-4 sm:px-6 lg:px-8 pt-14 pb-12 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black">
+            <div className="emerge-from-forest">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-px bg-[var(--tactical-green)]" />
+                <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">LEADERSHIP-02</span>
+              </div>
+              <h2 className="heading-h2 text-white mb-8">MEET THE TEAM</h2>
 
-                  <div className="flex-shrink-0">
-                    <div className="text-3xl md:text-4xl font-bold text-[var(--night-vision)]/20 font-mono">
-                      {item.num}
+              <div className="space-y-6">
+                {/* Will Smith */}
+                <article className="relative group stalk-in" style={{ animationDelay: '0.1s' }}>
+                  <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                    <div className="relative aspect-square overflow-hidden">
+                      <Image src="/images/headshots/will-smith.jpg" alt="Will Smith" fill className="object-cover transition-all duration-500" unoptimized />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                     </div>
+                    <div className="p-4 text-center">
+                      <h3 className="text-lg font-bold text-white font-mono mb-1 tracking-wide">Will Smith</h3>
+                      <p className="text-[var(--night-vision)] font-mono text-xs font-bold">Founder & CEO</p>
+                    </div>
+                    <div className="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[var(--night-vision)] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[var(--night-vision)] opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
+                </article>
 
-                  <div className="flex-1">
-                    <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed">
-                      {item.title}
-                    </p>
+                {/* Dr. Edgar Carmenatty */}
+                <article className="relative group stalk-in" style={{ animationDelay: '0.2s' }}>
+                  <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                    <div className="relative aspect-square overflow-hidden">
+                      <Image src="/images/headshots/edgar-carmenatty.png" alt="Dr. Edgar Carmenatty" fill className="object-cover object-top transition-all duration-500" unoptimized />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
+                    </div>
+                    <div className="p-4 text-center">
+                      <h3 className="text-lg font-bold text-white font-mono mb-1 tracking-wide">Dr. Edgar Carmenatty</h3>
+                      <p className="text-[var(--night-vision)] font-mono text-xs font-bold">Principal Cyber Security Consultant</p>
+                    </div>
+                    <div className="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[var(--night-vision)] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[var(--night-vision)] opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                </div>
-              </article>
-            ))}
-          </div>
+                </article>
 
-          <div className="mt-10 p-6 border border-[var(--tactical-green-dark)] bg-black/60">
-            <p className="text-sm md:text-base text-gray-400 font-mono leading-relaxed italic">
-              We combine operational experience, risk-informed methodologies, and a human-centered approach to secure the mission—not just infrastructure.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Track Record Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
-        <div className="absolute inset-0 tactical-grid opacity-5" />
-
-        <div className="absolute inset-0">
-          <Image
-            src="/images/AdobeStock_328406149.jpeg"
-            alt=""
-            fill
-            className="object-cover opacity-10 mix-blend-lighten"
-          />
-        </div>
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="mb-12 emerge-from-forest">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">TRACK RECORD</span>
+                {/* Charles Walker */}
+                <article className="relative group stalk-in" style={{ animationDelay: '0.3s' }}>
+                  <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                    <div className="relative aspect-square overflow-hidden">
+                      <Image src="/images/headshots/charles-walker.png" alt="Charles Walker" fill className="object-cover transition-all duration-500" unoptimized />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
+                    </div>
+                    <div className="p-4 text-center">
+                      <h3 className="text-lg font-bold text-white font-mono mb-1 tracking-wide">Charles Walker</h3>
+                      <p className="text-[var(--night-vision)] font-mono text-xs font-bold">Director, Mission Capture</p>
+                    </div>
+                    <div className="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-[var(--night-vision)] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-[var(--night-vision)] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                </article>
+              </div>
             </div>
-            <h2 className="heading-h2 text-white mb-6">
-              PROVEN PERFORMANCE
-            </h2>
-            <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
-              Our operational track record demonstrates mission success at scale
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Metric 1: Privileged Accounts */}
-            <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.1s' }}>
-              <div className="credential-shine relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
-                <div className="text-5xl md:text-6xl font-bold text-[var(--night-vision)] font-mono mb-4">
-                  22,000
-                </div>
-                <p className="text-base text-gray-300 font-mono leading-relaxed">
-                  Privileged accounts secured
-                </p>
-              </div>
-            </article>
-
-            {/* Metric 2: Authorization Delivery */}
-            <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.2s' }}>
-              <div className="credential-shine relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
-                <div className="text-3xl md:text-4xl font-bold text-[var(--night-vision)] font-mono mb-4 relative">
-                  ACCELERATED
-                </div>
-                <p className="text-base text-gray-300 font-mono leading-relaxed relative">
-                  Authorization delivery across multiple enclaves
-                </p>
-              </div>
-            </article>
-
-            {/* Metric 3: Mission Assurance */}
-            <article className="relative group stalk-in border-2 border-[var(--tactical-green-dark)] bg-black/60 backdrop-blur-sm p-8 hover:border-[var(--night-vision)] transition-all duration-500" style={{ animationDelay: '0.3s' }}>
-              <div className="credential-shine relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" aria-hidden="true" />
-                <div className="text-3xl md:text-4xl font-bold text-[var(--night-vision)] font-mono mb-4 uppercase">
-                  Mission Assurance
-                </div>
-                <p className="text-base text-gray-300 font-mono leading-relaxed">
-                  Bridging compliance and operational reality
-                </p>
-              </div>
-            </article>
-          </div>
         </div>
       </section>
 
