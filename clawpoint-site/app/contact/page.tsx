@@ -199,7 +199,8 @@ export default function ContactPage() {
                     OFFICE LOCATION
                   </h3>
                   <p className="text-white font-mono text-lg">Clawpoint Security Collective</p>
-                  <p className="text-gray-400 font-mono text-sm">Charlotte, NC</p>
+                  <p className="text-gray-400 font-mono text-sm">9319 Robert D. Snyder Rd, Suite 202</p>
+                  <p className="text-gray-400 font-mono text-sm">Charlotte, NC 28223</p>
                 </div>
 
                 <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">

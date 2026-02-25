@@ -40,5 +40,3 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# large media files hosted on external CDN (Vercel Blob)
-public/images/Reverse Video.mp4
