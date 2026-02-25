@@ -266,7 +266,7 @@ export default function AboutPage() {
           <div className="mb-12 emerge-from-forest">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CAPABILITIES-02</span>
+              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CAPABILITIES-03</span>
             </div>
             <h2 className="heading-h2 text-white mb-6">
               WHAT WE DO
