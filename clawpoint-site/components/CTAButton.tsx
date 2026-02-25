@@ -49,7 +49,7 @@ export default function CTAButton({
   onClick,
   type = 'button'
 }: CTAButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center border-2 font-mono font-bold tracking-wider uppercase transition-all duration-300 relative overflow-hidden group'
+  const baseStyles = 'inline-flex items-center justify-center border-2 font-mono font-bold tracking-wider uppercase transition-all duration-300 relative overflow-hidden group whitespace-nowrap'
 
   const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`
 

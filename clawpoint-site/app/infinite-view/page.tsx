@@ -84,12 +84,6 @@ export default function InfiniteViewPage() {
 
         <div className="max-w-5xl mx-auto relative z-10">
           <div className="emerge-from-forest text-center">
-            <div className="inline-flex items-center gap-4 mb-6">
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CONCEPT-STAGE PLATFORM</span>
-              <div className="w-12 h-px bg-[var(--tactical-green)]" />
-            </div>
-
             <div className="border-2 border-[var(--night-vision)] bg-black/60 backdrop-blur-sm p-10 relative">
               <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[var(--tactical-green)]" />
               <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[var(--tactical-green)]" />

@@ -69,11 +69,11 @@ export default function Navigation() {
                 priority
               />
             </div>
-            <div className="hidden sm:block">
+            <div className="hidden sm:flex flex-col leading-tight">
               <span className="text-white font-mono font-bold text-lg tracking-wider">
                 CLAWPOINT
               </span>
-              <span className="text-night-vision font-mono font-bold text-lg tracking-wider ml-2">
+              <span className="text-night-vision font-mono font-bold text-lg tracking-wider">
                 SECURITY COLLECTIVE
               </span>
             </div>
