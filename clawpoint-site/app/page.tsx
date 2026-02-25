@@ -158,7 +158,7 @@ export default function Home() {
           <div className="rabbit-hole-element absolute w-2.5 h-2.5 border border-[var(--tactical-green)] rotate-45" style={{ left: '75%', animationDelay: '15s' }} />
         </div>
 
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-center pt-20 pb-16">
+        <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-center pt-20 pb-40">
           {/* Logo - Main Focus - Shows First */}
           <div className="mb-8 flex justify-center stalk-in" style={{ animationDelay: '0.5s', animationDuration: '2s' }}>
             <Image
