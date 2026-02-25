@@ -295,6 +295,23 @@ body {
   opacity: 0;
 }
 
+/* Infinite View logo — starts tiny (far away), grows slowly then rushes toward viewer */
+@keyframes iv-emerge {
+  0%   { opacity: 0;    transform: scale(0.04); }
+  15%  { opacity: 0.1;  transform: scale(0.06); }
+  30%  { opacity: 0.25; transform: scale(0.1);  }
+  50%  { opacity: 0.55; transform: scale(0.25); }
+  70%  { opacity: 0.85; transform: scale(0.6);  }
+  88%  { opacity: 1;    transform: scale(0.97); }
+  94%  {                transform: scale(1.04); }
+  100% { opacity: 1;    transform: scale(1);    }
+}
+
+.iv-emerge {
+  animation: iv-emerge 4s linear forwards;
+  opacity: 0;
+}
+
 /* Predator eye glow - slow and menacing */
 @keyframes eye-glow {
   0%, 100% {
