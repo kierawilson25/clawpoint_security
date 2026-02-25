@@ -52,7 +52,7 @@ export default function InfiniteViewPage() {
 
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center py-20">
           {/* Infinite View Logo */}
-          <div className="mb-8 stalk-in flex justify-center">
+          <div className="mb-8 iv-emerge flex justify-center">
             <Image
               src="/images/infiniteview-logo-white.png"
               alt="Infinite View"
