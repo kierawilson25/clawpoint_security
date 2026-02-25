@@ -189,10 +189,10 @@ export default function AboutPage() {
 
               <div className="space-y-6">
                 {/* Will Smith */}
-                <article className="relative group stalk-in" style={{ animationDelay: '0.1s' }}>
+                <article className="relative group stalk-in max-w-[220px] mx-auto" style={{ animationDelay: '0.1s' }}>
                   <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative aspect-square overflow-hidden">
                       <Image src="/images/headshots/will-smith.jpg" alt="Will Smith" fill className="object-cover transition-all duration-500" unoptimized />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                     </div>
@@ -206,10 +206,10 @@ export default function AboutPage() {
                 </article>
 
                 {/* Dr. Edgar Carmenatty */}
-                <article className="relative group stalk-in" style={{ animationDelay: '0.2s' }}>
+                <article className="relative group stalk-in max-w-[220px] mx-auto" style={{ animationDelay: '0.2s' }}>
                   <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative aspect-square overflow-hidden">
                       <Image src="/images/headshots/edgar-carmenatty.png" alt="Dr. Edgar Carmenatty" fill className="object-cover object-top transition-all duration-500" unoptimized />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                     </div>
@@ -223,10 +223,10 @@ export default function AboutPage() {
                 </article>
 
                 {/* Charles Walker */}
-                <article className="relative group stalk-in" style={{ animationDelay: '0.3s' }}>
+                <article className="relative group stalk-in max-w-[220px] mx-auto" style={{ animationDelay: '0.3s' }}>
                   <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--night-vision)]/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative aspect-square overflow-hidden">
                       <Image src="/images/headshots/charles-walker.png" alt="Charles Walker" fill className="object-cover transition-all duration-500" unoptimized />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                     </div>
