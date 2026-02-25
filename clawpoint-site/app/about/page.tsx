@@ -80,12 +80,23 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_70%,rgba(0,0,0,0.9)_100%)]" />
 
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center pt-8 pb-20">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.2s' }}>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-10 font-mono tracking-wider stalk-in" style={{ animationDelay: '0.2s' }}>
             CLAWPOINT SECURITY
             <span className="block text-[var(--night-vision)] text-glow mt-3">
               COLLECTIVE
             </span>
           </h1>
+
+          <div className="text-left max-w-3xl mx-auto stalk-in" style={{ animationDelay: '0.5s' }}>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-px bg-[var(--tactical-green)]" />
+              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">MISSION-01</span>
+            </div>
+            <h2 className="heading-h3 text-white mb-4">WHO WE ARE</h2>
+            <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed">
+              Clawpoint Security Collective (CSC) is a mission-centric cybersecurity company built to deliver precision over panic—turning fragmented telemetry, complex risk, and operational uncertainty into actionable outcomes. CSC operates at the intersection of mission assurance, cyber resilience, and analyst enablement to reduce exposure while strengthening mission continuity.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -103,10 +114,10 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3">
 
-          {/* Left 2/3: WHAT WE DO + WHO WE ARE + PROVEN PERFORMANCE */}
+          {/* Left 2/3: WHO WE ARE + WHAT WE DO + PROVEN PERFORMANCE */}
           <div className="lg:col-span-2 px-4 sm:px-6 lg:px-8 divide-y divide-[var(--tactical-green-dark)]">
 
-            {/* WHAT WE DO — first section, single compressed block */}
+            {/* WHAT WE DO — single compressed block */}
             <div className="pt-14 pb-12 emerge-from-forest">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-px bg-[var(--tactical-green)]" />
@@ -137,18 +148,6 @@ export default function AboutPage() {
                   We combine operational experience, risk-informed methodologies, and a human-centered approach to secure the mission—not just infrastructure.
                 </p>
               </div>
-            </div>
-
-            {/* WHO WE ARE */}
-            <div className="py-12 emerge-from-forest">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-px bg-[var(--tactical-green)]" />
-                <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">MISSION-01</span>
-              </div>
-              <h2 className="heading-h2 text-white mb-8">WHO WE ARE</h2>
-              <p className="text-lg md:text-xl text-white font-mono leading-relaxed">
-                Clawpoint Security Collective (CSC) is a mission-centric cybersecurity company built to deliver precision over panic—turning fragmented telemetry, complex risk, and operational uncertainty into actionable outcomes. CSC operates at the intersection of mission assurance, cyber resilience, and analyst enablement to reduce exposure while strengthening mission continuity.
-              </p>
             </div>
 
             {/* PROVEN PERFORMANCE */}
