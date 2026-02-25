@@ -58,7 +58,7 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex flex-col overflow-hidden">
         {/* Background video - reverse video */}
         <div className="absolute inset-0">
           <video
@@ -68,7 +68,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover opacity-35 mix-blend-screen"
           >
-            <source src="https://7xcqtmwmk6ep09bq.public.blob.vercel-storage.com/Reverse%20Video.mp4" type="video/mp4" />
+            <source src="/images/Reverse%20Video.mp4" type="video/mp4" />
           </video>
         </div>
 
@@ -158,7 +158,8 @@ export default function Home() {
           <div className="rabbit-hole-element absolute w-2.5 h-2.5 border border-[var(--tactical-green)] rotate-45" style={{ left: '75%', animationDelay: '15s' }} />
         </div>
 
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-center pt-20 pb-40">
+        <div className="relative z-10 flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
+        <div className="max-w-7xl w-full text-center">
           {/* Logo - Main Focus - Shows First */}
           <div className="mb-8 flex justify-center stalk-in" style={{ animationDelay: '0.5s', animationDuration: '2s' }}>
             <Image
@@ -177,9 +178,10 @@ export default function Home() {
             </p>
           </div>
         </div>
+        </div>
 
-        {/* Scroll indicator - hidden on small screens to prevent overlap */}
-        <div className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-3 animate-bounce opacity-60">
+        {/* Scroll indicator — in normal flow at bottom, can never overlap content */}
+        <div className="hidden sm:flex relative z-10 flex-col items-center gap-3 animate-bounce opacity-60 pb-8">
           <span className="text-[var(--night-vision)] font-mono text-sm tracking-wider">
             VENTURE DEEPER
           </span>
