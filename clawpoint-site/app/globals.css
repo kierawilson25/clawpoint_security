@@ -295,14 +295,22 @@ body {
   opacity: 0;
 }
 
-/* Infinite View logo — starts tiny and grows toward viewer */
+/* Infinite View logo — starts tiny (far away) and surges toward viewer */
 @keyframes iv-emerge {
   0% {
     opacity: 0;
-    transform: scale(0.3);
+    transform: scale(0.05);
   }
-  30% {
-    opacity: 0.6;
+  15% {
+    opacity: 0.4;
+    transform: scale(0.15);
+  }
+  60% {
+    opacity: 0.9;
+    transform: scale(0.85);
+  }
+  80% {
+    transform: scale(1.04);
   }
   100% {
     opacity: 1;
@@ -311,7 +319,7 @@ body {
 }
 
 .iv-emerge {
-  animation: iv-emerge 2.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: iv-emerge 3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
 }
 
