@@ -35,7 +35,7 @@ export default function AboutPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background tactical grid */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
@@ -94,7 +94,7 @@ export default function AboutPage() {
       </section>
 
       {/* Who We Are & Mission Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
+      <section className="relative pt-14 pb-8 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
         <div className="absolute inset-0 tactical-grid opacity-5" />
 
         <div className="absolute inset-0">
@@ -124,7 +124,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black border-t border-[var(--tactical-green-dark)]">
+      <section className="relative pt-10 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--forest-depth-2)] to-black border-t border-[var(--tactical-green-dark)]">
         <div className="absolute inset-0 tactical-grid opacity-5" />
 
         <div className="max-w-6xl mx-auto relative z-10">
