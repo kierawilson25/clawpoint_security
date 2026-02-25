@@ -114,8 +114,41 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3">
 
-          {/* Left 2/3: PROVEN PERFORMANCE */}
+          {/* Left 2/3: WHAT WE DO + PROVEN PERFORMANCE */}
           <div className="md:col-span-2 px-4 sm:px-6 lg:px-8 divide-y divide-[var(--tactical-green-dark)]">
+
+            {/* WHAT WE DO — single compressed block */}
+            <div className="pt-14 pb-12 emerge-from-forest">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-px bg-[var(--tactical-green)]" />
+                <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CAPABILITIES-02</span>
+              </div>
+              <h2 className="heading-h2 text-white mb-6">WHAT WE DO</h2>
+              <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-6">
+                Clawpoint Security Collective partners with mission-critical organizations to:
+              </p>
+              <div className="border-l-4 border-[var(--tactical-green)] pl-6 py-4 bg-black/40 backdrop-blur-sm space-y-4 stalk-in">
+                <p className="text-base text-gray-300 font-mono leading-relaxed">
+                  <span className="text-[var(--night-vision)] font-bold mr-3">01</span>
+                  Surface enterprise risk that undermines operational effectiveness
+                </p>
+                <div className="h-px bg-[var(--tactical-green-dark)]" />
+                <p className="text-base text-gray-300 font-mono leading-relaxed">
+                  <span className="text-[var(--night-vision)] font-bold mr-3">02</span>
+                  Accelerate leadership decisions with context and confidence
+                </p>
+                <div className="h-px bg-[var(--tactical-green-dark)]" />
+                <p className="text-base text-gray-300 font-mono leading-relaxed">
+                  <span className="text-[var(--night-vision)] font-bold mr-3">03</span>
+                  Fortify mission continuity against dynamic threats
+                </p>
+              </div>
+              <div className="mt-6 p-6 border border-[var(--tactical-green-dark)] bg-black/60">
+                <p className="text-sm md:text-base text-gray-400 font-mono leading-relaxed italic">
+                  We combine operational experience, risk-informed methodologies, and a human-centered approach to secure the mission—not just infrastructure.
+                </p>
+              </div>
+            </div>
 
             {/* PROVEN PERFORMANCE */}
             <div className="py-12 emerge-from-forest">
@@ -209,42 +242,6 @@ export default function AboutPage() {
             </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* Capabilities Statement */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
-        <div className="absolute inset-0 tactical-grid opacity-5" />
-        <div className="max-w-5xl mx-auto relative z-10 emerge-from-forest">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="w-12 h-px bg-[var(--tactical-green)]" />
-            <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CAPABILITIES-03</span>
-          </div>
-          <h2 className="heading-h2 text-white mb-6">CAPABILITIES STATEMENT</h2>
-          <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-6">
-            Clawpoint Security Collective partners with mission-critical organizations to:
-          </p>
-          <div className="border-l-4 border-[var(--tactical-green)] pl-6 py-4 bg-black/40 backdrop-blur-sm space-y-4">
-            <p className="text-base text-gray-300 font-mono leading-relaxed">
-              <span className="text-[var(--night-vision)] font-bold mr-3">01</span>
-              Surface enterprise risk that undermines operational effectiveness
-            </p>
-            <div className="h-px bg-[var(--tactical-green-dark)]" />
-            <p className="text-base text-gray-300 font-mono leading-relaxed">
-              <span className="text-[var(--night-vision)] font-bold mr-3">02</span>
-              Accelerate leadership decisions with context and confidence
-            </p>
-            <div className="h-px bg-[var(--tactical-green-dark)]" />
-            <p className="text-base text-gray-300 font-mono leading-relaxed">
-              <span className="text-[var(--night-vision)] font-bold mr-3">03</span>
-              Fortify mission continuity against dynamic threats
-            </p>
-          </div>
-          <div className="mt-6 p-6 border border-[var(--tactical-green-dark)] bg-black/60">
-            <p className="text-sm md:text-base text-gray-400 font-mono leading-relaxed italic">
-              We combine operational experience, risk-informed methodologies, and a human-centered approach to secure the mission—not just infrastructure.
-            </p>
-          </div>
         </div>
       </section>
 
