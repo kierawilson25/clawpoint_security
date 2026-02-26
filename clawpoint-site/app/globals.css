@@ -308,7 +308,7 @@ body {
 }
 
 .iv-emerge {
-  animation: iv-emerge 4s linear forwards;
+  animation: iv-emerge 2s linear forwards;
   opacity: 0;
 }
 
