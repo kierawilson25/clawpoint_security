@@ -42,12 +42,7 @@ export default function SolutionsPage() {
           </h1>
 
           {/* Security Categories */}
-          <div className="border-2 border-[var(--night-vision)] bg-black/60 backdrop-blur-sm p-8 relative stalk-in" style={{ animationDelay: '0.4s' }}>
-            <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[var(--tactical-green)]" />
-            <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[var(--tactical-green)]" />
-            <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[var(--tactical-green)]" />
-            <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[var(--tactical-green)]" />
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 stalk-in" style={{ animationDelay: '0.4s' }}>
               {[
                 'MISSION ASSURANCE',
                 'CYBER RESILIENCE',
@@ -71,7 +66,6 @@ export default function SolutionsPage() {
                   </span>
                 </div>
               ))}
-            </div>
           </div>
         </div>
       </section>
