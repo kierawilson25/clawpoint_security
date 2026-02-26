@@ -38,7 +38,7 @@ export default function SolutionsPage() {
         <div className="max-w-6xl mx-auto text-center relative z-10 px-4 sm:px-6 lg:px-8 py-24">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white font-mono tracking-wider stalk-in mb-16" style={{ animationDelay: '0.2s' }}>
             EMPOWER YOUR
-            <span className="block text-[var(--night-vision)] text-glow mt-3">CYBER STRATEGY</span>
+            <span className="block text-[var(--night-vision)] text-glow mt-3">MISSION</span>
           </h1>
 
           {/* Security Categories */}
@@ -64,7 +64,7 @@ export default function SolutionsPage() {
               ].map((topic, index) => (
                 <div
                   key={index}
-                  className="border border-[var(--tactical-green-dark)] bg-black/50 backdrop-blur-sm px-4 py-3 text-center hover:border-[var(--night-vision)] hover:bg-[var(--tactical-green-dark)]/20 transition-tactical cursor-pointer"
+                  className="border border-[var(--tactical-green)] bg-black/50 backdrop-blur-sm px-4 py-3 text-center hover:border-[var(--night-vision)] hover:bg-[var(--tactical-green-dark)]/20 transition-tactical cursor-pointer"
                 >
                   <span className="text-gray-400 hover:text-white font-mono text-xs tracking-wider transition-colors">
                     {topic}
