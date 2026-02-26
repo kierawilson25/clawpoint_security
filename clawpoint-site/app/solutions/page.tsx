@@ -42,30 +42,36 @@ export default function SolutionsPage() {
           </h1>
 
           {/* Security Categories */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 stalk-in" style={{ animationDelay: '0.4s' }}>
-            {[
-              'MISSION ASSURANCE',
-              'CYBER RESILIENCE',
-              'ANALYST ENABLEMENT',
-              'DECISION SUPPORT',
-              'INCIDENT RESPONSE',
-              'THREAT HUNTING',
-              'OPERATIONAL TRUTH',
-              'COMPLIANCE POSTURE',
-              'ZERO TRUST',
-              'SIGNAL EXTRACTION',
-              'MISSION CONTINUITY',
-              'COGNITIVE LOAD REDUCTION',
-            ].map((topic, index) => (
-              <div
-                key={index}
-                className="border border-[var(--tactical-green-dark)] bg-black/50 backdrop-blur-sm px-4 py-3 text-center hover:border-[var(--night-vision)] hover:bg-[var(--tactical-green-dark)]/20 transition-tactical cursor-pointer"
-              >
-                <span className="text-gray-400 hover:text-white font-mono text-xs tracking-wider transition-colors">
-                  {topic}
-                </span>
-              </div>
-            ))}
+          <div className="border-2 border-[var(--night-vision)] bg-black/60 backdrop-blur-sm p-8 relative stalk-in" style={{ animationDelay: '0.4s' }}>
+            <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[var(--tactical-green)]" />
+            <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[var(--tactical-green)]" />
+            <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[var(--tactical-green)]" />
+            <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[var(--tactical-green)]" />
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {[
+                'MISSION ASSURANCE',
+                'CYBER RESILIENCE',
+                'ANALYST ENABLEMENT',
+                'DECISION SUPPORT',
+                'INCIDENT RESPONSE',
+                'THREAT HUNTING',
+                'OPERATIONAL TRUTH',
+                'COMPLIANCE POSTURE',
+                'ZERO TRUST',
+                'SIGNAL EXTRACTION',
+                'MISSION CONTINUITY',
+                'COGNITIVE LOAD REDUCTION',
+              ].map((topic, index) => (
+                <div
+                  key={index}
+                  className="border border-[var(--tactical-green-dark)] bg-black/50 backdrop-blur-sm px-4 py-3 text-center hover:border-[var(--night-vision)] hover:bg-[var(--tactical-green-dark)]/20 transition-tactical cursor-pointer"
+                >
+                  <span className="text-gray-400 hover:text-white font-mono text-xs tracking-wider transition-colors">
+                    {topic}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
