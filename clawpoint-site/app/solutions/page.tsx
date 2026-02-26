@@ -35,22 +35,21 @@ export default function SolutionsPage() {
         {/* Vignette */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_70%,rgba(0,0,0,0.9)_100%)]" />
 
-        <div className="max-w-6xl mx-auto text-center relative z-10 px-4 sm:px-6 lg:px-8 py-24">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white font-mono tracking-wider stalk-in mb-16" style={{ animationDelay: '0.2s' }}>
+        <div className="max-w-6xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8 py-24">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white font-mono tracking-wider stalk-in mb-16 text-center" style={{ animationDelay: '0.2s' }}>
             EMPOWER YOUR
             <span className="block text-[var(--night-vision)] text-glow mt-3">MISSION</span>
           </h1>
 
           {/* Security Categories */}
-          <div className="text-left mb-6 stalk-in" style={{ animationDelay: '0.4s' }}>
+          <div className="max-w-3xl stalk-in" style={{ animationDelay: '0.4s' }}>
             <div className="flex items-center gap-4 mb-3">
               <div className="w-12 h-px bg-[var(--tactical-green)]" />
               <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">DOMAINS-01</span>
             </div>
-            <h2 className="heading-h3 text-white">SECURITY CATEGORIES</h2>
-          </div>
+            <h2 className="heading-h3 text-white mb-5">SECURITY CATEGORIES</h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 stalk-in" style={{ animationDelay: '0.5s' }}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
               {[
                 'MISSION ASSURANCE',
                 'CYBER RESILIENCE',
@@ -67,13 +66,14 @@ export default function SolutionsPage() {
               ].map((topic, index) => (
                 <div
                   key={index}
-                  className="border-2 border-[var(--tactical-green-light)] bg-black/50 backdrop-blur-sm px-4 py-3 text-center hover:border-[var(--night-vision)] hover:bg-[var(--tactical-green-dark)]/20 transition-tactical cursor-pointer"
+                  className="border-2 border-[var(--tactical-green-light)] bg-black/50 backdrop-blur-sm px-3 py-2 text-center hover:border-[var(--night-vision)] hover:bg-[var(--tactical-green-dark)]/20 transition-tactical cursor-pointer"
                 >
                   <span className="text-gray-400 hover:text-white font-mono text-xs tracking-wider transition-colors">
                     {topic}
                   </span>
                 </div>
               ))}
+            </div>
           </div>
         </div>
       </section>
