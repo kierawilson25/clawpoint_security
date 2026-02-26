@@ -1,8 +1,5 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import SolutionCard from '@/components/SolutionCard'
-import CTAButton from '@/components/CTAButton'
-import DownloadBrief from '@/components/DownloadBrief'
 
 export const metadata: Metadata = {
   title: 'Solutions | Clawpoint Security Collective',
@@ -14,7 +11,7 @@ export default function SolutionsPage() {
   return (
     <div className="bg-black min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative flex items-center justify-center overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
@@ -38,16 +35,49 @@ export default function SolutionsPage() {
         {/* Vignette */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_70%,rgba(0,0,0,0.9)_100%)]" />
 
-        <div className="max-w-4xl mx-auto text-center relative z-10 px-4 sm:px-6 lg:px-8 py-20">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white font-mono tracking-wider stalk-in" style={{ animationDelay: '0.2s' }}>
+        <div className="max-w-6xl mx-auto text-center relative z-10 px-4 sm:px-6 lg:px-8 py-24">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white font-mono tracking-wider stalk-in mb-16" style={{ animationDelay: '0.2s' }}>
             EMPOWER YOUR
-            <span className="block text-[var(--night-vision)] text-glow mt-3">CYBER STRATEGY</span>
+            <span className="block text-[var(--night-vision)] text-glow mt-3">MISSION</span>
           </h1>
+
+          {/* Security Categories */}
+          <div className="border-2 border-[var(--night-vision)] bg-black/60 backdrop-blur-sm p-8 relative stalk-in" style={{ animationDelay: '0.4s' }}>
+            <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[var(--tactical-green)]" />
+            <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[var(--tactical-green)]" />
+            <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[var(--tactical-green)]" />
+            <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[var(--tactical-green)]" />
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {[
+                'MISSION ASSURANCE',
+                'CYBER RESILIENCE',
+                'ANALYST ENABLEMENT',
+                'DECISION SUPPORT',
+                'INCIDENT RESPONSE',
+                'THREAT HUNTING',
+                'OPERATIONAL TRUTH',
+                'COMPLIANCE POSTURE',
+                'ZERO TRUST',
+                'SIGNAL EXTRACTION',
+                'MISSION CONTINUITY',
+                'COGNITIVE LOAD REDUCTION',
+              ].map((topic, index) => (
+                <div
+                  key={index}
+                  className="border border-[var(--tactical-green)] bg-black/50 backdrop-blur-sm px-4 py-3 text-center hover:border-[var(--night-vision)] hover:bg-[var(--tactical-green-dark)]/20 transition-tactical cursor-pointer"
+                >
+                  <span className="text-gray-400 hover:text-white font-mono text-xs tracking-wider transition-colors">
+                    {topic}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Core Offerings Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
         <div className="absolute inset-0 tactical-grid opacity-5" />
 
         <div className="max-w-6xl mx-auto relative z-10">
@@ -126,51 +156,6 @@ export default function SolutionsPage() {
             ))}
           </div>
 
-        </div>
-      </section>
-
-      {/* Security Categories */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[var(--tactical-green-dark)] to-black">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono tracking-wider">
-              SECURITY CATEGORIES
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {[
-              'MISSION ASSURANCE',
-              'CYBER RESILIENCE',
-              'ANALYST ENABLEMENT',
-              'DECISION SUPPORT',
-              'INCIDENT RESPONSE',
-              'THREAT HUNTING',
-              'OPERATIONAL TRUTH',
-              'COMPLIANCE POSTURE',
-              'ZERO TRUST',
-              'SIGNAL EXTRACTION',
-              'MISSION CONTINUITY',
-              'COGNITIVE LOAD REDUCTION',
-            ].map((topic, index) => (
-              <div
-                key={index}
-                className="border border-[var(--tactical-green-dark)] bg-black px-6 py-5 text-center hover:border-[var(--night-vision)] hover:bg-[var(--tactical-green-dark)]/20 transition-tactical cursor-pointer"
-              >
-                <span className="text-gray-400 hover:text-white font-mono text-sm tracking-wider transition-colors">
-                  {topic}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-      {/* Download Brief Section */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 border-t border-[var(--tactical-green-dark)]">
-        <div className="max-w-4xl mx-auto">
-          <DownloadBrief variant="banner" />
         </div>
       </section>
     </div>
