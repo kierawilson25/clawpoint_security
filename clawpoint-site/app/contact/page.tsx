@@ -179,58 +179,8 @@ export default function ContactPage() {
           />
         </div>
 
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-            {/* Contact Info - 2 columns */}
-            <div className="lg:col-span-2">
-              <div className="mb-12 emerge-from-forest">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-px bg-[var(--tactical-green)]" />
-                  <span className="text-[var(--tactical-green-light)] font-mono text-sm tracking-widest">CONTACT-INFO</span>
-                </div>
-                <h2 className="heading-h2 text-white mb-8">
-                  CONTACT INFORMATION
-                </h2>
-              </div>
-
-              <div className="space-y-6">
-                <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">
-                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
-                    OFFICE LOCATION
-                  </h3>
-                  <p className="text-white font-mono text-lg">Clawpoint Security Collective</p>
-                  <p className="text-gray-400 font-mono text-sm">9319 Robert D. Snyder Rd, Suite 202</p>
-                  <p className="text-gray-400 font-mono text-sm">Charlotte, NC 28223</p>
-                </div>
-
-                <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">
-                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
-                    EMAIL
-                  </h3>
-                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-white font-mono text-sm hover:text-[var(--night-vision)] transition-colors break-all">
-                    CSC_growth@clawpointsecuritycollective.com
-                  </a>
-                </div>
-
-                <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">
-                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
-                    LINKEDIN
-                  </h3>
-                  <a
-                    href="https://www.linkedin.com/company/clawpoint"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white font-mono text-sm hover:text-[var(--night-vision)] transition-colors inline-flex items-center gap-2"
-                  >
-                    <span>Connect with us</span>
-                    <span>→</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Form - 3 columns */}
-            <div className="lg:col-span-3">
+        <div className="max-w-3xl mx-auto relative z-10">
+          <div>
               <div className="border-2 border-[var(--tactical-green)] bg-black/60 backdrop-blur-sm p-8 md:p-12 relative emerge-from-forest" style={{ animationDelay: '0.2s' }}>
                 {/* Tactical corners */}
                 <div className="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-[var(--night-vision)]/40" />
@@ -398,7 +348,6 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
