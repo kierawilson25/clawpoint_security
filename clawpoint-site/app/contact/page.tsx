@@ -179,7 +179,15 @@ export default function ContactPage() {
           />
         </div>
 
-        <div className="max-w-3xl mx-auto relative z-10">
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="mb-10 emerge-from-forest">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-px bg-[var(--tactical-green)]" />
+              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CONTACT-INFO</span>
+            </div>
+            <h2 className="heading-h2 text-white">CONTACT US</h2>
+          </div>
+
           <div>
               <div className="border-2 border-[var(--tactical-green)] bg-black/60 backdrop-blur-sm p-8 md:p-12 relative emerge-from-forest" style={{ animationDelay: '0.2s' }}>
                 {/* Tactical corners */}
@@ -189,75 +197,85 @@ export default function ContactPage() {
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[var(--night-vision)]/40" />
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                      FULL NAME *
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-black border ${
-                        errors.name ? 'border-red-500' : 'border-[var(--tactical-green)]'
-                      } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
-                      placeholder="John Smith"
-                    />
-                    {errors.name && (
-                      <p className="text-red-400 font-mono text-xs mt-1">{errors.name}</p>
-                    )}
+                  {/* Row 1: Name + Email */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                        FULL NAME *
+                      </label>
+                      <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className={`w-full px-4 py-3 bg-black border ${
+                          errors.name ? 'border-red-500' : 'border-[var(--tactical-green)]'
+                        } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
+                        placeholder="John Smith"
+                      />
+                      {errors.name && (
+                        <p className="text-red-400 font-mono text-xs mt-1">{errors.name}</p>
+                      )}
+                    </div>
+
+                    <div>
+                      <label htmlFor="email" className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                        EMAIL ADDRESS *
+                      </label>
+                      <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={`w-full px-4 py-3 bg-black border ${
+                          errors.email ? 'border-red-500' : 'border-[var(--tactical-green)]'
+                        } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
+                        placeholder="contact@organization.com"
+                      />
+                      {errors.email && (
+                        <p className="text-red-400 font-mono text-xs mt-1">{errors.email}</p>
+                      )}
+                    </div>
                   </div>
 
-                  <div>
-                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                      EMAIL ADDRESS *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-black border ${
-                        errors.email ? 'border-red-500' : 'border-[var(--tactical-green)]'
-                      } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
-                      placeholder="contact@organization.com"
-                    />
-                    {errors.email && (
-                      <p className="text-red-400 font-mono text-xs mt-1">{errors.email}</p>
-                    )}
-                  </div>
+                  {/* Row 2: Company + Phone */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="company" className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                        COMPANY/ORGANIZATION *
+                      </label>
+                      <input
+                        id="company"
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className={`w-full px-4 py-3 bg-black border ${
+                          errors.company ? 'border-red-500' : 'border-[var(--tactical-green)]'
+                        } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
+                        placeholder="Your Organization"
+                      />
+                      {errors.company && (
+                        <p className="text-red-400 font-mono text-xs mt-1">{errors.company}</p>
+                      )}
+                    </div>
 
-                  <div>
-                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                      COMPANY/ORGANIZATION *
-                    </label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-black border ${
-                        errors.company ? 'border-red-500' : 'border-[var(--tactical-green)]'
-                      } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
-                      placeholder="Your Organization"
-                    />
-                    {errors.company && (
-                      <p className="text-red-400 font-mono text-xs mt-1">{errors.company}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                      PHONE NUMBER (OPTIONAL)
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black border border-[var(--tactical-green)] text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all"
-                      placeholder="+1 (555) 000-0000"
-                    />
+                    <div>
+                      <label htmlFor="phone" className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                        PHONE NUMBER (OPTIONAL)
+                      </label>
+                      <input
+                        id="phone"
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-black border border-[var(--tactical-green)] text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all"
+                        placeholder="+1 (555) 000-0000"
+                      />
+                    </div>
                   </div>
 
                   <div>
