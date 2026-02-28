@@ -160,9 +160,6 @@ export default function ContactPage() {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-mono leading-relaxed stalk-in" style={{ animationDelay: '0.6s' }}>
-            Schedule a Mission Briefing
-          </p>
         </div>
       </section>
 
