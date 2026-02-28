@@ -52,7 +52,7 @@ export default function InfiniteViewPage() {
           {/* Logo — smaller */}
           <div className="mb-10 iv-emerge flex justify-center">
             <Image
-              src="/images/infiniteview-logo-white.png"
+              src="/images/New Infinite view.png"
               alt="Infinite View"
               width={420}
               height={420}
