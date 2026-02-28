@@ -42,7 +42,7 @@ export default function SolutionsPage() {
           </h1>
 
           {/* Security Categories */}
-          <div className="max-w-3xl stalk-in" style={{ animationDelay: '0.4s' }}>
+          <div className="max-w-4xl stalk-in" style={{ animationDelay: '0.4s' }}>
             <div className="flex items-center gap-4 mb-3">
               <div className="w-12 h-px bg-[var(--tactical-green)]" />
               <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">DOMAINS-01</span>
