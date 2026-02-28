@@ -160,9 +160,6 @@ export default function ContactPage() {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-mono leading-relaxed stalk-in" style={{ animationDelay: '0.6s' }}>
-            Schedule a Mission Briefing
-          </p>
         </div>
       </section>
 
@@ -179,58 +176,16 @@ export default function ContactPage() {
           />
         </div>
 
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-            {/* Contact Info - 2 columns */}
-            <div className="lg:col-span-2">
-              <div className="mb-12 emerge-from-forest">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-px bg-[var(--tactical-green)]" />
-                  <span className="text-[var(--tactical-green-light)] font-mono text-sm tracking-widest">CONTACT-INFO</span>
-                </div>
-                <h2 className="heading-h2 text-white mb-8">
-                  CONTACT INFORMATION
-                </h2>
-              </div>
-
-              <div className="space-y-6">
-                <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">
-                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
-                    OFFICE LOCATION
-                  </h3>
-                  <p className="text-white font-mono text-lg">Clawpoint Security Collective</p>
-                  <p className="text-gray-400 font-mono text-sm">9319 Robert D. Snyder Rd, Suite 202</p>
-                  <p className="text-gray-400 font-mono text-sm">Charlotte, NC 28223</p>
-                </div>
-
-                <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">
-                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
-                    EMAIL
-                  </h3>
-                  <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-white font-mono text-sm hover:text-[var(--night-vision)] transition-colors break-all">
-                    CSC_growth@clawpointsecuritycollective.com
-                  </a>
-                </div>
-
-                <div className="border border-[var(--tactical-green-dark)] bg-black/40 p-6 hover:border-[var(--tactical-green)] hover:bg-black/60 transition-all duration-300">
-                  <h3 className="text-sm font-mono font-bold text-[var(--night-vision)] mb-2 tracking-wider">
-                    LINKEDIN
-                  </h3>
-                  <a
-                    href="https://www.linkedin.com/company/clawpoint"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white font-mono text-sm hover:text-[var(--night-vision)] transition-colors inline-flex items-center gap-2"
-                  >
-                    <span>Connect with us</span>
-                    <span>→</span>
-                  </a>
-                </div>
-              </div>
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="mb-10 emerge-from-forest">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-px bg-[var(--tactical-green)]" />
+              <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">CONTACT-INFO</span>
             </div>
+            <h2 className="heading-h2 text-white">CONTACT US</h2>
+          </div>
 
-            {/* Contact Form - 3 columns */}
-            <div className="lg:col-span-3">
+          <div>
               <div className="border-2 border-[var(--tactical-green)] bg-black/60 backdrop-blur-sm p-8 md:p-12 relative emerge-from-forest" style={{ animationDelay: '0.2s' }}>
                 {/* Tactical corners */}
                 <div className="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-[var(--night-vision)]/40" />
@@ -239,75 +194,85 @@ export default function ContactPage() {
                 <div className="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[var(--night-vision)]/40" />
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                      FULL NAME *
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-black border ${
-                        errors.name ? 'border-red-500' : 'border-[var(--tactical-green)]'
-                      } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
-                      placeholder="John Smith"
-                    />
-                    {errors.name && (
-                      <p className="text-red-400 font-mono text-xs mt-1">{errors.name}</p>
-                    )}
+                  {/* Row 1: Name + Email */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                        FULL NAME *
+                      </label>
+                      <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className={`w-full px-4 py-3 bg-black border ${
+                          errors.name ? 'border-red-500' : 'border-[var(--tactical-green)]'
+                        } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
+                        placeholder="John Smith"
+                      />
+                      {errors.name && (
+                        <p className="text-red-400 font-mono text-xs mt-1">{errors.name}</p>
+                      )}
+                    </div>
+
+                    <div>
+                      <label htmlFor="email" className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                        EMAIL ADDRESS *
+                      </label>
+                      <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={`w-full px-4 py-3 bg-black border ${
+                          errors.email ? 'border-red-500' : 'border-[var(--tactical-green)]'
+                        } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
+                        placeholder="contact@organization.com"
+                      />
+                      {errors.email && (
+                        <p className="text-red-400 font-mono text-xs mt-1">{errors.email}</p>
+                      )}
+                    </div>
                   </div>
 
-                  <div>
-                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                      EMAIL ADDRESS *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-black border ${
-                        errors.email ? 'border-red-500' : 'border-[var(--tactical-green)]'
-                      } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
-                      placeholder="contact@organization.com"
-                    />
-                    {errors.email && (
-                      <p className="text-red-400 font-mono text-xs mt-1">{errors.email}</p>
-                    )}
-                  </div>
+                  {/* Row 2: Company + Phone */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="company" className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                        COMPANY/ORGANIZATION *
+                      </label>
+                      <input
+                        id="company"
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className={`w-full px-4 py-3 bg-black border ${
+                          errors.company ? 'border-red-500' : 'border-[var(--tactical-green)]'
+                        } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
+                        placeholder="Your Organization"
+                      />
+                      {errors.company && (
+                        <p className="text-red-400 font-mono text-xs mt-1">{errors.company}</p>
+                      )}
+                    </div>
 
-                  <div>
-                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                      COMPANY/ORGANIZATION *
-                    </label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-black border ${
-                        errors.company ? 'border-red-500' : 'border-[var(--tactical-green)]'
-                      } text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all`}
-                      placeholder="Your Organization"
-                    />
-                    {errors.company && (
-                      <p className="text-red-400 font-mono text-xs mt-1">{errors.company}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
-                      PHONE NUMBER (OPTIONAL)
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black border border-[var(--tactical-green)] text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all"
-                      placeholder="+1 (555) 000-0000"
-                    />
+                    <div>
+                      <label htmlFor="phone" className="block text-white font-mono text-sm font-bold mb-2 tracking-wider">
+                        PHONE NUMBER (OPTIONAL)
+                      </label>
+                      <input
+                        id="phone"
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-black border border-[var(--tactical-green)] text-white font-mono text-sm focus:border-[var(--night-vision)] focus:outline-none transition-all"
+                        placeholder="+1 (555) 000-0000"
+                      />
+                    </div>
                   </div>
 
                   <div>
@@ -398,7 +363,6 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
