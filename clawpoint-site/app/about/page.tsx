@@ -155,7 +155,7 @@ export default function AboutPage() {
             <div className="py-12 emerge-from-forest">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-px bg-[var(--tactical-green)]" />
-                <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">TRACK RECORD</span>
+                <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">TRACK RECORD-03</span>
               </div>
               <h2 className="heading-h2 text-white mb-6">PROVEN PERFORMANCE</h2>
               <p className="text-base md:text-lg text-gray-300 font-mono leading-relaxed mb-8">
@@ -189,11 +189,11 @@ export default function AboutPage() {
             <div className="emerge-from-forest">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-px bg-[var(--tactical-green)]" />
-                <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">LEADERSHIP-02</span>
+                <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">LEADERSHIP-04</span>
               </div>
               <h2 className="heading-h2 text-white mb-8">THE TEAM</h2>
 
-              <div className="space-y-6">
+              <div className="space-y-10">
                 {/* Will Smith */}
                 <article className="relative group stalk-in max-w-[220px] mx-auto" style={{ animationDelay: '0.1s' }}>
                   <div className="credential-shine border-2 border-[var(--tactical-green-dark)] bg-black/80 backdrop-blur-sm relative overflow-hidden hover:border-[var(--night-vision)] transition-all duration-500">
