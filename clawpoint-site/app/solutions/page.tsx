@@ -42,14 +42,14 @@ export default function SolutionsPage() {
           </h1>
 
           {/* Security Categories */}
-          <div className="max-w-4xl stalk-in" style={{ animationDelay: '0.4s' }}>
+          <div className="max-w-6xl stalk-in" style={{ animationDelay: '0.4s' }}>
             <div className="flex items-center gap-4 mb-3">
               <div className="w-12 h-px bg-[var(--tactical-green)]" />
               <span className="text-[var(--tactical-green-light)] font-mono text-xs tracking-widest">DOMAINS-01</span>
             </div>
             <h2 className="heading-h3 text-white mb-5">SECURITY CATEGORIES</h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-12 gap-y-3">
               {[
                 'MISSION ASSURANCE',
                 'CYBER RESILIENCE',
@@ -66,9 +66,9 @@ export default function SolutionsPage() {
               ].map((topic, index) => (
                 <div
                   key={index}
-                  className="border-2 border-[var(--tactical-green-light)] bg-black/50 backdrop-blur-sm px-3 py-2 text-center hover:border-[var(--night-vision)] hover:bg-[var(--tactical-green-dark)]/20 transition-tactical cursor-pointer"
+                  className="border-2 border-[var(--night-vision)]/80 bg-[var(--tactical-green-dark)]/30 backdrop-blur-sm px-5 py-2 text-center hover:border-[var(--night-vision)] hover:bg-[var(--tactical-green-dark)]/50 transition-tactical cursor-pointer"
                 >
-                  <span className="text-gray-400 hover:text-white font-mono text-xs tracking-wider transition-colors">
+                  <span className="text-white font-mono text-xs tracking-wider transition-colors">
                     {topic}
                   </span>
                 </div>

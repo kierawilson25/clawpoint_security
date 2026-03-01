@@ -54,8 +54,8 @@ export default function InfiniteViewPage() {
             <Image
               src="/images/New Infinite view.png"
               alt="Infinite View"
-              width={560}
-              height={560}
+              width={680}
+              height={680}
               className="object-contain drop-shadow-[0_0_40px_rgba(0,255,65,0.4)]"
               priority
             />
