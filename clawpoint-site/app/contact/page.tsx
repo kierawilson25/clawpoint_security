@@ -6,6 +6,10 @@ import emailjs from '@emailjs/browser'
 
 export default function ContactPage() {
   const [scrollProgress, setScrollProgress] = useState(0)
+
+  useEffect(() => {
+    emailjs.init({ publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! })
+  }, [])
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -80,8 +84,7 @@ export default function ContactPage() {
           phone: formData.phone || 'Not provided',
           interest: formData.interest.length > 0 ? formData.interest.join(', ') : 'Not specified',
           message: formData.message,
-        },
-        { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! }
+        }
       )
 
       setStatus('success')
@@ -327,7 +330,7 @@ export default function ContactPage() {
                   <p className="text-red-400 font-mono text-sm font-bold mb-1">TRANSMISSION FAILED</p>
                   <p className="text-gray-300 font-mono text-xs">
                     Error submitting form. Try emailing us directly at{' '}
-                    <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--night-vision)] hover:underline">
+                    <a href="mailto:CSC_growth@clawpointsecuritycollective.com" className="text-[var(--night-vision)] hover:underline break-all">
                       CSC_growth@clawpointsecuritycollective.com
                     </a>
                   </p>
